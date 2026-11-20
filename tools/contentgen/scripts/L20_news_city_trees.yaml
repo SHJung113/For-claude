@@ -1,0 +1,18 @@
+id: L20-N-001
+level: 20
+track: news
+title: "Why Cities Are Planting Trees"
+target_wpm: 195
+pause_ms: 250
+speakers:
+  Anchor: am_michael
+  Reporter: bf_emma
+  Planner: af_nicole
+lines:
+  - [Anchor, "Good evening. As summers get hotter, more cities are turning to one of the oldest tools there is: trees. Our correspondent has more."]
+  - [Reporter, "On a July afternoon, the asphalt on this street can get hot enough to burn bare feet. Just a few blocks away, under a line of old oaks, it's noticeably cooler."]
+  - [Reporter, "Researchers call this difference the urban heat island effect. Pavement and rooftops soak up heat during the day and release it slowly at night, so neighborhoods with little shade can stay warm long after sunset."]
+  - [Planner, "We used to think of trees as decoration. Now we treat them as infrastructure, like pipes or power lines. A healthy tree canopy cools the street, cleans the air, and honestly, it makes people wanna walk outside."]
+  - [Reporter, "But planting is the easy part. Young trees need water, care, and years of growth before they give real shade, and the neighborhoods that need them most often have the least room for them."]
+  - [Planner, "You can't just drop a sapling into a crack in the sidewalk and walk away. It's a twenty-year commitment."]
+  - [Reporter, "Still, city leaders here say the math is simple. Every tree that survives is a little shade that didn't exist before. Reporting from downtown, I'm Claire Hughes."]

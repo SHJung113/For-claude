@@ -1,0 +1,139 @@
+{
+  "id": "L20-N-001",
+  "level": 20,
+  "track": "news",
+  "title": "Why Cities Are Planting Trees",
+  "duration_ms": 64066,
+  "words": 207,
+  "measured_wpm": 194,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 1.256,
+    "voices": {
+      "Anchor": "am_michael",
+      "Reporter": "bf_emma",
+      "Planner": "af_nicole"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Good evening.",
+      "start_ms": 250,
+      "end_ms": 933
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "As summers get hotter, more cities are turning to one of the oldest tools there is: trees.",
+      "start_ms": 1183,
+      "end_ms": 5884
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "Our correspondent has more.",
+      "start_ms": 6134,
+      "end_ms": 7436
+    },
+    {
+      "idx": 3,
+      "speaker": "Reporter",
+      "text": "On a July afternoon, the asphalt on this street can get hot enough to burn bare feet.",
+      "start_ms": 7686,
+      "end_ms": 11650
+    },
+    {
+      "idx": 4,
+      "speaker": "Reporter",
+      "text": "Just a few blocks away, under a line of old oaks, it's noticeably cooler.",
+      "start_ms": 11900,
+      "end_ms": 15335
+    },
+    {
+      "idx": 5,
+      "speaker": "Reporter",
+      "text": "Researchers call this difference the urban heat island effect.",
+      "start_ms": 15585,
+      "end_ms": 18252
+    },
+    {
+      "idx": 6,
+      "speaker": "Reporter",
+      "text": "Pavement and rooftops soak up heat during the day and release it slowly at night, so neighborhoods with little shade can stay warm long after sunset.",
+      "start_ms": 18502,
+      "end_ms": 25249
+    },
+    {
+      "idx": 7,
+      "speaker": "Planner",
+      "text": "We used to think of trees as decoration.",
+      "start_ms": 25499,
+      "end_ms": 28242
+    },
+    {
+      "idx": 8,
+      "speaker": "Planner",
+      "text": "Now we treat them as infrastructure, like pipes or power lines.",
+      "start_ms": 28492,
+      "end_ms": 33155
+    },
+    {
+      "idx": 9,
+      "speaker": "Planner",
+      "text": "A healthy tree canopy cools the street, cleans the air, and honestly, it makes people wanna walk outside.",
+      "start_ms": 33405,
+      "end_ms": 41060
+    },
+    {
+      "idx": 10,
+      "speaker": "Reporter",
+      "text": "But planting is the easy part.",
+      "start_ms": 41310,
+      "end_ms": 42805
+    },
+    {
+      "idx": 11,
+      "speaker": "Reporter",
+      "text": "Young trees need water, care, and years of growth before they give real shade, and the neighborhoods that need them most often have the least room for them.",
+      "start_ms": 43055,
+      "end_ms": 49801
+    },
+    {
+      "idx": 12,
+      "speaker": "Planner",
+      "text": "You can't just drop a sapling into a crack in the sidewalk and walk away.",
+      "start_ms": 50051,
+      "end_ms": 54263
+    },
+    {
+      "idx": 13,
+      "speaker": "Planner",
+      "text": "It's a twenty-year commitment.",
+      "start_ms": 54513,
+      "end_ms": 55931
+    },
+    {
+      "idx": 14,
+      "speaker": "Reporter",
+      "text": "Still, city leaders here say the math is simple.",
+      "start_ms": 56181,
+      "end_ms": 58267
+    },
+    {
+      "idx": 15,
+      "speaker": "Reporter",
+      "text": "Every tree that survives is a little shade that didn't exist before.",
+      "start_ms": 58517,
+      "end_ms": 61565
+    },
+    {
+      "idx": 16,
+      "speaker": "Reporter",
+      "text": "Reporting from downtown, I'm Claire Hughes.",
+      "start_ms": 61815,
+      "end_ms": 63816
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+id: L10-D-001
+level: 10
+track: daily
+title: "The Sleepover"
+target_wpm: 135
+pause_ms: 450
+speakers:
+  Max: am_puck
+  Dad: am_michael
+  Leo: am_echo
+lines:
+  - [Max, "Dad, can Leo sleep over on Friday?"]
+  - [Dad, "Did you finish your science project first?"]
+  - [Max, "Almost. We just need to paint the planets."]
+  - [Leo, "And we're gonna make the rings for Saturn out of paper."]
+  - [Dad, "Sounds great. But no staying up past eleven, okay?"]
+  - [Max, "Okay. Can we order pizza, though?"]
+  - [Dad, "Only if you clean up the kitchen after."]
+  - [Leo, "Deal! I wanna get pepperoni and extra cheese."]
+  - [Max, "Better make it two pizzas. Leo eats a lot."]
+  - [Leo, "Hey! That's not true. Well, maybe a little."]
+  - [Dad, "Alright, two pizzas. But the next day, you're both helping me in the garden."]
+  - [Max, "Got it. Thanks, Dad!"]
