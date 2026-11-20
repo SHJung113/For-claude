@@ -1,0 +1,96 @@
+{
+  "id": "L02-D-006",
+  "level": 2,
+  "track": "daily",
+  "title": "Grandpa's Visit",
+  "duration_ms": 20145,
+  "words": 29,
+  "measured_wpm": 86,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.802,
+    "voices": {
+      "Grandpa": "am_adam",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Grandpa",
+      "text": "Hello, Max!",
+      "start_ms": 250,
+      "end_ms": 1426
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Grandpa!",
+      "start_ms": 2226,
+      "end_ms": 3083
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "You're here!",
+      "start_ms": 3883,
+      "end_ms": 4561
+    },
+    {
+      "idx": 3,
+      "speaker": "Grandpa",
+      "text": "I'm here.",
+      "start_ms": 5361,
+      "end_ms": 6249
+    },
+    {
+      "idx": 4,
+      "speaker": "Grandpa",
+      "text": "Give me a hug.",
+      "start_ms": 7049,
+      "end_ms": 8185
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "I made a picture for you.",
+      "start_ms": 8985,
+      "end_ms": 10322
+    },
+    {
+      "idx": 6,
+      "speaker": "Grandpa",
+      "text": "It's beautiful.",
+      "start_ms": 11122,
+      "end_ms": 12315
+    },
+    {
+      "idx": 7,
+      "speaker": "Grandpa",
+      "text": "Is this a dog?",
+      "start_ms": 13115,
+      "end_ms": 14438
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Yes.",
+      "start_ms": 15238,
+      "end_ms": 15786
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "It's Biscuit.",
+      "start_ms": 16586,
+      "end_ms": 17545
+    },
+    {
+      "idx": 10,
+      "speaker": "Grandpa",
+      "text": "I love it.",
+      "start_ms": 18345,
+      "end_ms": 19345
+    }
+  ]
+}

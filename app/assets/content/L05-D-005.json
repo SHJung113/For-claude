@@ -1,0 +1,89 @@
+{
+  "id": "L05-D-005",
+  "level": 5,
+  "track": "daily",
+  "title": "The Lost Tooth",
+  "duration_ms": 24502,
+  "words": 44,
+  "measured_wpm": 108,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.614,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "Mom!",
+      "start_ms": 250,
+      "end_ms": 1050
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "My tooth fell out!",
+      "start_ms": 1600,
+      "end_ms": 3218
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "Let me see.",
+      "start_ms": 3768,
+      "end_ms": 5174
+    },
+    {
+      "idx": 3,
+      "speaker": "Mom",
+      "text": "Wow, there's a big gap.",
+      "start_ms": 5724,
+      "end_ms": 7833
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Does it look funny?",
+      "start_ms": 8383,
+      "end_ms": 9982
+    },
+    {
+      "idx": 5,
+      "speaker": "Mom",
+      "text": "It looks great.",
+      "start_ms": 10532,
+      "end_ms": 12024
+    },
+    {
+      "idx": 6,
+      "speaker": "Mom",
+      "text": "Put the tooth under your pillow.",
+      "start_ms": 12574,
+      "end_ms": 14958
+    },
+    {
+      "idx": 7,
+      "speaker": "Max",
+      "text": "Will the tooth fairy come?",
+      "start_ms": 15508,
+      "end_ms": 17453
+    },
+    {
+      "idx": 8,
+      "speaker": "Mom",
+      "text": "Maybe, if you go to sleep early.",
+      "start_ms": 18003,
+      "end_ms": 21100
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "I'm going to bed right now!",
+      "start_ms": 21650,
+      "end_ms": 23952
+    }
+  ]
+}

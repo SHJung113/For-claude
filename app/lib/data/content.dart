@@ -35,13 +35,17 @@ class Content {
   final Duration duration;
   final List<Sentence> sentences;
 
-  String get audioAsset => 'content/$id/audio.mp3';
+  String get audioAsset => 'content/$id.mp3';
 }
 
 /// Loads every bundled content.json listed in the asset manifest.
 Future<List<Content>> loadCatalog() async {
   final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
-  final paths = manifest.listAssets().where((p) => p.endsWith('/content.json')).toList()..sort();
+  final paths = manifest
+      .listAssets()
+      .where((p) => p.startsWith('assets/content/') && p.endsWith('.json'))
+      .toList()
+    ..sort();
   return [
     for (final p in paths)
       Content.fromJson(jsonDecode(await rootBundle.loadString(p)) as Map<String, dynamic>)

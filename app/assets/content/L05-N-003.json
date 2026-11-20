@@ -1,0 +1,81 @@
+{
+  "id": "L05-N-003",
+  "level": 5,
+  "track": "news",
+  "title": "Kids News: The Moon",
+  "duration_ms": 28485,
+  "words": 51,
+  "measured_wpm": 107,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.659,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Good evening.",
+      "start_ms": 250,
+      "end_ms": 1421
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "Welcome to Kids News.",
+      "start_ms": 1971,
+      "end_ms": 4115
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "Look up at the sky tonight.",
+      "start_ms": 4665,
+      "end_ms": 6848
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "Can you see the moon?",
+      "start_ms": 7398,
+      "end_ms": 8930
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "The moon doesn't make its own light.",
+      "start_ms": 9480,
+      "end_ms": 12634
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "It shines because the sun lights it up.",
+      "start_ms": 13184,
+      "end_ms": 16575
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "The moon looks different every night.",
+      "start_ms": 17125,
+      "end_ms": 19666
+    },
+    {
+      "idx": 7,
+      "speaker": "Anchor",
+      "text": "Sometimes it's round, and sometimes it's thin.",
+      "start_ms": 20216,
+      "end_ms": 24184
+    },
+    {
+      "idx": 8,
+      "speaker": "Anchor",
+      "text": "Good night, and happy moon watching!",
+      "start_ms": 24734,
+      "end_ms": 27935
+    }
+  ]
+}

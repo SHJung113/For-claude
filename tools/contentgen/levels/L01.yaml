@@ -1,0 +1,116 @@
+level: 1
+target_wpm: 75
+pause_ms: 900
+contents:
+  - id: L01-D-001
+    track: daily
+    title: "Max Says Hello"
+    lines:
+      - [Mom, "Good morning, Max."]
+      - [Max, "Good morning, Mom."]
+      - [Mom, "How are you?"]
+      - [Max, "I am happy."]
+      - [Mom, "Look! It is a red ball."]
+      - [Max, "A red ball!"]
+      - [Mom, "One, two, three."]
+      - [Max, "Catch!"]
+      - [Mom, "Good job, Max."]
+      - [Max, "Thank you, Mom."]
+  - id: L01-D-002
+    track: daily
+    title: "My Family"
+    lines:
+      - [Max, "This is my mom."]
+      - [Max, "This is my dad."]
+      - [Max, "This is Lily."]
+      - [Max, "Lily is my sister."]
+      - [Max, "This is Biscuit."]
+      - [Max, "Biscuit is a dog."]
+      - [Max, "I love my family."]
+  - id: L01-D-003
+    track: daily
+    title: "Colors"
+    lines:
+      - [Mom, "What color is it?"]
+      - [Max, "It is blue."]
+      - [Mom, "What color is this?"]
+      - [Max, "It is yellow."]
+      - [Mom, "Is it green?"]
+      - [Max, "No. It is red."]
+      - [Mom, "Good job!"]
+  - id: L01-D-004
+    track: daily
+    title: "Snack Time"
+    lines:
+      - [Max, "I am hungry."]
+      - [Mom, "Here is an apple."]
+      - [Max, "Thank you."]
+      - [Mom, "Do you want milk?"]
+      - [Max, "Yes, please."]
+      - [Mom, "Here you go."]
+      - [Max, "Yum!"]
+  - id: L01-D-005
+    track: daily
+    title: "Count with Me"
+    lines:
+      - [Dad, "Count with me, Max."]
+      - [Dad, "One, two, three."]
+      - [Max, "Four, five, six."]
+      - [Dad, "Seven, eight."]
+      - [Max, "Nine, ten!"]
+      - [Dad, "Great counting!"]
+  - id: L01-D-006
+    track: daily
+    title: "Bath Time"
+    lines:
+      - [Mom, "It is bath time."]
+      - [Max, "Is the water hot?"]
+      - [Mom, "It is warm."]
+      - [Max, "I see bubbles!"]
+      - [Mom, "Wash your hands."]
+      - [Max, "My hands are clean."]
+      - [Mom, "Now wash your feet."]
+  - id: L01-D-007
+    track: daily
+    title: "Good Night"
+    lines:
+      - [Dad, "It is time for bed."]
+      - [Max, "I am not tired."]
+      - [Dad, "Close your eyes."]
+      - [Max, "Read a book, please."]
+      - [Dad, "One book."]
+      - [Max, "Thank you, Dad."]
+      - [Dad, "Good night, Max."]
+      - [Max, "Good night."]
+  - id: L01-N-001
+    track: news
+    title: "Today Is Monday"
+    lines:
+      - [Anchor, "Good morning!"]
+      - [Anchor, "Today is Monday."]
+      - [Anchor, "It is sunny."]
+      - [Anchor, "It is warm."]
+      - [Anchor, "Have a good day!"]
+  - id: L01-N-002
+    track: news
+    title: "Rainy Day"
+    lines:
+      - [Anchor, "Hello, everyone!"]
+      - [Anchor, "Today is Tuesday."]
+      - [Anchor, "It is rainy."]
+      - [Anchor, "It is cold."]
+      - [Anchor, "Take an umbrella."]
+      - [Anchor, "Wear your boots."]
+      - [Anchor, "See you tomorrow!"]
+  - id: L01-N-003
+    track: news
+    title: "Snow Day"
+    lines:
+      - [Anchor, "Good morning!"]
+      - [Anchor, "Today is Friday."]
+      - [Anchor, "Look outside."]
+      - [Anchor, "It is snowing!"]
+      - [Anchor, "The snow is white."]
+      - [Anchor, "Wear a hat."]
+      - [Anchor, "Wear your gloves."]
+      - [Anchor, "Have fun!"]

@@ -1,0 +1,74 @@
+{
+  "id": "L05-N-001",
+  "level": 5,
+  "track": "news",
+  "title": "Kids News: How Bees Help",
+  "duration_ms": 28978,
+  "words": 50,
+  "measured_wpm": 104,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.663,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Welcome to Kids News.",
+      "start_ms": 250,
+      "end_ms": 2393
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "Today, we're talking about bees.",
+      "start_ms": 2943,
+      "end_ms": 5860
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "Bees fly from flower to flower.",
+      "start_ms": 6410,
+      "end_ms": 9013
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "They drink nectar, a sweet juice inside flowers.",
+      "start_ms": 9563,
+      "end_ms": 14212
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "They also carry pollen.",
+      "start_ms": 14762,
+      "end_ms": 16614
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "Pollen helps plants make fruit and seeds.",
+      "start_ms": 17164,
+      "end_ms": 20549
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "Without bees, we would have fewer apples and berries.",
+      "start_ms": 21099,
+      "end_ms": 25657
+    },
+    {
+      "idx": 7,
+      "speaker": "Anchor",
+      "text": "So say thank you to the bees!",
+      "start_ms": 26207,
+      "end_ms": 28428
+    }
+  ]
+}

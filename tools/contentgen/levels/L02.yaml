@@ -1,0 +1,116 @@
+level: 2
+target_wpm: 85
+pause_ms: 800
+contents:
+  - id: L02-D-001
+    track: daily
+    title: "At the Park"
+    lines:
+      - [Max, "Mom, look! It's a swing."]
+      - [Mom, "Do you want to swing?"]
+      - [Max, "Yes! Push me, please."]
+      - [Mom, "Hold on tight."]
+      - [Max, "I'm so high!"]
+      - [Mom, "Not too high."]
+      - [Max, "Now I want the slide."]
+      - [Mom, "Okay. Be careful."]
+  - id: L02-D-002
+    track: daily
+    title: "Biscuit the Dog"
+    lines:
+      - [Max, "Biscuit, come here!"]
+      - [Max, "Sit, Biscuit. Good boy!"]
+      - [Max, "Do you want a ball?"]
+      - [Max, "Go get it!"]
+      - [Max, "Biscuit runs fast."]
+      - [Max, "He's a happy dog."]
+      - [Max, "I'm happy too."]
+  - id: L02-D-003
+    track: daily
+    title: "Lily Is Crying"
+    lines:
+      - [Max, "Mom, Lily is crying."]
+      - [Mom, "She's hungry."]
+      - [Max, "Can I help?"]
+      - [Mom, "Get her bottle, please."]
+      - [Max, "Here it is."]
+      - [Mom, "Thank you, Max."]
+      - [Max, "Look! She's smiling now."]
+  - id: L02-D-004
+    track: daily
+    title: "Getting Dressed"
+    lines:
+      - [Dad, "It's cold today."]
+      - [Max, "I want my red shirt."]
+      - [Dad, "Put on your jacket too."]
+      - [Max, "Where are my shoes?"]
+      - [Dad, "They're by the door."]
+      - [Max, "I'm ready!"]
+      - [Dad, "Good job. Let's go."]
+  - id: L02-D-005
+    track: daily
+    title: "The Toy Box"
+    lines:
+      - [Max, "This is my toy box."]
+      - [Max, "I have a big truck."]
+      - [Max, "I have a small car."]
+      - [Max, "This is my teddy bear."]
+      - [Max, "His name is Mr. Bear."]
+      - [Max, "He's soft."]
+      - [Max, "It's my favorite toy."]
+  - id: L02-D-006
+    track: daily
+    title: "Grandpa's Visit"
+    lines:
+      - [Grandpa, "Hello, Max!"]
+      - [Max, "Grandpa! You're here!"]
+      - [Grandpa, "I'm here. Give me a hug."]
+      - [Max, "I made a picture for you."]
+      - [Grandpa, "It's beautiful. Is this a dog?"]
+      - [Max, "Yes. It's Biscuit."]
+      - [Grandpa, "I love it."]
+  - id: L02-D-007
+    track: daily
+    title: "Brushing Teeth"
+    lines:
+      - [Mom, "Time to brush your teeth."]
+      - [Max, "I can do it."]
+      - [Mom, "Up and down."]
+      - [Max, "Up and down."]
+      - [Mom, "Now spit."]
+      - [Max, "My teeth are clean!"]
+      - [Mom, "Let me see. Nice and white!"]
+  - id: L02-N-001
+    track: news
+    title: "Class News: Show and Tell"
+    lines:
+      - [Ms. Park, "Good morning, class!"]
+      - [Ms. Park, "It's show and tell day."]
+      - [Ms. Park, "Mia has a shell."]
+      - [Ms. Park, "It's from the beach."]
+      - [Ms. Park, "Sam has a toy robot."]
+      - [Ms. Park, "It can walk."]
+      - [Ms. Park, "Max has a photo of his dog."]
+      - [Ms. Park, "Thank you, everyone!"]
+  - id: L02-N-002
+    track: news
+    title: "Weather: Windy Day"
+    lines:
+      - [Anchor, "Hello, friends!"]
+      - [Anchor, "It's Wednesday."]
+      - [Anchor, "It's windy today."]
+      - [Anchor, "The trees are moving."]
+      - [Anchor, "Hold your hat!"]
+      - [Anchor, "It's a good day for a kite."]
+      - [Anchor, "Have fun outside!"]
+  - id: L02-N-003
+    track: news
+    title: "Class News: New Fish"
+    lines:
+      - [Ms. Park, "Good news, class!"]
+      - [Ms. Park, "We have a new fish."]
+      - [Ms. Park, "It's orange."]
+      - [Ms. Park, "It's very small."]
+      - [Ms. Park, "Its name is Bubbles."]
+      - [Ms. Park, "Bubbles eats in the morning."]
+      - [Ms. Park, "Please say hello to Bubbles!"]

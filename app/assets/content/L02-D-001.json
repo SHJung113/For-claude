@@ -1,0 +1,96 @@
+{
+  "id": "L02-D-001",
+  "level": 2,
+  "track": "daily",
+  "title": "At the Park",
+  "duration_ms": 21266,
+  "words": 31,
+  "measured_wpm": 87,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.719,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "Mom, look!",
+      "start_ms": 250,
+      "end_ms": 1198
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "It's a swing.",
+      "start_ms": 1998,
+      "end_ms": 3024
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "Do you want to swing?",
+      "start_ms": 3824,
+      "end_ms": 5153
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Yes!",
+      "start_ms": 5953,
+      "end_ms": 6589
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Push me, please.",
+      "start_ms": 7389,
+      "end_ms": 8602
+    },
+    {
+      "idx": 5,
+      "speaker": "Mom",
+      "text": "Hold on tight.",
+      "start_ms": 9402,
+      "end_ms": 10707
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "I'm so high!",
+      "start_ms": 11507,
+      "end_ms": 12626
+    },
+    {
+      "idx": 7,
+      "speaker": "Mom",
+      "text": "Not too high.",
+      "start_ms": 13426,
+      "end_ms": 14674
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Now I want the slide.",
+      "start_ms": 15474,
+      "end_ms": 16952
+    },
+    {
+      "idx": 9,
+      "speaker": "Mom",
+      "text": "Okay.",
+      "start_ms": 17752,
+      "end_ms": 18599
+    },
+    {
+      "idx": 10,
+      "speaker": "Mom",
+      "text": "Be careful.",
+      "start_ms": 19399,
+      "end_ms": 20466
+    }
+  ]
+}

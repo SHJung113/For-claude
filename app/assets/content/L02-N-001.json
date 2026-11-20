@@ -1,0 +1,74 @@
+{
+  "id": "L02-N-001",
+  "level": 2,
+  "track": "news",
+  "title": "Class News: Show and Tell",
+  "duration_ms": 23261,
+  "words": 34,
+  "measured_wpm": 88,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.586,
+    "voices": {
+      "Ms. Park": "af_sarah"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Ms. Park",
+      "text": "Good morning, class!",
+      "start_ms": 250,
+      "end_ms": 2293
+    },
+    {
+      "idx": 1,
+      "speaker": "Ms. Park",
+      "text": "It's show and tell day.",
+      "start_ms": 3093,
+      "end_ms": 5277
+    },
+    {
+      "idx": 2,
+      "speaker": "Ms. Park",
+      "text": "Mia has a shell.",
+      "start_ms": 6077,
+      "end_ms": 7811
+    },
+    {
+      "idx": 3,
+      "speaker": "Ms. Park",
+      "text": "It's from the beach.",
+      "start_ms": 8611,
+      "end_ms": 10362
+    },
+    {
+      "idx": 4,
+      "speaker": "Ms. Park",
+      "text": "Sam has a toy robot.",
+      "start_ms": 11162,
+      "end_ms": 13625
+    },
+    {
+      "idx": 5,
+      "speaker": "Ms. Park",
+      "text": "It can walk.",
+      "start_ms": 14425,
+      "end_ms": 15947
+    },
+    {
+      "idx": 6,
+      "speaker": "Ms. Park",
+      "text": "Max has a photo of his dog.",
+      "start_ms": 16747,
+      "end_ms": 19613
+    },
+    {
+      "idx": 7,
+      "speaker": "Ms. Park",
+      "text": "Thank you, everyone!",
+      "start_ms": 20413,
+      "end_ms": 22461
+    }
+  ]
+}

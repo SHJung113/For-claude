@@ -1,0 +1,75 @@
+{
+  "id": "L02-D-003",
+  "level": 2,
+  "track": "daily",
+  "title": "Lily Is Crying",
+  "duration_ms": 16308,
+  "words": 23,
+  "measured_wpm": 85,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.729,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "Mom, Lily is crying.",
+      "start_ms": 250,
+      "end_ms": 1837
+    },
+    {
+      "idx": 1,
+      "speaker": "Mom",
+      "text": "She's hungry.",
+      "start_ms": 2637,
+      "end_ms": 3781
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "Can I help?",
+      "start_ms": 4581,
+      "end_ms": 5574
+    },
+    {
+      "idx": 3,
+      "speaker": "Mom",
+      "text": "Get her bottle, please.",
+      "start_ms": 6374,
+      "end_ms": 8066
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Here it is.",
+      "start_ms": 8866,
+      "end_ms": 9811
+    },
+    {
+      "idx": 5,
+      "speaker": "Mom",
+      "text": "Thank you, Max.",
+      "start_ms": 10611,
+      "end_ms": 11910
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "Look!",
+      "start_ms": 12710,
+      "end_ms": 13362
+    },
+    {
+      "idx": 7,
+      "speaker": "Max",
+      "text": "She's smiling now.",
+      "start_ms": 14162,
+      "end_ms": 15508
+    }
+  ]
+}

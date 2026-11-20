@@ -1,0 +1,67 @@
+{
+  "id": "L02-N-003",
+  "level": 2,
+  "track": "news",
+  "title": "Class News: New Fish",
+  "duration_ms": 18669,
+  "words": 27,
+  "measured_wpm": 87,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.656,
+    "voices": {
+      "Ms. Park": "af_sarah"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Ms. Park",
+      "text": "Good news, class!",
+      "start_ms": 250,
+      "end_ms": 1921
+    },
+    {
+      "idx": 1,
+      "speaker": "Ms. Park",
+      "text": "We have a new fish.",
+      "start_ms": 2721,
+      "end_ms": 4450
+    },
+    {
+      "idx": 2,
+      "speaker": "Ms. Park",
+      "text": "It's orange.",
+      "start_ms": 5250,
+      "end_ms": 6566
+    },
+    {
+      "idx": 3,
+      "speaker": "Ms. Park",
+      "text": "It's very small.",
+      "start_ms": 7366,
+      "end_ms": 8990
+    },
+    {
+      "idx": 4,
+      "speaker": "Ms. Park",
+      "text": "Its name is Bubbles.",
+      "start_ms": 9790,
+      "end_ms": 11710
+    },
+    {
+      "idx": 5,
+      "speaker": "Ms. Park",
+      "text": "Bubbles eats in the morning.",
+      "start_ms": 12510,
+      "end_ms": 14802
+    },
+    {
+      "idx": 6,
+      "speaker": "Ms. Park",
+      "text": "Please say hello to Bubbles!",
+      "start_ms": 15602,
+      "end_ms": 17869
+    }
+  ]
+}

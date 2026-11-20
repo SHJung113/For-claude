@@ -1,11 +1,15 @@
-"""Build a content bundle (audio.mp3 + content.json) from a script YAML.
+"""Build content bundles (<id>.mp3 + <id>.json) from script YAML files.
 
-Usage: python make_content.py <script.yaml> <out_dir> --model-dir <dir>
-  out_dir is normally app/assets/content/<id> (also add it to app/pubspec.yaml assets).
+Usage:
+  python make_content.py levels/L01.yaml [more.yaml ...] --out ../../app/assets/content --model-dir <dir>
+
+A YAML file is either a level file (level, target_wpm, pause_ms, contents: [...])
+or a single script (id, level, target_wpm, pause_ms, lines, ...).
+Voices come from characters.yaml, overridable per script with `speakers:`.
+Existing bundles are skipped unless --force.
 
 Each sentence is synthesized separately, so sentence timestamps are exact.
-Speech speed is tuned iteratively until the measured wpm of the whole clip
-is close to the level's target.
+Speech speed is tuned until the measured wpm is close to the level target.
 """
 import argparse, json, re, subprocess, sys, tempfile
 from pathlib import Path
@@ -51,29 +55,27 @@ def build(k, spec, speed):
     return audio, sentences, words, wpm
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("script"); ap.add_argument("out_dir")
-    ap.add_argument("--model-dir", required=True)
-    a = ap.parse_args()
-    spec = yaml.safe_load(Path(a.script).read_text())
-    md = Path(a.model_dir)
-    k = Kokoro(str(md / "kokoro-v1.0.onnx"), str(md / "voices-v1.0.bin"))
+def scripts_in(path):
+    d = yaml.safe_load(Path(path).read_text())
+    if "contents" not in d:
+        yield d
+        return
+    for c in d["contents"]:
+        yield {"level": d["level"], "target_wpm": d["target_wpm"], "pause_ms": d["pause_ms"], **c}
 
+
+def make(k, spec, out):
     speed = 1.0
     for _ in range(5):
         audio, sentences, words, wpm = build(k, spec, speed)
         err = spec["target_wpm"] / wpm
-        print(f"  speed={speed:.2f} wpm={wpm:.0f} target={spec['target_wpm']}", file=sys.stderr)
         if abs(err - 1) < 0.04:
             break
         speed = float(np.clip(speed * err, 0.5, 2.0))
-
-    out = Path(a.out_dir); out.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(suffix=".wav") as tmp:
         sf.write(tmp.name, audio, SR)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", tmp.name,
-                        "-ac", "1", "-b:a", "64k", str(out / "audio.mp3")], check=True)
+                        "-ac", "1", "-b:a", "64k", str(out / f"{spec['id']}.mp3")], check=True)
     meta = {k_: spec[k_] for k_ in ("id", "level", "track", "title")}
     meta.update({
         "duration_ms": round(len(audio) * 1000 / SR), "words": words,
@@ -81,8 +83,30 @@ def main():
                                              "voices": spec["speakers"]},
         "sentences": sentences,
     })
-    (out / "content.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False))
-    print(f"{spec['id']}: {meta['duration_ms']/1000:.1f}s, {words} words, {wpm:.0f} wpm (speed {speed:.2f})")
+    (out / f"{spec['id']}.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False))
+    print(f"{spec['id']}: {meta['duration_ms']/1000:.1f}s, {words} words, "
+          f"{wpm:.0f}/{spec['target_wpm']} wpm (speed {speed:.2f})", flush=True)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("files", nargs="+")
+    ap.add_argument("--out", required=True)
+    ap.add_argument("--model-dir", required=True)
+    ap.add_argument("--force", action="store_true")
+    a = ap.parse_args()
+    here = Path(__file__).parent
+    chars = yaml.safe_load((here / "characters.yaml").read_text())
+    md = Path(a.model_dir)
+    k = Kokoro(str(md / "kokoro-v1.0.onnx"), str(md / "voices-v1.0.bin"))
+    out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
+    for f in a.files:
+        for spec in scripts_in(f):
+            if not a.force and (out / f"{spec['id']}.json").exists():
+                continue
+            used = {sp for sp, _ in spec["lines"]}
+            spec["speakers"] = {sp: (spec.get("speakers") or {}).get(sp) or chars[sp] for sp in used}
+            make(k, spec, out)
 
 
 if __name__ == "__main__":

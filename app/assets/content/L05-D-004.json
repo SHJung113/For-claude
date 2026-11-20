@@ -1,0 +1,97 @@
+{
+  "id": "L05-D-004",
+  "level": 5,
+  "track": "daily",
+  "title": "Soccer Practice",
+  "duration_ms": 23102,
+  "words": 39,
+  "measured_wpm": 101,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.772,
+    "voices": {
+      "Leo": "am_echo",
+      "Coach": "am_eric",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Coach",
+      "text": "Okay, team.",
+      "start_ms": 250,
+      "end_ms": 1653
+    },
+    {
+      "idx": 1,
+      "speaker": "Coach",
+      "text": "Line up!",
+      "start_ms": 2203,
+      "end_ms": 3101
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "Coach, can I be the goalie?",
+      "start_ms": 3651,
+      "end_ms": 5292
+    },
+    {
+      "idx": 3,
+      "speaker": "Coach",
+      "text": "Not today.",
+      "start_ms": 5842,
+      "end_ms": 6981
+    },
+    {
+      "idx": 4,
+      "speaker": "Coach",
+      "text": "Today we're practicing kicks.",
+      "start_ms": 7531,
+      "end_ms": 9718
+    },
+    {
+      "idx": 5,
+      "speaker": "Leo",
+      "text": "Watch this, Max!",
+      "start_ms": 10268,
+      "end_ms": 12084
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "Nice kick, Leo!",
+      "start_ms": 12634,
+      "end_ms": 13928
+    },
+    {
+      "idx": 7,
+      "speaker": "Coach",
+      "text": "Good.",
+      "start_ms": 14478,
+      "end_ms": 15124
+    },
+    {
+      "idx": 8,
+      "speaker": "Coach",
+      "text": "Now pass the ball and run.",
+      "start_ms": 15674,
+      "end_ms": 17787
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "I'm tired already.",
+      "start_ms": 18337,
+      "end_ms": 19635
+    },
+    {
+      "idx": 10,
+      "speaker": "Coach",
+      "text": "Drink some water and then come back.",
+      "start_ms": 20185,
+      "end_ms": 22552
+    }
+  ]
+}

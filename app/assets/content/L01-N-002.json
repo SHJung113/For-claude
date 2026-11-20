@@ -1,0 +1,67 @@
+{
+  "id": "L01-N-002",
+  "level": 1,
+  "track": "news",
+  "title": "Rainy Day",
+  "duration_ms": 15650,
+  "words": 20,
+  "measured_wpm": 77,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.725,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Hello, everyone!",
+      "start_ms": 250,
+      "end_ms": 1671
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "Today is Tuesday.",
+      "start_ms": 2571,
+      "end_ms": 4102
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "It is rainy.",
+      "start_ms": 5002,
+      "end_ms": 6158
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "It is cold.",
+      "start_ms": 7058,
+      "end_ms": 8229
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "Take an umbrella.",
+      "start_ms": 9129,
+      "end_ms": 10470
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "Wear your boots.",
+      "start_ms": 11370,
+      "end_ms": 12597
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "See you tomorrow!",
+      "start_ms": 13497,
+      "end_ms": 14750
+    }
+  ]
+}

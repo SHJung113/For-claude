@@ -1,0 +1,96 @@
+{
+  "id": "L05-D-002",
+  "level": 5,
+  "track": "daily",
+  "title": "Homework Time",
+  "duration_ms": 23773,
+  "words": 43,
+  "measured_wpm": 109,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.755,
+    "voices": {
+      "Dad": "am_michael",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Dad",
+      "text": "Did you finish your homework?",
+      "start_ms": 250,
+      "end_ms": 2310
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Not yet.",
+      "start_ms": 2860,
+      "end_ms": 3700
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "Math is hard.",
+      "start_ms": 4250,
+      "end_ms": 5396
+    },
+    {
+      "idx": 3,
+      "speaker": "Dad",
+      "text": "Let me see.",
+      "start_ms": 5946,
+      "end_ms": 7182
+    },
+    {
+      "idx": 4,
+      "speaker": "Dad",
+      "text": "What's eight and five?",
+      "start_ms": 7732,
+      "end_ms": 9468
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "Um, thirteen?",
+      "start_ms": 10018,
+      "end_ms": 11163
+    },
+    {
+      "idx": 6,
+      "speaker": "Dad",
+      "text": "That's right!",
+      "start_ms": 11713,
+      "end_ms": 12794
+    },
+    {
+      "idx": 7,
+      "speaker": "Dad",
+      "text": "See, you can do it.",
+      "start_ms": 13344,
+      "end_ms": 14810
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Can I play after this page?",
+      "start_ms": 15360,
+      "end_ms": 17296
+    },
+    {
+      "idx": 9,
+      "speaker": "Dad",
+      "text": "Finish this page and then read for ten minutes.",
+      "start_ms": 17846,
+      "end_ms": 21697
+    },
+    {
+      "idx": 10,
+      "speaker": "Max",
+      "text": "Okay, deal.",
+      "start_ms": 22247,
+      "end_ms": 23223
+    }
+  ]
+}

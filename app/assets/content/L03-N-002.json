@@ -1,0 +1,67 @@
+{
+  "id": "L03-N-002",
+  "level": 3,
+  "track": "news",
+  "title": "Animal News: Penguins",
+  "duration_ms": 20771,
+  "words": 34,
+  "measured_wpm": 98,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.696,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Today's animal news is about penguins.",
+      "start_ms": 250,
+      "end_ms": 3411
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "Penguins are birds.",
+      "start_ms": 4111,
+      "end_ms": 5690
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "But they can't fly.",
+      "start_ms": 6390,
+      "end_ms": 7878
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "They're very good swimmers.",
+      "start_ms": 8578,
+      "end_ms": 10397
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "They eat fish.",
+      "start_ms": 11097,
+      "end_ms": 12373
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "Some penguins live in very cold places.",
+      "start_ms": 13073,
+      "end_ms": 16536
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "They stand close together to stay warm.",
+      "start_ms": 17236,
+      "end_ms": 20071
+    }
+  ]
+}

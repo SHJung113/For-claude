@@ -1,0 +1,89 @@
+{
+  "id": "L04-D-007",
+  "level": 4,
+  "track": "daily",
+  "title": "Lily's Tower",
+  "duration_ms": 19957,
+  "words": 34,
+  "measured_wpm": 102,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.739,
+    "voices": {
+      "Lily": "af_nova",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Lily",
+      "text": "Max, look at my tower.",
+      "start_ms": 250,
+      "end_ms": 2385
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Wow, it's really tall.",
+      "start_ms": 2985,
+      "end_ms": 4373
+    },
+    {
+      "idx": 2,
+      "speaker": "Lily",
+      "text": "Don't touch it!",
+      "start_ms": 4973,
+      "end_ms": 6499
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "I won't touch it.",
+      "start_ms": 7099,
+      "end_ms": 8288
+    },
+    {
+      "idx": 4,
+      "speaker": "Lily",
+      "text": "Biscuit, no!",
+      "start_ms": 8888,
+      "end_ms": 10458
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "Oh no.",
+      "start_ms": 11058,
+      "end_ms": 11856
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "He knocked it down.",
+      "start_ms": 12456,
+      "end_ms": 13757
+    },
+    {
+      "idx": 7,
+      "speaker": "Lily",
+      "text": "Bad dog!",
+      "start_ms": 14357,
+      "end_ms": 15613
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Don't cry.",
+      "start_ms": 16213,
+      "end_ms": 17101
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "I'll help you build it again.",
+      "start_ms": 17701,
+      "end_ms": 19357
+    }
+  ]
+}

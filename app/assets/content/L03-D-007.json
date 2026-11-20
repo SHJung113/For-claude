@@ -1,0 +1,76 @@
+{
+  "id": "L03-D-007",
+  "level": 3,
+  "track": "daily",
+  "title": "How Do You Feel?",
+  "duration_ms": 18752,
+  "words": 30,
+  "measured_wpm": 96,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.63,
+    "voices": {
+      "Mia": "af_kore",
+      "Ms. Park": "af_sarah",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Ms. Park",
+      "text": "How do you feel today?",
+      "start_ms": 250,
+      "end_ms": 2275
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "I feel happy.",
+      "start_ms": 2975,
+      "end_ms": 4311
+    },
+    {
+      "idx": 2,
+      "speaker": "Ms. Park",
+      "text": "Why are you happy?",
+      "start_ms": 5011,
+      "end_ms": 6707
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "My grandpa is here.",
+      "start_ms": 7407,
+      "end_ms": 9205
+    },
+    {
+      "idx": 4,
+      "speaker": "Mia",
+      "text": "I feel sleepy.",
+      "start_ms": 9905,
+      "end_ms": 11447
+    },
+    {
+      "idx": 5,
+      "speaker": "Ms. Park",
+      "text": "Did you go to bed late?",
+      "start_ms": 12147,
+      "end_ms": 14347
+    },
+    {
+      "idx": 6,
+      "speaker": "Mia",
+      "text": "Yes.",
+      "start_ms": 15047,
+      "end_ms": 15836
+    },
+    {
+      "idx": 7,
+      "speaker": "Mia",
+      "text": "I watched the moon.",
+      "start_ms": 16536,
+      "end_ms": 18052
+    }
+  ]
+}

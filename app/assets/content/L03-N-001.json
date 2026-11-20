@@ -1,0 +1,67 @@
+{
+  "id": "L03-N-001",
+  "level": 3,
+  "track": "news",
+  "title": "Animal News: Baby Elephant",
+  "duration_ms": 22575,
+  "words": 36,
+  "measured_wpm": 96,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.601,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Good morning, everyone!",
+      "start_ms": 250,
+      "end_ms": 2599
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "Here's some animal news.",
+      "start_ms": 3299,
+      "end_ms": 5550
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "A baby elephant was born at the zoo.",
+      "start_ms": 6250,
+      "end_ms": 9681
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "She's very big.",
+      "start_ms": 10381,
+      "end_ms": 11990
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "She's already taller than a dog!",
+      "start_ms": 12690,
+      "end_ms": 15465
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "She drinks lots of milk.",
+      "start_ms": 16165,
+      "end_ms": 18407
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "Her mom is always next to her.",
+      "start_ms": 19107,
+      "end_ms": 21875
+    }
+  ]
+}

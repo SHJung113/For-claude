@@ -1,0 +1,75 @@
+{
+  "id": "L01-D-003",
+  "level": 1,
+  "track": "daily",
+  "title": "Colors",
+  "duration_ms": 18067,
+  "words": 23,
+  "measured_wpm": 76,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.611,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Mom",
+      "text": "What color is it?",
+      "start_ms": 250,
+      "end_ms": 1938
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "It is blue.",
+      "start_ms": 2838,
+      "end_ms": 4159
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "What color is this?",
+      "start_ms": 5059,
+      "end_ms": 6911
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "It is yellow.",
+      "start_ms": 7811,
+      "end_ms": 9059
+    },
+    {
+      "idx": 4,
+      "speaker": "Mom",
+      "text": "Is it green?",
+      "start_ms": 9959,
+      "end_ms": 11337
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "No.",
+      "start_ms": 12237,
+      "end_ms": 12969
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "It is red.",
+      "start_ms": 13869,
+      "end_ms": 14965
+    },
+    {
+      "idx": 7,
+      "speaker": "Mom",
+      "text": "Good job!",
+      "start_ms": 15865,
+      "end_ms": 17167
+    }
+  ]
+}

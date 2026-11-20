@@ -1,0 +1,122 @@
+level: 5
+target_wpm: 105
+pause_ms: 550
+contents:
+  - id: L05-D-001
+    track: daily
+    title: "At the Supermarket"
+    lines:
+      - [Mom, "Can you get the milk and eggs?"]
+      - [Max, "Which milk do we need?"]
+      - [Mom, "The big one with the blue cap."]
+      - [Max, "Got it. Can we get cereal too?"]
+      - [Mom, "Only if it's not too sweet."]
+      - [Max, "How about this one?"]
+      - [Mom, "Let me see. Okay, that's fine."]
+      - [Max, "Can I push the cart now?"]
+  - id: L05-D-002
+    track: daily
+    title: "Homework Time"
+    lines:
+      - [Dad, "Did you finish your homework?"]
+      - [Max, "Not yet. Math is hard."]
+      - [Dad, "Let me see. What's eight and five?"]
+      - [Max, "Um, thirteen?"]
+      - [Dad, "That's right! See, you can do it."]
+      - [Max, "Can I play after this page?"]
+      - [Dad, "Finish this page and then read for ten minutes."]
+      - [Max, "Okay, deal."]
+  - id: L05-D-003
+    track: daily
+    title: "A New Goldfish"
+    lines:
+      - [Lily, "Mom, can we get a fish?"]
+      - [Mom, "A fish needs a lot of care."]
+      - [Lily, "I'll feed it every day."]
+      - [Max, "And I'll clean the tank."]
+      - [Mom, "Do you promise?"]
+      - [Lily, "We promise!"]
+      - [Mom, "Okay. Let's go to the pet store on Saturday."]
+      - [Lily, "Yay! I'll name it Goldie."]
+  - id: L05-D-004
+    track: daily
+    title: "Soccer Practice"
+    lines:
+      - [Coach, "Okay, team. Line up!"]
+      - [Max, "Coach, can I be the goalie?"]
+      - [Coach, "Not today. Today we're practicing kicks."]
+      - [Leo, "Watch this, Max!"]
+      - [Max, "Nice kick, Leo!"]
+      - [Coach, "Good. Now pass the ball and run."]
+      - [Max, "I'm tired already."]
+      - [Coach, "Drink some water and then come back."]
+  - id: L05-D-005
+    track: daily
+    title: "The Lost Tooth"
+    lines:
+      - [Max, "Mom! My tooth fell out!"]
+      - [Mom, "Let me see. Wow, there's a big gap."]
+      - [Max, "Does it look funny?"]
+      - [Mom, "It looks great. Put the tooth under your pillow."]
+      - [Max, "Will the tooth fairy come?"]
+      - [Mom, "Maybe, if you go to sleep early."]
+      - [Max, "I'm going to bed right now!"]
+  - id: L05-D-006
+    track: daily
+    title: "Making Pancakes"
+    lines:
+      - [Dad, "Who wants pancakes?"]
+      - [Lily, "Me! Can I help?"]
+      - [Dad, "Sure. Crack the eggs into the bowl."]
+      - [Lily, "Oops. Some shell fell in."]
+      - [Dad, "That's okay. I'll take it out."]
+      - [Max, "Can I flip them?"]
+      - [Dad, "Be careful. The pan is hot."]
+      - [Max, "Look, a perfect pancake!"]
+  - id: L05-D-007
+    track: daily
+    title: "The Snowman"
+    lines:
+      - [Max, "Lily, let's make a snowman."]
+      - [Lily, "Okay! I'll make the head."]
+      - [Max, "I'll roll the big ball for the body."]
+      - [Lily, "We need a nose."]
+      - [Max, "Let's use a carrot."]
+      - [Lily, "And two rocks for the eyes."]
+      - [Max, "He needs a hat and a scarf."]
+      - [Lily, "He looks just like Grandpa!"]
+  - id: L05-N-001
+    track: news
+    title: "Kids News: How Bees Help"
+    lines:
+      - [Anchor, "Welcome to Kids News."]
+      - [Anchor, "Today, we're talking about bees."]
+      - [Anchor, "Bees fly from flower to flower."]
+      - [Anchor, "They drink nectar, a sweet juice inside flowers."]
+      - [Anchor, "They also carry pollen."]
+      - [Anchor, "Pollen helps plants make fruit and seeds."]
+      - [Anchor, "Without bees, we would have fewer apples and berries."]
+      - [Anchor, "So say thank you to the bees!"]
+  - id: L05-N-002
+    track: news
+    title: "Kids News: Sea Turtles"
+    lines:
+      - [Anchor, "Hello again! This is Kids News."]
+      - [Anchor, "Sea turtles live in the ocean."]
+      - [Anchor, "But they lay their eggs on the beach."]
+      - [Anchor, "A mother turtle digs a hole in the sand."]
+      - [Anchor, "She leaves her eggs there."]
+      - [Anchor, "When the babies hatch, they crawl to the sea."]
+      - [Anchor, "Some beaches turn off bright lights at night to help them."]
+  - id: L05-N-003
+    track: news
+    title: "Kids News: The Moon"
+    lines:
+      - [Anchor, "Good evening. Welcome to Kids News."]
+      - [Anchor, "Look up at the sky tonight."]
+      - [Anchor, "Can you see the moon?"]
+      - [Anchor, "The moon doesn't make its own light."]
+      - [Anchor, "It shines because the sun lights it up."]
+      - [Anchor, "The moon looks different every night."]
+      - [Anchor, "Sometimes it's round, and sometimes it's thin."]
+      - [Anchor, "Good night, and happy moon watching!"]

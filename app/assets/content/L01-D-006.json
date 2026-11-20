@@ -1,0 +1,68 @@
+{
+  "id": "L01-D-006",
+  "level": 1,
+  "track": "daily",
+  "title": "Bath Time",
+  "duration_ms": 19894,
+  "words": 25,
+  "measured_wpm": 75,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.545,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Mom",
+      "text": "It is bath time.",
+      "start_ms": 250,
+      "end_ms": 2383
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Is the water hot?",
+      "start_ms": 3283,
+      "end_ms": 5105
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "It is warm.",
+      "start_ms": 6005,
+      "end_ms": 7630
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "I see bubbles!",
+      "start_ms": 8530,
+      "end_ms": 10219
+    },
+    {
+      "idx": 4,
+      "speaker": "Mom",
+      "text": "Wash your hands.",
+      "start_ms": 11119,
+      "end_ms": 13062
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "My hands are clean.",
+      "start_ms": 13962,
+      "end_ms": 15878
+    },
+    {
+      "idx": 6,
+      "speaker": "Mom",
+      "text": "Now wash your feet.",
+      "start_ms": 16778,
+      "end_ms": 18994
+    }
+  ]
+}

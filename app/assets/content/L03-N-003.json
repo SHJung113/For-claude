@@ -1,0 +1,67 @@
+{
+  "id": "L03-N-003",
+  "level": 3,
+  "track": "news",
+  "title": "Weather: Hot Summer Day",
+  "duration_ms": 17375,
+  "words": 28,
+  "measured_wpm": 97,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.623,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Good afternoon!",
+      "start_ms": 250,
+      "end_ms": 1766
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "It's very hot today.",
+      "start_ms": 2466,
+      "end_ms": 4521
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "Drink lots of water.",
+      "start_ms": 5221,
+      "end_ms": 7164
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "Wear a hat in the sun.",
+      "start_ms": 7864,
+      "end_ms": 9716
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "Stay in the shade.",
+      "start_ms": 10416,
+      "end_ms": 12023
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "The pool is open.",
+      "start_ms": 12723,
+      "end_ms": 14449
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "Have a cool day!",
+      "start_ms": 15149,
+      "end_ms": 16675
+    }
+  ]
+}

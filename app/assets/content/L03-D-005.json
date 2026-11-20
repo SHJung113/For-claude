@@ -1,0 +1,90 @@
+{
+  "id": "L03-D-005",
+  "level": 3,
+  "track": "daily",
+  "title": "At the Doctor",
+  "duration_ms": 22331,
+  "words": 36,
+  "measured_wpm": 97,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.688,
+    "voices": {
+      "Doctor": "am_eric",
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Doctor",
+      "text": "Hello, Max.",
+      "start_ms": 250,
+      "end_ms": 1643
+    },
+    {
+      "idx": 1,
+      "speaker": "Doctor",
+      "text": "How are you feeling?",
+      "start_ms": 2343,
+      "end_ms": 3990
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "My ear hurts.",
+      "start_ms": 4690,
+      "end_ms": 5884
+    },
+    {
+      "idx": 3,
+      "speaker": "Doctor",
+      "text": "Let me look inside.",
+      "start_ms": 6584,
+      "end_ms": 8454
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Will it hurt?",
+      "start_ms": 9154,
+      "end_ms": 10147
+    },
+    {
+      "idx": 5,
+      "speaker": "Doctor",
+      "text": "No, it won't hurt.",
+      "start_ms": 10847,
+      "end_ms": 12589
+    },
+    {
+      "idx": 6,
+      "speaker": "Doctor",
+      "text": "I see.",
+      "start_ms": 13289,
+      "end_ms": 14278
+    },
+    {
+      "idx": 7,
+      "speaker": "Doctor",
+      "text": "It's a little red.",
+      "start_ms": 14978,
+      "end_ms": 16535
+    },
+    {
+      "idx": 8,
+      "speaker": "Mom",
+      "text": "Is he okay?",
+      "start_ms": 17235,
+      "end_ms": 18503
+    },
+    {
+      "idx": 9,
+      "speaker": "Doctor",
+      "text": "He'll be fine in a few days.",
+      "start_ms": 19203,
+      "end_ms": 21631
+    }
+  ]
+}

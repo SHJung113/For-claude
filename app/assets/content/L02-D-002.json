@@ -1,0 +1,74 @@
+{
+  "id": "L02-D-002",
+  "level": 2,
+  "track": "daily",
+  "title": "Biscuit the Dog",
+  "duration_ms": 17041,
+  "words": 25,
+  "measured_wpm": 88,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.682,
+    "voices": {
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "Biscuit, come here!",
+      "start_ms": 250,
+      "end_ms": 1681
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Sit, Biscuit.",
+      "start_ms": 2481,
+      "end_ms": 3655
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "Good boy!",
+      "start_ms": 4455,
+      "end_ms": 5427
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Do you want a ball?",
+      "start_ms": 6227,
+      "end_ms": 7519
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Go get it!",
+      "start_ms": 8319,
+      "end_ms": 9360
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "Biscuit runs fast.",
+      "start_ms": 10160,
+      "end_ms": 11815
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "He's a happy dog.",
+      "start_ms": 12615,
+      "end_ms": 14047
+    },
+    {
+      "idx": 7,
+      "speaker": "Max",
+      "text": "I'm happy too.",
+      "start_ms": 14847,
+      "end_ms": 16241
+    }
+  ]
+}

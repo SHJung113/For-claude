@@ -1,0 +1,53 @@
+{
+  "id": "L01-N-001",
+  "level": 1,
+  "track": "news",
+  "title": "Today Is Monday",
+  "duration_ms": 11663,
+  "words": 15,
+  "measured_wpm": 77,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.631,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Good morning!",
+      "start_ms": 250,
+      "end_ms": 1498
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "Today is Monday.",
+      "start_ms": 2398,
+      "end_ms": 4052
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "It is sunny.",
+      "start_ms": 4952,
+      "end_ms": 6207
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "It is warm.",
+      "start_ms": 7107,
+      "end_ms": 8429
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "Have a good day!",
+      "start_ms": 9329,
+      "end_ms": 10763
+    }
+  ]
+}

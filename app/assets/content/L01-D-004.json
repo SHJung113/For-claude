@@ -1,0 +1,68 @@
+{
+  "id": "L01-D-004",
+  "level": 1,
+  "track": "daily",
+  "title": "Snack Time",
+  "duration_ms": 15045,
+  "words": 19,
+  "measured_wpm": 76,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.663,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "I am hungry.",
+      "start_ms": 250,
+      "end_ms": 1459
+    },
+    {
+      "idx": 1,
+      "speaker": "Mom",
+      "text": "Here is an apple.",
+      "start_ms": 2359,
+      "end_ms": 3920
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "Thank you.",
+      "start_ms": 4820,
+      "end_ms": 5849
+    },
+    {
+      "idx": 3,
+      "speaker": "Mom",
+      "text": "Do you want milk?",
+      "start_ms": 6749,
+      "end_ms": 8293
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Yes, please.",
+      "start_ms": 9193,
+      "end_ms": 10359
+    },
+    {
+      "idx": 5,
+      "speaker": "Mom",
+      "text": "Here you go.",
+      "start_ms": 11259,
+      "end_ms": 12515
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "Yum!",
+      "start_ms": 13415,
+      "end_ms": 14145
+    }
+  ]
+}

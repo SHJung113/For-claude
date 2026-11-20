@@ -1,0 +1,122 @@
+level: 4
+target_wpm: 100
+pause_ms: 600
+contents:
+  - id: L04-D-001
+    track: daily
+    title: "First Day of School"
+    lines:
+      - [Mom, "Are you ready for school?"]
+      - [Max, "I don't want to go."]
+      - [Mom, "Why not, honey?"]
+      - [Max, "I don't know anybody."]
+      - [Mom, "You'll make new friends."]
+      - [Max, "What if they don't like me?"]
+      - [Mom, "They'll like you. You're a good friend."]
+      - [Max, "Okay. Can you walk me to the door?"]
+  - id: L04-D-002
+    track: daily
+    title: "Lunch Trade"
+    lines:
+      - [Leo, "What's in your lunch box?"]
+      - [Max, "A turkey sandwich and an apple."]
+      - [Leo, "I have a peanut butter sandwich."]
+      - [Max, "Do you want to trade?"]
+      - [Leo, "Sure, but I want the apple too."]
+      - [Max, "No way! I can't give you everything."]
+      - [Leo, "Okay, just the sandwich then."]
+      - [Max, "Deal."]
+  - id: L04-D-003
+    track: daily
+    title: "The Lost Pencil"
+    lines:
+      - [Max, "Ms. Park, I can't find my pencil."]
+      - [Ms. Park, "Did you look in your desk?"]
+      - [Max, "Yes, but it isn't there."]
+      - [Ms. Park, "Check under the table."]
+      - [Max, "Oh, here it is!"]
+      - [Ms. Park, "Good. Now write your name at the top."]
+      - [Max, "Do I write it in big letters?"]
+      - [Ms. Park, "Yes, nice and big."]
+  - id: L04-D-004
+    track: daily
+    title: "Library Day"
+    lines:
+      - [Librarian, "Welcome to the library, class."]
+      - [Max, "Can I take two books?"]
+      - [Librarian, "Yes, you can take two."]
+      - [Max, "I want a book about trucks."]
+      - [Librarian, "They're on the bottom shelf."]
+      - [Max, "And one about space."]
+      - [Librarian, "Good choice. Bring them back next week."]
+  - id: L04-D-005
+    track: daily
+    title: "Rainy Recess"
+    lines:
+      - [Ms. Park, "We can't go outside today."]
+      - [Max, "Why not?"]
+      - [Ms. Park, "It's raining too hard."]
+      - [Leo, "Can we play a game?"]
+      - [Ms. Park, "Sure. You can play a board game."]
+      - [Max, "Let's play the animal game."]
+      - [Leo, "Okay, but I go first."]
+      - [Max, "Fine. Roll the dice."]
+  - id: L04-D-006
+    track: daily
+    title: "Learning to Ride"
+    lines:
+      - [Dad, "Do you want to ride your bike?"]
+      - [Max, "Yes, but don't let go!"]
+      - [Dad, "I'm holding on."]
+      - [Max, "Am I doing it?"]
+      - [Dad, "Yes! Keep pedaling."]
+      - [Max, "Dad, are you still holding on?"]
+      - [Dad, "No, you're doing it by yourself!"]
+      - [Max, "I can ride a bike!"]
+  - id: L04-D-007
+    track: daily
+    title: "Lily's Tower"
+    lines:
+      - [Lily, "Max, look at my tower."]
+      - [Max, "Wow, it's really tall."]
+      - [Lily, "Don't touch it!"]
+      - [Max, "I won't touch it."]
+      - [Lily, "Biscuit, no!"]
+      - [Max, "Oh no. He knocked it down."]
+      - [Lily, "Bad dog!"]
+      - [Max, "Don't cry. I'll help you build it again."]
+  - id: L04-N-001
+    track: news
+    title: "Kids News: Fall Is Here"
+    lines:
+      - [Anchor, "Hello and welcome to Kids News."]
+      - [Anchor, "Fall is here."]
+      - [Anchor, "The leaves are changing colors."]
+      - [Anchor, "Some are red, and some are yellow."]
+      - [Anchor, "The air is cooler in the morning."]
+      - [Anchor, "Don't forget your jacket."]
+      - [Anchor, "Many families pick apples in the fall."]
+      - [Anchor, "That's all for today. See you next time!"]
+  - id: L04-N-002
+    track: news
+    title: "Kids News: Spring Rain"
+    lines:
+      - [Anchor, "Good morning, and welcome to Kids News."]
+      - [Anchor, "Spring is a rainy time of year."]
+      - [Anchor, "Rain helps plants grow."]
+      - [Anchor, "Soon, flowers will open."]
+      - [Anchor, "Worms come out after the rain."]
+      - [Anchor, "Look for them on the sidewalk."]
+      - [Anchor, "But don't step on them!"]
+      - [Anchor, "Have a great day!"]
+  - id: L04-N-003
+    track: news
+    title: "Kids News: Long Summer Days"
+    lines:
+      - [Anchor, "Hello, friends! This is Kids News."]
+      - [Anchor, "Summer is almost here."]
+      - [Anchor, "In June, the days are very long."]
+      - [Anchor, "The sun goes down late in the evening."]
+      - [Anchor, "You can play outside after dinner."]
+      - [Anchor, "Don't forget your sunscreen."]
+      - [Anchor, "Enjoy the long, sunny days!"]

@@ -1,0 +1,82 @@
+{
+  "id": "L04-D-002",
+  "level": 4,
+  "track": "daily",
+  "title": "Lunch Trade",
+  "duration_ms": 25691,
+  "words": 42,
+  "measured_wpm": 98,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.658,
+    "voices": {
+      "Leo": "am_echo",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Leo",
+      "text": "What's in your lunch box?",
+      "start_ms": 250,
+      "end_ms": 2810
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "A turkey sandwich and an apple.",
+      "start_ms": 3410,
+      "end_ms": 5894
+    },
+    {
+      "idx": 2,
+      "speaker": "Leo",
+      "text": "I have a peanut butter sandwich.",
+      "start_ms": 6494,
+      "end_ms": 9780
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Do you want to trade?",
+      "start_ms": 10380,
+      "end_ms": 12074
+    },
+    {
+      "idx": 4,
+      "speaker": "Leo",
+      "text": "Sure, but I want the apple too.",
+      "start_ms": 12674,
+      "end_ms": 15840
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "No way!",
+      "start_ms": 16440,
+      "end_ms": 17398
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "I can't give you everything.",
+      "start_ms": 17998,
+      "end_ms": 20072
+    },
+    {
+      "idx": 7,
+      "speaker": "Leo",
+      "text": "Okay, just the sandwich then.",
+      "start_ms": 20672,
+      "end_ms": 23741
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Deal.",
+      "start_ms": 24341,
+      "end_ms": 25091
+    }
+  ]
+}

@@ -63,9 +63,10 @@ MenuScreen buildRootMenu(List<Content> catalog) {
 
   return MenuScreen('ListenUp', [
     MenuItem("Today's Lesson",
+        detail: 'L$currentLevel',
         open: () => today.isEmpty
             ? InfoScreen("Today's Lesson", '콘텐츠 준비 중입니다.')
-            : ListeningScreen(today.first)),
+            : levelScreen(levels[currentLevel - 1])),
     MenuItem('Levels',
         open: () => MenuScreen('Levels', [
               for (final l in levels)

@@ -1,0 +1,75 @@
+{
+  "id": "L04-D-004",
+  "level": 4,
+  "track": "daily",
+  "title": "Library Day",
+  "duration_ms": 22014,
+  "words": 37,
+  "measured_wpm": 101,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.613,
+    "voices": {
+      "Librarian": "af_bella",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Librarian",
+      "text": "Welcome to the library, class.",
+      "start_ms": 250,
+      "end_ms": 3223
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Can I take two books?",
+      "start_ms": 3823,
+      "end_ms": 5727
+    },
+    {
+      "idx": 2,
+      "speaker": "Librarian",
+      "text": "Yes, you can take two.",
+      "start_ms": 6327,
+      "end_ms": 8759
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "I want a book about trucks.",
+      "start_ms": 9359,
+      "end_ms": 11541
+    },
+    {
+      "idx": 4,
+      "speaker": "Librarian",
+      "text": "They're on the bottom shelf.",
+      "start_ms": 12141,
+      "end_ms": 14307
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "And one about space.",
+      "start_ms": 14907,
+      "end_ms": 16708
+    },
+    {
+      "idx": 6,
+      "speaker": "Librarian",
+      "text": "Good choice.",
+      "start_ms": 17308,
+      "end_ms": 18617
+    },
+    {
+      "idx": 7,
+      "speaker": "Librarian",
+      "text": "Bring them back next week.",
+      "start_ms": 19217,
+      "end_ms": 21414
+    }
+  ]
+}

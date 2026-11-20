@@ -1,0 +1,75 @@
+{
+  "id": "L02-D-007",
+  "level": 2,
+  "track": "daily",
+  "title": "Brushing Teeth",
+  "duration_ms": 18568,
+  "words": 27,
+  "measured_wpm": 87,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.628,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Mom",
+      "text": "Time to brush your teeth.",
+      "start_ms": 250,
+      "end_ms": 2313
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "I can do it.",
+      "start_ms": 3113,
+      "end_ms": 4348
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "Up and down.",
+      "start_ms": 5148,
+      "end_ms": 6511
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Up and down.",
+      "start_ms": 7311,
+      "end_ms": 8541
+    },
+    {
+      "idx": 4,
+      "speaker": "Mom",
+      "text": "Now spit.",
+      "start_ms": 9341,
+      "end_ms": 10667
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "My teeth are clean!",
+      "start_ms": 11467,
+      "end_ms": 13187
+    },
+    {
+      "idx": 6,
+      "speaker": "Mom",
+      "text": "Let me see.",
+      "start_ms": 13987,
+      "end_ms": 15367
+    },
+    {
+      "idx": 7,
+      "speaker": "Mom",
+      "text": "Nice and white!",
+      "start_ms": 16167,
+      "end_ms": 17768
+    }
+  ]
+}

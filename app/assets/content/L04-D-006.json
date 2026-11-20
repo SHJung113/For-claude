@@ -1,0 +1,82 @@
+{
+  "id": "L04-D-006",
+  "level": 4,
+  "track": "daily",
+  "title": "Learning to Ride",
+  "duration_ms": 22518,
+  "words": 39,
+  "measured_wpm": 104,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.66,
+    "voices": {
+      "Dad": "am_michael",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Dad",
+      "text": "Do you want to ride your bike?",
+      "start_ms": 250,
+      "end_ms": 2640
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Yes, but don't let go!",
+      "start_ms": 3240,
+      "end_ms": 5282
+    },
+    {
+      "idx": 2,
+      "speaker": "Dad",
+      "text": "I'm holding on.",
+      "start_ms": 5882,
+      "end_ms": 7675
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Am I doing it?",
+      "start_ms": 8275,
+      "end_ms": 9615
+    },
+    {
+      "idx": 4,
+      "speaker": "Dad",
+      "text": "Yes!",
+      "start_ms": 10215,
+      "end_ms": 11140
+    },
+    {
+      "idx": 5,
+      "speaker": "Dad",
+      "text": "Keep pedaling.",
+      "start_ms": 11740,
+      "end_ms": 13254
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "Dad, are you still holding on?",
+      "start_ms": 13854,
+      "end_ms": 16170
+    },
+    {
+      "idx": 7,
+      "speaker": "Dad",
+      "text": "No, you're doing it by yourself!",
+      "start_ms": 16770,
+      "end_ms": 19732
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "I can ride a bike!",
+      "start_ms": 20332,
+      "end_ms": 21918
+    }
+  ]
+}

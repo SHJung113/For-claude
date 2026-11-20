@@ -1,0 +1,89 @@
+{
+  "id": "L05-D-001",
+  "level": 5,
+  "track": "daily",
+  "title": "At the Supermarket",
+  "duration_ms": 27365,
+  "words": 48,
+  "measured_wpm": 105,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.559,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Mom",
+      "text": "Can you get the milk and eggs?",
+      "start_ms": 250,
+      "end_ms": 2934
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Which milk do we need?",
+      "start_ms": 3484,
+      "end_ms": 5566
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "The big one with the blue cap.",
+      "start_ms": 6116,
+      "end_ms": 8969
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Got it.",
+      "start_ms": 9519,
+      "end_ms": 10576
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Can we get cereal too?",
+      "start_ms": 11126,
+      "end_ms": 13542
+    },
+    {
+      "idx": 5,
+      "speaker": "Mom",
+      "text": "Only if it's not too sweet.",
+      "start_ms": 14092,
+      "end_ms": 16927
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "How about this one?",
+      "start_ms": 17477,
+      "end_ms": 19226
+    },
+    {
+      "idx": 7,
+      "speaker": "Mom",
+      "text": "Let me see.",
+      "start_ms": 19776,
+      "end_ms": 21315
+    },
+    {
+      "idx": 8,
+      "speaker": "Mom",
+      "text": "Okay, that's fine.",
+      "start_ms": 21865,
+      "end_ms": 23989
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "Can I push the cart now?",
+      "start_ms": 24539,
+      "end_ms": 26815
+    }
+  ]
+}

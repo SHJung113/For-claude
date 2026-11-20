@@ -1,0 +1,119 @@
+level: 3
+target_wpm: 95
+pause_ms: 700
+contents:
+  - id: L03-D-001
+    track: daily
+    title: "On the Playground"
+    lines:
+      - [Leo, "Hi! What's your name?"]
+      - [Max, "I'm Max. What's your name?"]
+      - [Leo, "I'm Leo. Do you want to play?"]
+      - [Max, "Sure! Let's play tag."]
+      - [Leo, "Okay. You're it!"]
+      - [Max, "I'm going to catch you!"]
+      - [Leo, "You can't catch me!"]
+      - [Max, "Got you! Now you're it."]
+  - id: L03-D-002
+    track: daily
+    title: "Max Is Sad"
+    lines:
+      - [Mom, "Max, why are you sad?"]
+      - [Max, "Leo didn't play with me."]
+      - [Mom, "What happened?"]
+      - [Max, "He played with Sam today."]
+      - [Mom, "You can play with them too."]
+      - [Max, "Can I?"]
+      - [Mom, "Of course. Just ask them."]
+      - [Max, "Okay. I'll ask tomorrow."]
+  - id: L03-D-003
+    track: daily
+    title: "Birthday Party"
+    lines:
+      - [Mom, "Happy birthday, Max!"]
+      - [Max, "I'm five years old!"]
+      - [Dad, "Make a wish."]
+      - [Max, "Okay. I made a wish."]
+      - [Dad, "Now blow out the candles."]
+      - [Max, "One, two, three!"]
+      - [Mom, "Here's your present."]
+      - [Max, "A red bike! Thank you!"]
+  - id: L03-D-004
+    track: daily
+    title: "Rainy Day Fort"
+    lines:
+      - [Max, "Mom, I'm bored."]
+      - [Mom, "Let's build a fort."]
+      - [Max, "With blankets?"]
+      - [Mom, "Yes, and the pillows."]
+      - [Max, "Can Biscuit come in?"]
+      - [Mom, "Sure, he can be the guard."]
+      - [Max, "This is the best fort ever!"]
+  - id: L03-D-005
+    track: daily
+    title: "At the Doctor"
+    lines:
+      - [Doctor, "Hello, Max. How are you feeling?"]
+      - [Max, "My ear hurts."]
+      - [Doctor, "Let me look inside."]
+      - [Max, "Will it hurt?"]
+      - [Doctor, "No, it won't hurt."]
+      - [Doctor, "I see. It's a little red."]
+      - [Mom, "Is he okay?"]
+      - [Doctor, "He'll be fine in a few days."]
+  - id: L03-D-006
+    track: daily
+    title: "Cookies with Grandpa"
+    lines:
+      - [Grandpa, "Let's make cookies."]
+      - [Max, "Can I mix it?"]
+      - [Grandpa, "Yes. Mix it slowly."]
+      - [Max, "Can I eat some?"]
+      - [Grandpa, "Not yet. Wait for the oven."]
+      - [Max, "They smell so good!"]
+      - [Grandpa, "Okay. Now they're ready."]
+      - [Max, "Mmm. Yummy!"]
+  - id: L03-D-007
+    track: daily
+    title: "How Do You Feel?"
+    lines:
+      - [Ms. Park, "How do you feel today?"]
+      - [Max, "I feel happy."]
+      - [Ms. Park, "Why are you happy?"]
+      - [Max, "My grandpa is here."]
+      - [Mia, "I feel sleepy."]
+      - [Ms. Park, "Did you go to bed late?"]
+      - [Mia, "Yes. I watched the moon."]
+  - id: L03-N-001
+    track: news
+    title: "Animal News: Baby Elephant"
+    lines:
+      - [Anchor, "Good morning, everyone!"]
+      - [Anchor, "Here's some animal news."]
+      - [Anchor, "A baby elephant was born at the zoo."]
+      - [Anchor, "She's very big."]
+      - [Anchor, "She's already taller than a dog!"]
+      - [Anchor, "She drinks lots of milk."]
+      - [Anchor, "Her mom is always next to her."]
+  - id: L03-N-002
+    track: news
+    title: "Animal News: Penguins"
+    lines:
+      - [Anchor, "Today's animal news is about penguins."]
+      - [Anchor, "Penguins are birds."]
+      - [Anchor, "But they can't fly."]
+      - [Anchor, "They're very good swimmers."]
+      - [Anchor, "They eat fish."]
+      - [Anchor, "Some penguins live in very cold places."]
+      - [Anchor, "They stand close together to stay warm."]
+  - id: L03-N-003
+    track: news
+    title: "Weather: Hot Summer Day"
+    lines:
+      - [Anchor, "Good afternoon!"]
+      - [Anchor, "It's very hot today."]
+      - [Anchor, "Drink lots of water."]
+      - [Anchor, "Wear a hat in the sun."]
+      - [Anchor, "Stay in the shade."]
+      - [Anchor, "The pool is open."]
+      - [Anchor, "Have a cool day!"]

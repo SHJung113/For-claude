@@ -1,0 +1,89 @@
+{
+  "id": "L04-D-003",
+  "level": 4,
+  "track": "daily",
+  "title": "The Lost Pencil",
+  "duration_ms": 26340,
+  "words": 45,
+  "measured_wpm": 103,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.578,
+    "voices": {
+      "Ms. Park": "af_sarah",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "Ms.",
+      "start_ms": 250,
+      "end_ms": 1292
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "Park, I can't find my pencil.",
+      "start_ms": 1892,
+      "end_ms": 4648
+    },
+    {
+      "idx": 2,
+      "speaker": "Ms. Park",
+      "text": "Did you look in your desk?",
+      "start_ms": 5248,
+      "end_ms": 7439
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "Yes, but it isn't there.",
+      "start_ms": 8039,
+      "end_ms": 10101
+    },
+    {
+      "idx": 4,
+      "speaker": "Ms. Park",
+      "text": "Check under the table.",
+      "start_ms": 10701,
+      "end_ms": 12735
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "Oh, here it is!",
+      "start_ms": 13335,
+      "end_ms": 14753
+    },
+    {
+      "idx": 6,
+      "speaker": "Ms. Park",
+      "text": "Good.",
+      "start_ms": 15353,
+      "end_ms": 16358
+    },
+    {
+      "idx": 7,
+      "speaker": "Ms. Park",
+      "text": "Now write your name at the top.",
+      "start_ms": 16958,
+      "end_ms": 19780
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Do I write it in big letters?",
+      "start_ms": 20380,
+      "end_ms": 22808
+    },
+    {
+      "idx": 9,
+      "speaker": "Ms. Park",
+      "text": "Yes, nice and big.",
+      "start_ms": 23408,
+      "end_ms": 25740
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "L03-D-004",
+  "level": 3,
+  "track": "daily",
+  "title": "Rainy Day Fort",
+  "duration_ms": 18003,
+  "words": 29,
+  "measured_wpm": 97,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.622,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Max",
+      "text": "Mom, I'm bored.",
+      "start_ms": 250,
+      "end_ms": 1761
+    },
+    {
+      "idx": 1,
+      "speaker": "Mom",
+      "text": "Let's build a fort.",
+      "start_ms": 2461,
+      "end_ms": 4309
+    },
+    {
+      "idx": 2,
+      "speaker": "Max",
+      "text": "With blankets?",
+      "start_ms": 5009,
+      "end_ms": 6353
+    },
+    {
+      "idx": 3,
+      "speaker": "Mom",
+      "text": "Yes, and the pillows.",
+      "start_ms": 7053,
+      "end_ms": 9068
+    },
+    {
+      "idx": 4,
+      "speaker": "Max",
+      "text": "Can Biscuit come in?",
+      "start_ms": 9768,
+      "end_ms": 11420
+    },
+    {
+      "idx": 5,
+      "speaker": "Mom",
+      "text": "Sure, he can be the guard.",
+      "start_ms": 12120,
+      "end_ms": 14447
+    },
+    {
+      "idx": 6,
+      "speaker": "Max",
+      "text": "This is the best fort ever!",
+      "start_ms": 15147,
+      "end_ms": 17303
+    }
+  ]
+}

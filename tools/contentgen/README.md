@@ -11,6 +11,10 @@
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
 curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
-.venv/bin/python make_content.py scripts/L01_daily_max_says_hello.yaml ../../app/assets/content/L01-D-001 --model-dir .
+.venv/bin/python make_content.py levels/*.yaml --out ../../app/assets/content --model-dir .
 ```
 모델 파일(약 350MB)은 커밋하지 않는다.
+
+- `levels/Lxx.yaml`: 단계별 대본 묶음 (`contents:` 목록)
+- `characters.yaml`: 등장인물별 기본 목소리
+- 이미 만든 번들은 건너뛴다 (`--force`로 다시 생성)

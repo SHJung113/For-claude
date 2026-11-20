@@ -1,0 +1,111 @@
+{
+  "id": "L05-D-006",
+  "level": 5,
+  "track": "daily",
+  "title": "Making Pancakes",
+  "duration_ms": 22027,
+  "words": 39,
+  "measured_wpm": 106,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.866,
+    "voices": {
+      "Lily": "af_nova",
+      "Dad": "am_michael",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Dad",
+      "text": "Who wants pancakes?",
+      "start_ms": 250,
+      "end_ms": 1609
+    },
+    {
+      "idx": 1,
+      "speaker": "Lily",
+      "text": "Me!",
+      "start_ms": 2159,
+      "end_ms": 2841
+    },
+    {
+      "idx": 2,
+      "speaker": "Lily",
+      "text": "Can I help?",
+      "start_ms": 3391,
+      "end_ms": 4602
+    },
+    {
+      "idx": 3,
+      "speaker": "Dad",
+      "text": "Sure.",
+      "start_ms": 5152,
+      "end_ms": 5763
+    },
+    {
+      "idx": 4,
+      "speaker": "Dad",
+      "text": "Crack the eggs into the bowl.",
+      "start_ms": 6313,
+      "end_ms": 8083
+    },
+    {
+      "idx": 5,
+      "speaker": "Lily",
+      "text": "Oops.",
+      "start_ms": 8633,
+      "end_ms": 9333
+    },
+    {
+      "idx": 6,
+      "speaker": "Lily",
+      "text": "Some shell fell in.",
+      "start_ms": 9883,
+      "end_ms": 11410
+    },
+    {
+      "idx": 7,
+      "speaker": "Dad",
+      "text": "That's okay.",
+      "start_ms": 11960,
+      "end_ms": 13038
+    },
+    {
+      "idx": 8,
+      "speaker": "Dad",
+      "text": "I'll take it out.",
+      "start_ms": 13588,
+      "end_ms": 14703
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "Can I flip them?",
+      "start_ms": 15253,
+      "end_ms": 16218
+    },
+    {
+      "idx": 10,
+      "speaker": "Dad",
+      "text": "Be careful.",
+      "start_ms": 16768,
+      "end_ms": 17731
+    },
+    {
+      "idx": 11,
+      "speaker": "Dad",
+      "text": "The pan is hot.",
+      "start_ms": 18281,
+      "end_ms": 19564
+    },
+    {
+      "idx": 12,
+      "speaker": "Max",
+      "text": "Look, a perfect pancake!",
+      "start_ms": 20114,
+      "end_ms": 21477
+    }
+  ]
+}

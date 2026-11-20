@@ -3,15 +3,15 @@
   "level": 1,
   "track": "daily",
   "title": "Max Says Hello",
-  "duration_ms": 24888,
+  "duration_ms": 24701,
   "words": 31,
   "measured_wpm": 75,
   "tts": {
     "engine": "kokoro-v1.0",
-    "speed": 0.75,
+    "speed": 0.659,
     "voices": {
       "Mom": "af_heart",
-      "Max": "af_sky"
+      "Max": "am_puck"
     }
   },
   "sentences": [
@@ -20,77 +20,77 @@
       "speaker": "Mom",
       "text": "Good morning, Max.",
       "start_ms": 250,
-      "end_ms": 1655
+      "end_ms": 1914
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Good morning, Mom.",
-      "start_ms": 2555,
-      "end_ms": 4446
+      "start_ms": 2814,
+      "end_ms": 4342
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "How are you?",
-      "start_ms": 5346,
-      "end_ms": 6322
+      "start_ms": 5242,
+      "end_ms": 6433
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "I am happy.",
-      "start_ms": 7222,
-      "end_ms": 8766
+      "start_ms": 7333,
+      "end_ms": 8447
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "Look!",
-      "start_ms": 9666,
-      "end_ms": 10327
+      "start_ms": 9347,
+      "end_ms": 10129
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "It is a red ball.",
-      "start_ms": 11227,
-      "end_ms": 12755
+      "start_ms": 11029,
+      "end_ms": 12718
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "A red ball!",
-      "start_ms": 13655,
-      "end_ms": 15136
+      "start_ms": 13618,
+      "end_ms": 14771
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "One, two, three.",
-      "start_ms": 16036,
-      "end_ms": 17387
+      "start_ms": 15671,
+      "end_ms": 17271
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Catch!",
-      "start_ms": 18287,
-      "end_ms": 19158
+      "start_ms": 18171,
+      "end_ms": 18993
     },
     {
       "idx": 9,
       "speaker": "Mom",
       "text": "Good job, Max.",
-      "start_ms": 20058,
-      "end_ms": 21504
+      "start_ms": 19893,
+      "end_ms": 21603
     },
     {
       "idx": 10,
       "speaker": "Max",
       "text": "Thank you, Mom.",
-      "start_ms": 22404,
-      "end_ms": 23988
+      "start_ms": 22503,
+      "end_ms": 23801
     }
   ]
 }

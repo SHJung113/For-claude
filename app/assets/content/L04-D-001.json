@@ -1,0 +1,89 @@
+{
+  "id": "L04-D-001",
+  "level": 4,
+  "track": "daily",
+  "title": "First Day of School",
+  "duration_ms": 24448,
+  "words": 42,
+  "measured_wpm": 103,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.583,
+    "voices": {
+      "Mom": "af_heart",
+      "Max": "am_puck"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Mom",
+      "text": "Are you ready for school?",
+      "start_ms": 250,
+      "end_ms": 2208
+    },
+    {
+      "idx": 1,
+      "speaker": "Max",
+      "text": "I don't want to go.",
+      "start_ms": 2808,
+      "end_ms": 4691
+    },
+    {
+      "idx": 2,
+      "speaker": "Mom",
+      "text": "Why not, honey?",
+      "start_ms": 5291,
+      "end_ms": 7051
+    },
+    {
+      "idx": 3,
+      "speaker": "Max",
+      "text": "I don't know anybody.",
+      "start_ms": 7651,
+      "end_ms": 9703
+    },
+    {
+      "idx": 4,
+      "speaker": "Mom",
+      "text": "You'll make new friends.",
+      "start_ms": 10303,
+      "end_ms": 12179
+    },
+    {
+      "idx": 5,
+      "speaker": "Max",
+      "text": "What if they don't like me?",
+      "start_ms": 12779,
+      "end_ms": 14965
+    },
+    {
+      "idx": 6,
+      "speaker": "Mom",
+      "text": "They'll like you.",
+      "start_ms": 15565,
+      "end_ms": 17019
+    },
+    {
+      "idx": 7,
+      "speaker": "Mom",
+      "text": "You're a good friend.",
+      "start_ms": 17619,
+      "end_ms": 19308
+    },
+    {
+      "idx": 8,
+      "speaker": "Max",
+      "text": "Okay.",
+      "start_ms": 19908,
+      "end_ms": 20885
+    },
+    {
+      "idx": 9,
+      "speaker": "Max",
+      "text": "Can you walk me to the door?",
+      "start_ms": 21485,
+      "end_ms": 23848
+    }
+  ]
+}

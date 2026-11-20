@@ -1,0 +1,74 @@
+{
+  "id": "L04-N-003",
+  "level": 4,
+  "track": "news",
+  "title": "Kids News: Long Summer Days",
+  "duration_ms": 23882,
+  "words": 40,
+  "measured_wpm": 100,
+  "tts": {
+    "engine": "kokoro-v1.0",
+    "speed": 0.646,
+    "voices": {
+      "Anchor": "af_bella"
+    }
+  },
+  "sentences": [
+    {
+      "idx": 0,
+      "speaker": "Anchor",
+      "text": "Hello, friends!",
+      "start_ms": 250,
+      "end_ms": 1814
+    },
+    {
+      "idx": 1,
+      "speaker": "Anchor",
+      "text": "This is Kids News.",
+      "start_ms": 2414,
+      "end_ms": 4197
+    },
+    {
+      "idx": 2,
+      "speaker": "Anchor",
+      "text": "Summer is almost here.",
+      "start_ms": 4797,
+      "end_ms": 6798
+    },
+    {
+      "idx": 3,
+      "speaker": "Anchor",
+      "text": "In June, the days are very long.",
+      "start_ms": 7398,
+      "end_ms": 10799
+    },
+    {
+      "idx": 4,
+      "speaker": "Anchor",
+      "text": "The sun goes down late in the evening.",
+      "start_ms": 11399,
+      "end_ms": 14290
+    },
+    {
+      "idx": 5,
+      "speaker": "Anchor",
+      "text": "You can play outside after dinner.",
+      "start_ms": 14890,
+      "end_ms": 17379
+    },
+    {
+      "idx": 6,
+      "speaker": "Anchor",
+      "text": "Don't forget your sunscreen.",
+      "start_ms": 17979,
+      "end_ms": 20286
+    },
+    {
+      "idx": 7,
+      "speaker": "Anchor",
+      "text": "Enjoy the long, sunny days!",
+      "start_ms": 20886,
+      "end_ms": 23282
+    }
+  ]
+}
