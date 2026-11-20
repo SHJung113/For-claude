@@ -27,10 +27,11 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze --no-fatal-infos
       - run: flutter build apk --release
+      - run: cp build/app/outputs/flutter-apk/app-release.apk build/listenup.apk
       - uses: actions/upload-artifact@v4
         with:
           name: listenup-android-apk
-          path: app/build/app/outputs/flutter-apk/app-release.apk
+          path: app/build/listenup.apk
 
   windows:
     runs-on: windows-latest
@@ -43,7 +44,39 @@ jobs:
           cache: true
       - run: flutter pub get
       - run: flutter build windows --release
+      - run: Compress-Archive -Path build/windows/x64/runner/Release/* -DestinationPath build/listenup-windows.zip
+        shell: pwsh
       - uses: actions/upload-artifact@v4
         with:
           name: listenup-windows
-          path: app/build/windows/x64/runner/Release/
+          path: app/build/listenup-windows.zip
+
+  # Publish both files as a GitHub Release so the phone can download the APK
+  # directly from a fixed link:
+  #   https://github.com/SHJung113/For-claude/releases/latest/download/listenup.apk
+  release:
+    needs: [android, windows]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          name: ListenUp build ${{ github.run_number }}
+          body: |
+            커밋 ${{ github.sha }} 에서 자동 빌드.
+            - Android: listenup.apk
+            - Windows: listenup-windows.zip (압축 해제 후 listenup.exe 실행)
+          make_latest: "true"
+          files: |
+            dist/listenup.apk
+            dist/listenup-windows.zip
