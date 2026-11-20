@@ -19,49 +19,56 @@
       "speaker": "Anchor",
       "text": "Good afternoon!",
       "start_ms": 250,
-      "end_ms": 1766
+      "end_ms": 1766,
+      "ko": "안녕하세요!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "It's very hot today.",
       "start_ms": 2466,
-      "end_ms": 4521
+      "end_ms": 4521,
+      "ko": "오늘은 아주 더워요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Drink lots of water.",
       "start_ms": 5221,
-      "end_ms": 7164
+      "end_ms": 7164,
+      "ko": "물을 많이 마시세요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "Wear a hat in the sun.",
       "start_ms": 7864,
-      "end_ms": 9716
+      "end_ms": 9716,
+      "ko": "햇볕 아래에서는 모자를 쓰세요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "Stay in the shade.",
       "start_ms": 10416,
-      "end_ms": 12023
+      "end_ms": 12023,
+      "ko": "그늘에 있으세요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "The pool is open.",
       "start_ms": 12723,
-      "end_ms": 14449
+      "end_ms": 14449,
+      "ko": "수영장이 열었어요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Have a cool day!",
       "start_ms": 15149,
-      "end_ms": 16675
+      "end_ms": 16675,
+      "ko": "시원한 하루 보내세요!"
     }
   ]
 }

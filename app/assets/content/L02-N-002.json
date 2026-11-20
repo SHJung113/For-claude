@@ -19,49 +19,56 @@
       "speaker": "Anchor",
       "text": "Hello, friends!",
       "start_ms": 250,
-      "end_ms": 1594
+      "end_ms": 1594,
+      "ko": "친구들, 안녕하세요!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "It's Wednesday.",
       "start_ms": 2394,
-      "end_ms": 3700
+      "end_ms": 3700,
+      "ko": "오늘은 수요일이에요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "It's windy today.",
       "start_ms": 4500,
-      "end_ms": 6096
+      "end_ms": 6096,
+      "ko": "오늘은 바람이 많이 불어요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "The trees are moving.",
       "start_ms": 6896,
-      "end_ms": 8514
+      "end_ms": 8514,
+      "ko": "나무들이 흔들리고 있어요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "Hold your hat!",
       "start_ms": 9314,
-      "end_ms": 10570
+      "end_ms": 10570,
+      "ko": "모자를 꼭 잡으세요!"
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "It's a good day for a kite.",
       "start_ms": 11370,
-      "end_ms": 13417
+      "end_ms": 13417,
+      "ko": "연 날리기 좋은 날이에요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Have fun outside!",
       "start_ms": 14217,
-      "end_ms": 15819
+      "end_ms": 15819,
+      "ko": "밖에서 재미있게 놀아요!"
     }
   ]
 }

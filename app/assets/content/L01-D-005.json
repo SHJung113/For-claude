@@ -20,42 +20,48 @@
       "speaker": "Dad",
       "text": "Count with me, Max.",
       "start_ms": 250,
-      "end_ms": 1631
+      "end_ms": 1631,
+      "ko": "아빠랑 같이 세어 보자, 맥스."
     },
     {
       "idx": 1,
       "speaker": "Dad",
       "text": "One, two, three.",
       "start_ms": 2531,
-      "end_ms": 3694
+      "end_ms": 3694,
+      "ko": "하나, 둘, 셋."
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "Four, five, six.",
       "start_ms": 4594,
-      "end_ms": 5727
+      "end_ms": 5727,
+      "ko": "넷, 다섯, 여섯."
     },
     {
       "idx": 3,
       "speaker": "Dad",
       "text": "Seven, eight.",
       "start_ms": 6627,
-      "end_ms": 7689
+      "end_ms": 7689,
+      "ko": "일곱, 여덟."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Nine, ten!",
       "start_ms": 8589,
-      "end_ms": 9416
+      "end_ms": 9416,
+      "ko": "아홉, 열!"
     },
     {
       "idx": 5,
       "speaker": "Dad",
       "text": "Great counting!",
       "start_ms": 10316,
-      "end_ms": 11516
+      "end_ms": 11516,
+      "ko": "숫자 정말 잘 세는구나!"
     }
   ]
 }

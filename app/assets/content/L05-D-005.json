@@ -20,70 +20,80 @@
       "speaker": "Max",
       "text": "Mom!",
       "start_ms": 250,
-      "end_ms": 1050
+      "end_ms": 1050,
+      "ko": "엄마!"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "My tooth fell out!",
       "start_ms": 1600,
-      "end_ms": 3218
+      "end_ms": 3218,
+      "ko": "이가 빠졌어요!"
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "Let me see.",
       "start_ms": 3768,
-      "end_ms": 5174
+      "end_ms": 5174,
+      "ko": "어디 보자."
     },
     {
       "idx": 3,
       "speaker": "Mom",
       "text": "Wow, there's a big gap.",
       "start_ms": 5724,
-      "end_ms": 7833
+      "end_ms": 7833,
+      "ko": "와, 구멍이 크게 생겼네."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Does it look funny?",
       "start_ms": 8383,
-      "end_ms": 9982
+      "end_ms": 9982,
+      "ko": "웃겨 보여요?"
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "It looks great.",
       "start_ms": 10532,
-      "end_ms": 12024
+      "end_ms": 12024,
+      "ko": "멋져 보여."
     },
     {
       "idx": 6,
       "speaker": "Mom",
       "text": "Put the tooth under your pillow.",
       "start_ms": 12574,
-      "end_ms": 14958
+      "end_ms": 14958,
+      "ko": "빠진 이를 베개 밑에 넣으렴."
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "Will the tooth fairy come?",
       "start_ms": 15508,
-      "end_ms": 17453
+      "end_ms": 17453,
+      "ko": "이빨 요정이 올까요?"
     },
     {
       "idx": 8,
       "speaker": "Mom",
       "text": "Maybe, if you go to sleep early.",
       "start_ms": 18003,
-      "end_ms": 21100
+      "end_ms": 21100,
+      "ko": "아마도, 일찍 자면."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "I'm going to bed right now!",
       "start_ms": 21650,
-      "end_ms": 23952
+      "end_ms": 23952,
+      "ko": "지금 바로 잘래요!"
     }
   ]
 }

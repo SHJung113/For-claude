@@ -21,56 +21,64 @@
       "speaker": "Ms. Park",
       "text": "How do you feel today?",
       "start_ms": 250,
-      "end_ms": 2275
+      "end_ms": 2275,
+      "ko": "오늘 기분이 어때요?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "I feel happy.",
       "start_ms": 2975,
-      "end_ms": 4311
+      "end_ms": 4311,
+      "ko": "기분이 좋아요."
     },
     {
       "idx": 2,
       "speaker": "Ms. Park",
       "text": "Why are you happy?",
       "start_ms": 5011,
-      "end_ms": 6707
+      "end_ms": 6707,
+      "ko": "왜 기분이 좋아요?"
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "My grandpa is here.",
       "start_ms": 7407,
-      "end_ms": 9205
+      "end_ms": 9205,
+      "ko": "할아버지가 와 계시거든요."
     },
     {
       "idx": 4,
       "speaker": "Mia",
       "text": "I feel sleepy.",
       "start_ms": 9905,
-      "end_ms": 11447
+      "end_ms": 11447,
+      "ko": "저는 졸려요."
     },
     {
       "idx": 5,
       "speaker": "Ms. Park",
       "text": "Did you go to bed late?",
       "start_ms": 12147,
-      "end_ms": 14347
+      "end_ms": 14347,
+      "ko": "늦게 잤어요?"
     },
     {
       "idx": 6,
       "speaker": "Mia",
       "text": "Yes.",
       "start_ms": 15047,
-      "end_ms": 15836
+      "end_ms": 15836,
+      "ko": "네."
     },
     {
       "idx": 7,
       "speaker": "Mia",
       "text": "I watched the moon.",
       "start_ms": 16536,
-      "end_ms": 18052
+      "end_ms": 18052,
+      "ko": "달 구경했어요."
     }
   ]
 }

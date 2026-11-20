@@ -20,77 +20,88 @@
       "speaker": "Grandpa",
       "text": "Hello, Max!",
       "start_ms": 250,
-      "end_ms": 1426
+      "end_ms": 1426,
+      "ko": "안녕, 맥스!"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Grandpa!",
       "start_ms": 2226,
-      "end_ms": 3083
+      "end_ms": 3083,
+      "ko": "할아버지!"
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "You're here!",
       "start_ms": 3883,
-      "end_ms": 4561
+      "end_ms": 4561,
+      "ko": "오셨네요!"
     },
     {
       "idx": 3,
       "speaker": "Grandpa",
       "text": "I'm here.",
       "start_ms": 5361,
-      "end_ms": 6249
+      "end_ms": 6249,
+      "ko": "그래, 왔단다."
     },
     {
       "idx": 4,
       "speaker": "Grandpa",
       "text": "Give me a hug.",
       "start_ms": 7049,
-      "end_ms": 8185
+      "end_ms": 8185,
+      "ko": "할아버지 한번 안아 주렴."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "I made a picture for you.",
       "start_ms": 8985,
-      "end_ms": 10322
+      "end_ms": 10322,
+      "ko": "할아버지 드리려고 그림 그렸어요."
     },
     {
       "idx": 6,
       "speaker": "Grandpa",
       "text": "It's beautiful.",
       "start_ms": 11122,
-      "end_ms": 12315
+      "end_ms": 12315,
+      "ko": "정말 예쁘구나."
     },
     {
       "idx": 7,
       "speaker": "Grandpa",
       "text": "Is this a dog?",
       "start_ms": 13115,
-      "end_ms": 14438
+      "end_ms": 14438,
+      "ko": "이거 강아지니?"
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Yes.",
       "start_ms": 15238,
-      "end_ms": 15786
+      "end_ms": 15786,
+      "ko": "네."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "It's Biscuit.",
       "start_ms": 16586,
-      "end_ms": 17545
+      "end_ms": 17545,
+      "ko": "비스킷이에요."
     },
     {
       "idx": 10,
       "speaker": "Grandpa",
       "text": "I love it.",
       "start_ms": 18345,
-      "end_ms": 19345
+      "end_ms": 19345,
+      "ko": "정말 마음에 든다."
     }
   ]
 }

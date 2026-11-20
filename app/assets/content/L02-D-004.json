@@ -20,56 +20,64 @@
       "speaker": "Dad",
       "text": "It's cold today.",
       "start_ms": 250,
-      "end_ms": 1963
+      "end_ms": 1963,
+      "ko": "오늘 춥다."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "I want my red shirt.",
       "start_ms": 2763,
-      "end_ms": 4344
+      "end_ms": 4344,
+      "ko": "빨간 셔츠 입을래요."
     },
     {
       "idx": 2,
       "speaker": "Dad",
       "text": "Put on your jacket too.",
       "start_ms": 5144,
-      "end_ms": 7141
+      "end_ms": 7141,
+      "ko": "재킷도 입으렴."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Where are my shoes?",
       "start_ms": 7941,
-      "end_ms": 9215
+      "end_ms": 9215,
+      "ko": "내 신발 어디 있어요?"
     },
     {
       "idx": 4,
       "speaker": "Dad",
       "text": "They're by the door.",
       "start_ms": 10015,
-      "end_ms": 11704
+      "end_ms": 11704,
+      "ko": "문 옆에 있어."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "I'm ready!",
       "start_ms": 12504,
-      "end_ms": 13447
+      "end_ms": 13447,
+      "ko": "준비 다 됐어요!"
     },
     {
       "idx": 6,
       "speaker": "Dad",
       "text": "Good job.",
       "start_ms": 14247,
-      "end_ms": 15538
+      "end_ms": 15538,
+      "ko": "잘했어."
     },
     {
       "idx": 7,
       "speaker": "Dad",
       "text": "Let's go.",
       "start_ms": 16338,
-      "end_ms": 17593
+      "end_ms": 17593,
+      "ko": "가자."
     }
   ]
 }

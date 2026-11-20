@@ -20,77 +20,88 @@
       "speaker": "Dad",
       "text": "Did you finish your homework?",
       "start_ms": 250,
-      "end_ms": 2310
+      "end_ms": 2310,
+      "ko": "숙제 다 했니?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Not yet.",
       "start_ms": 2860,
-      "end_ms": 3700
+      "end_ms": 3700,
+      "ko": "아직요."
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "Math is hard.",
       "start_ms": 4250,
-      "end_ms": 5396
+      "end_ms": 5396,
+      "ko": "수학이 어려워요."
     },
     {
       "idx": 3,
       "speaker": "Dad",
       "text": "Let me see.",
       "start_ms": 5946,
-      "end_ms": 7182
+      "end_ms": 7182,
+      "ko": "어디 보자."
     },
     {
       "idx": 4,
       "speaker": "Dad",
       "text": "What's eight and five?",
       "start_ms": 7732,
-      "end_ms": 9468
+      "end_ms": 9468,
+      "ko": "8 더하기 5는 뭐지?"
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "Um, thirteen?",
       "start_ms": 10018,
-      "end_ms": 11163
+      "end_ms": 11163,
+      "ko": "음, 13?"
     },
     {
       "idx": 6,
       "speaker": "Dad",
       "text": "That's right!",
       "start_ms": 11713,
-      "end_ms": 12794
+      "end_ms": 12794,
+      "ko": "맞아!"
     },
     {
       "idx": 7,
       "speaker": "Dad",
       "text": "See, you can do it.",
       "start_ms": 13344,
-      "end_ms": 14810
+      "end_ms": 14810,
+      "ko": "봐, 할 수 있잖아."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Can I play after this page?",
       "start_ms": 15360,
-      "end_ms": 17296
+      "end_ms": 17296,
+      "ko": "이 페이지 끝나면 놀아도 돼요?"
     },
     {
       "idx": 9,
       "speaker": "Dad",
       "text": "Finish this page and then read for ten minutes.",
       "start_ms": 17846,
-      "end_ms": 21697
+      "end_ms": 21697,
+      "ko": "이 페이지 끝내고 10분 동안 책 읽으렴."
     },
     {
       "idx": 10,
       "speaker": "Max",
       "text": "Okay, deal.",
       "start_ms": 22247,
-      "end_ms": 23223
+      "end_ms": 23223,
+      "ko": "네, 좋아요."
     }
   ]
 }

@@ -20,7 +20,7 @@ import yaml
 from kokoro_onnx import Kokoro
 
 SR = 24000
-SENT_RE = re.compile(r"(?<=[.!?])\s+")
+SENT_RE = re.compile(r"(?<!\bMr\.)(?<!\bMs\.)(?<!\bDr\.)(?<!\bMrs\.)(?<=[.!?])\s+")
 WORD_RE = re.compile(r"[A-Za-z0-9']+")
 
 

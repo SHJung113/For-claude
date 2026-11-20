@@ -20,70 +20,80 @@
       "speaker": "Mom",
       "text": "Can you get the milk and eggs?",
       "start_ms": 250,
-      "end_ms": 2934
+      "end_ms": 2934,
+      "ko": "우유랑 달걀 좀 가져다줄래?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Which milk do we need?",
       "start_ms": 3484,
-      "end_ms": 5566
+      "end_ms": 5566,
+      "ko": "어떤 우유가 필요해요?"
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "The big one with the blue cap.",
       "start_ms": 6116,
-      "end_ms": 8969
+      "end_ms": 8969,
+      "ko": "파란 뚜껑 있는 큰 거."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Got it.",
       "start_ms": 9519,
-      "end_ms": 10576
+      "end_ms": 10576,
+      "ko": "알았어요."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Can we get cereal too?",
       "start_ms": 11126,
-      "end_ms": 13542
+      "end_ms": 13542,
+      "ko": "시리얼도 사도 돼요?"
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "Only if it's not too sweet.",
       "start_ms": 14092,
-      "end_ms": 16927
+      "end_ms": 16927,
+      "ko": "너무 달지 않은 거라면."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "How about this one?",
       "start_ms": 17477,
-      "end_ms": 19226
+      "end_ms": 19226,
+      "ko": "이건 어때요?"
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Let me see.",
       "start_ms": 19776,
-      "end_ms": 21315
+      "end_ms": 21315,
+      "ko": "어디 보자."
     },
     {
       "idx": 8,
       "speaker": "Mom",
       "text": "Okay, that's fine.",
       "start_ms": 21865,
-      "end_ms": 23989
+      "end_ms": 23989,
+      "ko": "그래, 그건 괜찮아."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "Can I push the cart now?",
       "start_ms": 24539,
-      "end_ms": 26815
+      "end_ms": 26815,
+      "ko": "이제 내가 카트 밀어도 돼요?"
     }
   ]
 }

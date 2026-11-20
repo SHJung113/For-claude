@@ -20,63 +20,72 @@
       "speaker": "Max",
       "text": "Lily, let's make a snowman.",
       "start_ms": 250,
-      "end_ms": 2458
+      "end_ms": 2458,
+      "ko": "릴리, 눈사람 만들자."
     },
     {
       "idx": 1,
       "speaker": "Lily",
       "text": "Okay!",
       "start_ms": 3008,
-      "end_ms": 4203
+      "end_ms": 4203,
+      "ko": "좋아!"
     },
     {
       "idx": 2,
       "speaker": "Lily",
       "text": "I'll make the head.",
       "start_ms": 4753,
-      "end_ms": 6644
+      "end_ms": 6644,
+      "ko": "내가 머리 만들게."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "I'll roll the big ball for the body.",
       "start_ms": 7194,
-      "end_ms": 10021
+      "end_ms": 10021,
+      "ko": "나는 몸통 만들 큰 공을 굴릴게."
     },
     {
       "idx": 4,
       "speaker": "Lily",
       "text": "We need a nose.",
       "start_ms": 10571,
-      "end_ms": 12543
+      "end_ms": 12543,
+      "ko": "코가 필요해."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "Let's use a carrot.",
       "start_ms": 13093,
-      "end_ms": 14711
+      "end_ms": 14711,
+      "ko": "당근 쓰자."
     },
     {
       "idx": 6,
       "speaker": "Lily",
       "text": "And two rocks for the eyes.",
       "start_ms": 15261,
-      "end_ms": 17837
+      "end_ms": 17837,
+      "ko": "그리고 눈으로 쓸 돌 두 개."
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "He needs a hat and a scarf.",
       "start_ms": 18387,
-      "end_ms": 20659
+      "end_ms": 20659,
+      "ko": "모자랑 목도리도 필요해."
     },
     {
       "idx": 8,
       "speaker": "Lily",
       "text": "He looks just like Grandpa!",
       "start_ms": 21209,
-      "end_ms": 23971
+      "end_ms": 23971,
+      "ko": "할아버지랑 똑같이 생겼다!"
     }
   ]
 }

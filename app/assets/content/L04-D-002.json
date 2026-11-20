@@ -20,63 +20,72 @@
       "speaker": "Leo",
       "text": "What's in your lunch box?",
       "start_ms": 250,
-      "end_ms": 2810
+      "end_ms": 2810,
+      "ko": "도시락에 뭐 있어?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "A turkey sandwich and an apple.",
       "start_ms": 3410,
-      "end_ms": 5894
+      "end_ms": 5894,
+      "ko": "칠면조 샌드위치랑 사과."
     },
     {
       "idx": 2,
       "speaker": "Leo",
       "text": "I have a peanut butter sandwich.",
       "start_ms": 6494,
-      "end_ms": 9780
+      "end_ms": 9780,
+      "ko": "나는 땅콩버터 샌드위치 있어."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Do you want to trade?",
       "start_ms": 10380,
-      "end_ms": 12074
+      "end_ms": 12074,
+      "ko": "바꿀래?"
     },
     {
       "idx": 4,
       "speaker": "Leo",
       "text": "Sure, but I want the apple too.",
       "start_ms": 12674,
-      "end_ms": 15840
+      "end_ms": 15840,
+      "ko": "좋아, 근데 사과도 줘."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "No way!",
       "start_ms": 16440,
-      "end_ms": 17398
+      "end_ms": 17398,
+      "ko": "절대 안 돼!"
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "I can't give you everything.",
       "start_ms": 17998,
-      "end_ms": 20072
+      "end_ms": 20072,
+      "ko": "다 줄 수는 없어."
     },
     {
       "idx": 7,
       "speaker": "Leo",
       "text": "Okay, just the sandwich then.",
       "start_ms": 20672,
-      "end_ms": 23741
+      "end_ms": 23741,
+      "ko": "알았어, 그럼 샌드위치만."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Deal.",
       "start_ms": 24341,
-      "end_ms": 25091
+      "end_ms": 25091,
+      "ko": "좋아."
     }
   ]
 }

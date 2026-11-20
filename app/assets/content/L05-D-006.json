@@ -21,91 +21,104 @@
       "speaker": "Dad",
       "text": "Who wants pancakes?",
       "start_ms": 250,
-      "end_ms": 1609
+      "end_ms": 1609,
+      "ko": "팬케이크 먹을 사람?"
     },
     {
       "idx": 1,
       "speaker": "Lily",
       "text": "Me!",
       "start_ms": 2159,
-      "end_ms": 2841
+      "end_ms": 2841,
+      "ko": "저요!"
     },
     {
       "idx": 2,
       "speaker": "Lily",
       "text": "Can I help?",
       "start_ms": 3391,
-      "end_ms": 4602
+      "end_ms": 4602,
+      "ko": "도와줘도 돼요?"
     },
     {
       "idx": 3,
       "speaker": "Dad",
       "text": "Sure.",
       "start_ms": 5152,
-      "end_ms": 5763
+      "end_ms": 5763,
+      "ko": "그럼."
     },
     {
       "idx": 4,
       "speaker": "Dad",
       "text": "Crack the eggs into the bowl.",
       "start_ms": 6313,
-      "end_ms": 8083
+      "end_ms": 8083,
+      "ko": "그릇에 달걀을 깨 넣으렴."
     },
     {
       "idx": 5,
       "speaker": "Lily",
       "text": "Oops.",
       "start_ms": 8633,
-      "end_ms": 9333
+      "end_ms": 9333,
+      "ko": "앗."
     },
     {
       "idx": 6,
       "speaker": "Lily",
       "text": "Some shell fell in.",
       "start_ms": 9883,
-      "end_ms": 11410
+      "end_ms": 11410,
+      "ko": "껍데기가 좀 들어갔어요."
     },
     {
       "idx": 7,
       "speaker": "Dad",
       "text": "That's okay.",
       "start_ms": 11960,
-      "end_ms": 13038
+      "end_ms": 13038,
+      "ko": "괜찮아."
     },
     {
       "idx": 8,
       "speaker": "Dad",
       "text": "I'll take it out.",
       "start_ms": 13588,
-      "end_ms": 14703
+      "end_ms": 14703,
+      "ko": "아빠가 빼 줄게."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "Can I flip them?",
       "start_ms": 15253,
-      "end_ms": 16218
+      "end_ms": 16218,
+      "ko": "내가 뒤집어도 돼요?"
     },
     {
       "idx": 10,
       "speaker": "Dad",
       "text": "Be careful.",
       "start_ms": 16768,
-      "end_ms": 17731
+      "end_ms": 17731,
+      "ko": "조심해."
     },
     {
       "idx": 11,
       "speaker": "Dad",
       "text": "The pan is hot.",
       "start_ms": 18281,
-      "end_ms": 19564
+      "end_ms": 19564,
+      "ko": "팬이 뜨거워."
     },
     {
       "idx": 12,
       "speaker": "Max",
       "text": "Look, a perfect pancake!",
       "start_ms": 20114,
-      "end_ms": 21477
+      "end_ms": 21477,
+      "ko": "봐요, 완벽한 팬케이크!"
     }
   ]
 }

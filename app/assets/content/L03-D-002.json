@@ -20,70 +20,80 @@
       "speaker": "Mom",
       "text": "Max, why are you sad?",
       "start_ms": 250,
-      "end_ms": 2029
+      "end_ms": 2029,
+      "ko": "맥스, 왜 슬퍼?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Leo didn't play with me.",
       "start_ms": 2729,
-      "end_ms": 4487
+      "end_ms": 4487,
+      "ko": "레오가 나랑 안 놀았어요."
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "What happened?",
       "start_ms": 5187,
-      "end_ms": 6274
+      "end_ms": 6274,
+      "ko": "무슨 일이 있었니?"
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "He played with Sam today.",
       "start_ms": 6974,
-      "end_ms": 8752
+      "end_ms": 8752,
+      "ko": "오늘 레오가 샘이랑 놀았어요."
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "You can play with them too.",
       "start_ms": 9452,
-      "end_ms": 11208
+      "end_ms": 11208,
+      "ko": "너도 같이 놀면 되지."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "Can I?",
       "start_ms": 11908,
-      "end_ms": 12729
+      "end_ms": 12729,
+      "ko": "그래도 돼요?"
     },
     {
       "idx": 6,
       "speaker": "Mom",
       "text": "Of course.",
       "start_ms": 13429,
-      "end_ms": 14479
+      "end_ms": 14479,
+      "ko": "물론이지."
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Just ask them.",
       "start_ms": 15179,
-      "end_ms": 16512
+      "end_ms": 16512,
+      "ko": "같이 놀자고 물어보렴."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Okay.",
       "start_ms": 17212,
-      "end_ms": 18019
+      "end_ms": 18019,
+      "ko": "알았어요."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "I'll ask tomorrow.",
       "start_ms": 18719,
-      "end_ms": 20219
+      "end_ms": 20219,
+      "ko": "내일 물어볼게요."
     }
   ]
 }

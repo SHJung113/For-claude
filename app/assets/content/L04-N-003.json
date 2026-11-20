@@ -19,56 +19,64 @@
       "speaker": "Anchor",
       "text": "Hello, friends!",
       "start_ms": 250,
-      "end_ms": 1814
+      "end_ms": 1814,
+      "ko": "친구들, 안녕하세요!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "This is Kids News.",
       "start_ms": 2414,
-      "end_ms": 4197
+      "end_ms": 4197,
+      "ko": "키즈 뉴스입니다."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Summer is almost here.",
       "start_ms": 4797,
-      "end_ms": 6798
+      "end_ms": 6798,
+      "ko": "여름이 거의 다 왔어요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "In June, the days are very long.",
       "start_ms": 7398,
-      "end_ms": 10799
+      "end_ms": 10799,
+      "ko": "6월에는 낮이 아주 길어요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "The sun goes down late in the evening.",
       "start_ms": 11399,
-      "end_ms": 14290
+      "end_ms": 14290,
+      "ko": "해가 저녁 늦게 져요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "You can play outside after dinner.",
       "start_ms": 14890,
-      "end_ms": 17379
+      "end_ms": 17379,
+      "ko": "저녁 먹고 나서도 밖에서 놀 수 있어요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Don't forget your sunscreen.",
       "start_ms": 17979,
-      "end_ms": 20286
+      "end_ms": 20286,
+      "ko": "선크림 바르는 거 잊지 마세요."
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "Enjoy the long, sunny days!",
       "start_ms": 20886,
-      "end_ms": 23282
+      "end_ms": 23282,
+      "ko": "길고 화창한 날들을 즐기세요!"
     }
   ]
 }

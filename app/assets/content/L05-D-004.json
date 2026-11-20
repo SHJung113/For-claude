@@ -21,77 +21,88 @@
       "speaker": "Coach",
       "text": "Okay, team.",
       "start_ms": 250,
-      "end_ms": 1653
+      "end_ms": 1653,
+      "ko": "자, 여러분."
     },
     {
       "idx": 1,
       "speaker": "Coach",
       "text": "Line up!",
       "start_ms": 2203,
-      "end_ms": 3101
+      "end_ms": 3101,
+      "ko": "줄 서!"
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "Coach, can I be the goalie?",
       "start_ms": 3651,
-      "end_ms": 5292
+      "end_ms": 5292,
+      "ko": "코치님, 제가 골키퍼 해도 돼요?"
     },
     {
       "idx": 3,
       "speaker": "Coach",
       "text": "Not today.",
       "start_ms": 5842,
-      "end_ms": 6981
+      "end_ms": 6981,
+      "ko": "오늘은 안 돼."
     },
     {
       "idx": 4,
       "speaker": "Coach",
       "text": "Today we're practicing kicks.",
       "start_ms": 7531,
-      "end_ms": 9718
+      "end_ms": 9718,
+      "ko": "오늘은 차기 연습을 할 거야."
     },
     {
       "idx": 5,
       "speaker": "Leo",
       "text": "Watch this, Max!",
       "start_ms": 10268,
-      "end_ms": 12084
+      "end_ms": 12084,
+      "ko": "이거 봐, 맥스!"
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "Nice kick, Leo!",
       "start_ms": 12634,
-      "end_ms": 13928
+      "end_ms": 13928,
+      "ko": "잘 찼다, 레오!"
     },
     {
       "idx": 7,
       "speaker": "Coach",
       "text": "Good.",
       "start_ms": 14478,
-      "end_ms": 15124
+      "end_ms": 15124,
+      "ko": "좋아."
     },
     {
       "idx": 8,
       "speaker": "Coach",
       "text": "Now pass the ball and run.",
       "start_ms": 15674,
-      "end_ms": 17787
+      "end_ms": 17787,
+      "ko": "이제 공을 패스하고 달려."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "I'm tired already.",
       "start_ms": 18337,
-      "end_ms": 19635
+      "end_ms": 19635,
+      "ko": "벌써 힘들어요."
     },
     {
       "idx": 10,
       "speaker": "Coach",
       "text": "Drink some water and then come back.",
       "start_ms": 20185,
-      "end_ms": 22552
+      "end_ms": 22552,
+      "ko": "물 좀 마시고 다시 와."
     }
   ]
 }

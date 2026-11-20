@@ -115,7 +115,7 @@ class _Display extends StatelessWidget {
         builder: (context, _) {
           final top = nav.top;
           return Column(children: [
-            _TitleBar(title: top.title, depth: nav.stack.length),
+            _TitleBar(title: top.title, depth: nav.stack.length, onBack: nav.pop),
             Expanded(
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 200),
@@ -141,15 +141,16 @@ class _Display extends StatelessWidget {
 }
 
 class _TitleBar extends StatelessWidget {
-  const _TitleBar({required this.title, required this.depth});
+  const _TitleBar({required this.title, required this.depth, required this.onBack});
   final String title;
   final int depth;
+  final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context) {
     final pal = Palette.of(context);
     return Container(
-      height: 30,
+      height: 36,
       padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -161,8 +162,17 @@ class _TitleBar extends StatelessWidget {
       ),
       child: Row(children: [
         SizedBox(
-          width: 40,
-          child: depth > 1 ? Icon(Icons.chevron_left_rounded, size: 18, color: pal.subtext) : null,
+          width: 56,
+          height: 36,
+          child: depth > 1
+              ? InkWell(
+                  onTap: onBack,
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Icon(Icons.chevron_left_rounded, size: 22, color: pal.text),
+                  ),
+                )
+              : null,
         ),
         Expanded(
           child: Text(title,
@@ -170,7 +180,7 @@ class _TitleBar extends StatelessWidget {
               style: TextStyle(color: pal.text, fontWeight: FontWeight.w700, fontSize: 14)),
         ),
         SizedBox(
-          width: 40,
+          width: 56,
           child: Align(
             alignment: Alignment.centerRight,
             child: Icon(Icons.headphones_rounded, size: 16, color: pal.subtext),

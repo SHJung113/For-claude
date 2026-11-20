@@ -20,84 +20,96 @@
       "speaker": "Grandpa",
       "text": "Let's make cookies.",
       "start_ms": 250,
-      "end_ms": 1392
+      "end_ms": 1392,
+      "ko": "쿠키 만들자."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Can I mix it?",
       "start_ms": 2092,
-      "end_ms": 2925
+      "end_ms": 2925,
+      "ko": "내가 섞어도 돼요?"
     },
     {
       "idx": 2,
       "speaker": "Grandpa",
       "text": "Yes.",
       "start_ms": 3625,
-      "end_ms": 4188
+      "end_ms": 4188,
+      "ko": "그래."
     },
     {
       "idx": 3,
       "speaker": "Grandpa",
       "text": "Mix it slowly.",
       "start_ms": 4888,
-      "end_ms": 5954
+      "end_ms": 5954,
+      "ko": "천천히 섞으렴."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Can I eat some?",
       "start_ms": 6654,
-      "end_ms": 7568
+      "end_ms": 7568,
+      "ko": "조금 먹어도 돼요?"
     },
     {
       "idx": 5,
       "speaker": "Grandpa",
       "text": "Not yet.",
       "start_ms": 8268,
-      "end_ms": 9062
+      "end_ms": 9062,
+      "ko": "아직은 안 돼."
     },
     {
       "idx": 6,
       "speaker": "Grandpa",
       "text": "Wait for the oven.",
       "start_ms": 9762,
-      "end_ms": 10850
+      "end_ms": 10850,
+      "ko": "오븐에서 다 구워질 때까지 기다리렴."
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "They smell so good!",
       "start_ms": 11550,
-      "end_ms": 12594
+      "end_ms": 12594,
+      "ko": "냄새 정말 좋아요!"
     },
     {
       "idx": 8,
       "speaker": "Grandpa",
       "text": "Okay.",
       "start_ms": 13294,
-      "end_ms": 14017
+      "end_ms": 14017,
+      "ko": "자."
     },
     {
       "idx": 9,
       "speaker": "Grandpa",
       "text": "Now they're ready.",
       "start_ms": 14717,
-      "end_ms": 15691
+      "end_ms": 15691,
+      "ko": "이제 다 됐다."
     },
     {
       "idx": 10,
       "speaker": "Max",
       "text": "Mmm.",
       "start_ms": 16391,
-      "end_ms": 17094
+      "end_ms": 17094,
+      "ko": "음."
     },
     {
       "idx": 11,
       "speaker": "Max",
       "text": "Yummy!",
       "start_ms": 17794,
-      "end_ms": 18296
+      "end_ms": 18296,
+      "ko": "맛있어요!"
     }
   ]
 }

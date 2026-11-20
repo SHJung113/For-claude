@@ -19,56 +19,64 @@
       "speaker": "Ms. Park",
       "text": "Good morning, class!",
       "start_ms": 250,
-      "end_ms": 2293
+      "end_ms": 2293,
+      "ko": "좋은 아침이에요, 여러분!"
     },
     {
       "idx": 1,
       "speaker": "Ms. Park",
       "text": "It's show and tell day.",
       "start_ms": 3093,
-      "end_ms": 5277
+      "end_ms": 5277,
+      "ko": "오늘은 물건 소개하는 날이에요."
     },
     {
       "idx": 2,
       "speaker": "Ms. Park",
       "text": "Mia has a shell.",
       "start_ms": 6077,
-      "end_ms": 7811
+      "end_ms": 7811,
+      "ko": "미아는 조개껍데기를 가져왔어요."
     },
     {
       "idx": 3,
       "speaker": "Ms. Park",
       "text": "It's from the beach.",
       "start_ms": 8611,
-      "end_ms": 10362
+      "end_ms": 10362,
+      "ko": "바닷가에서 가져온 거예요."
     },
     {
       "idx": 4,
       "speaker": "Ms. Park",
       "text": "Sam has a toy robot.",
       "start_ms": 11162,
-      "end_ms": 13625
+      "end_ms": 13625,
+      "ko": "샘은 장난감 로봇을 가져왔어요."
     },
     {
       "idx": 5,
       "speaker": "Ms. Park",
       "text": "It can walk.",
       "start_ms": 14425,
-      "end_ms": 15947
+      "end_ms": 15947,
+      "ko": "로봇이 걸을 수 있어요."
     },
     {
       "idx": 6,
       "speaker": "Ms. Park",
       "text": "Max has a photo of his dog.",
       "start_ms": 16747,
-      "end_ms": 19613
+      "end_ms": 19613,
+      "ko": "맥스는 강아지 사진을 가져왔어요."
     },
     {
       "idx": 7,
       "speaker": "Ms. Park",
       "text": "Thank you, everyone!",
       "start_ms": 20413,
-      "end_ms": 22461
+      "end_ms": 22461,
+      "ko": "모두 고마워요!"
     }
   ]
 }

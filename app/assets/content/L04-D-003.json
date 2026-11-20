@@ -3,87 +3,89 @@
   "level": 4,
   "track": "daily",
   "title": "The Lost Pencil",
-  "duration_ms": 26340,
+  "duration_ms": 27095,
   "words": 45,
-  "measured_wpm": 103,
+  "measured_wpm": 100,
   "tts": {
     "engine": "kokoro-v1.0",
-    "speed": 0.578,
+    "speed": 0.546,
     "voices": {
-      "Ms. Park": "af_sarah",
-      "Max": "am_puck"
+      "Max": "am_puck",
+      "Ms. Park": "af_sarah"
     }
   },
   "sentences": [
     {
       "idx": 0,
       "speaker": "Max",
-      "text": "Ms.",
+      "text": "Ms. Park, I can't find my pencil.",
       "start_ms": 250,
-      "end_ms": 1292
+      "end_ms": 4004,
+      "ko": "박 선생님, 연필을 못 찾겠어요."
     },
     {
       "idx": 1,
-      "speaker": "Max",
-      "text": "Park, I can't find my pencil.",
-      "start_ms": 1892,
-      "end_ms": 4648
+      "speaker": "Ms. Park",
+      "text": "Did you look in your desk?",
+      "start_ms": 4604,
+      "end_ms": 6975,
+      "ko": "책상 안은 봤니?"
     },
     {
       "idx": 2,
-      "speaker": "Ms. Park",
-      "text": "Did you look in your desk?",
-      "start_ms": 5248,
-      "end_ms": 7439
+      "speaker": "Max",
+      "text": "Yes, but it isn't there.",
+      "start_ms": 7575,
+      "end_ms": 9877,
+      "ko": "네, 근데 거기 없어요."
     },
     {
       "idx": 3,
-      "speaker": "Max",
-      "text": "Yes, but it isn't there.",
-      "start_ms": 8039,
-      "end_ms": 10101
+      "speaker": "Ms. Park",
+      "text": "Check under the table.",
+      "start_ms": 10477,
+      "end_ms": 12703,
+      "ko": "탁자 밑을 봐."
     },
     {
       "idx": 4,
-      "speaker": "Ms. Park",
-      "text": "Check under the table.",
-      "start_ms": 10701,
-      "end_ms": 12735
+      "speaker": "Max",
+      "text": "Oh, here it is!",
+      "start_ms": 13303,
+      "end_ms": 14790,
+      "ko": "아, 여기 있다!"
     },
     {
       "idx": 5,
-      "speaker": "Max",
-      "text": "Oh, here it is!",
-      "start_ms": 13335,
-      "end_ms": 14753
+      "speaker": "Ms. Park",
+      "text": "Good.",
+      "start_ms": 15390,
+      "end_ms": 16465,
+      "ko": "좋아."
     },
     {
       "idx": 6,
       "speaker": "Ms. Park",
-      "text": "Good.",
-      "start_ms": 15353,
-      "end_ms": 16358
+      "text": "Now write your name at the top.",
+      "start_ms": 17065,
+      "end_ms": 20122,
+      "ko": "이제 맨 위에 이름을 쓰렴."
     },
     {
       "idx": 7,
-      "speaker": "Ms. Park",
-      "text": "Now write your name at the top.",
-      "start_ms": 16958,
-      "end_ms": 19780
+      "speaker": "Max",
+      "text": "Do I write it in big letters?",
+      "start_ms": 20722,
+      "end_ms": 23338,
+      "ko": "이름은 크게 써요?"
     },
     {
       "idx": 8,
-      "speaker": "Max",
-      "text": "Do I write it in big letters?",
-      "start_ms": 20380,
-      "end_ms": 22808
-    },
-    {
-      "idx": 9,
       "speaker": "Ms. Park",
       "text": "Yes, nice and big.",
-      "start_ms": 23408,
-      "end_ms": 25740
+      "start_ms": 23938,
+      "end_ms": 26495,
+      "ko": "그래, 크고 또박또박하게."
     }
   ]
 }

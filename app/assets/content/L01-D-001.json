@@ -20,77 +20,88 @@
       "speaker": "Mom",
       "text": "Good morning, Max.",
       "start_ms": 250,
-      "end_ms": 1914
+      "end_ms": 1914,
+      "ko": "좋은 아침, 맥스."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Good morning, Mom.",
       "start_ms": 2814,
-      "end_ms": 4342
+      "end_ms": 4342,
+      "ko": "좋은 아침이에요, 엄마."
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "How are you?",
       "start_ms": 5242,
-      "end_ms": 6433
+      "end_ms": 6433,
+      "ko": "기분 어때?"
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "I am happy.",
       "start_ms": 7333,
-      "end_ms": 8447
+      "end_ms": 8447,
+      "ko": "나는 기분이 좋아요."
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "Look!",
       "start_ms": 9347,
-      "end_ms": 10129
+      "end_ms": 10129,
+      "ko": "봐!"
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "It is a red ball.",
       "start_ms": 11029,
-      "end_ms": 12718
+      "end_ms": 12718,
+      "ko": "빨간 공이야."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "A red ball!",
       "start_ms": 13618,
-      "end_ms": 14771
+      "end_ms": 14771,
+      "ko": "빨간 공이다!"
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "One, two, three.",
       "start_ms": 15671,
-      "end_ms": 17271
+      "end_ms": 17271,
+      "ko": "하나, 둘, 셋."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Catch!",
       "start_ms": 18171,
-      "end_ms": 18993
+      "end_ms": 18993,
+      "ko": "받아!"
     },
     {
       "idx": 9,
       "speaker": "Mom",
       "text": "Good job, Max.",
       "start_ms": 19893,
-      "end_ms": 21603
+      "end_ms": 21603,
+      "ko": "잘했어, 맥스."
     },
     {
       "idx": 10,
       "speaker": "Max",
       "text": "Thank you, Mom.",
       "start_ms": 22503,
-      "end_ms": 23801
+      "end_ms": 23801,
+      "ko": "고마워요, 엄마."
     }
   ]
 }

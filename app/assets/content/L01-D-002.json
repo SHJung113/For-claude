@@ -19,49 +19,56 @@
       "speaker": "Max",
       "text": "This is my mom.",
       "start_ms": 250,
-      "end_ms": 2108
+      "end_ms": 2108,
+      "ko": "이분은 우리 엄마예요."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "This is my dad.",
       "start_ms": 3008,
-      "end_ms": 4895
+      "end_ms": 4895,
+      "ko": "이분은 우리 아빠예요."
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "This is Lily.",
       "start_ms": 5795,
-      "end_ms": 7358
+      "end_ms": 7358,
+      "ko": "이 아이는 릴리예요."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Lily is my sister.",
       "start_ms": 8258,
-      "end_ms": 10472
+      "end_ms": 10472,
+      "ko": "릴리는 내 여동생이에요."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "This is Biscuit.",
       "start_ms": 11372,
-      "end_ms": 13268
+      "end_ms": 13268,
+      "ko": "이건 비스킷이에요."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "Biscuit is a dog.",
       "start_ms": 14168,
-      "end_ms": 16235
+      "end_ms": 16235,
+      "ko": "비스킷은 강아지예요."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "I love my family.",
       "start_ms": 17135,
-      "end_ms": 19241
+      "end_ms": 19241,
+      "ko": "나는 우리 가족을 사랑해요."
     }
   ]
 }

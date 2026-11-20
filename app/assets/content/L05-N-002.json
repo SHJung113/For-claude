@@ -19,56 +19,64 @@
       "speaker": "Anchor",
       "text": "Hello again!",
       "start_ms": 250,
-      "end_ms": 1898
+      "end_ms": 1898,
+      "ko": "또 만났네요!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "This is Kids News.",
       "start_ms": 2448,
-      "end_ms": 4758
+      "end_ms": 4758,
+      "ko": "키즈 뉴스입니다."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Sea turtles live in the ocean.",
       "start_ms": 5308,
-      "end_ms": 8422
+      "end_ms": 8422,
+      "ko": "바다거북은 바다에 살아요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "But they lay their eggs on the beach.",
       "start_ms": 8972,
-      "end_ms": 12259
+      "end_ms": 12259,
+      "ko": "하지만 알은 해변에 낳아요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "A mother turtle digs a hole in the sand.",
       "start_ms": 12809,
-      "end_ms": 17168
+      "end_ms": 17168,
+      "ko": "엄마 거북이 모래에 구멍을 파요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "She leaves her eggs there.",
       "start_ms": 17718,
-      "end_ms": 20254
+      "end_ms": 20254,
+      "ko": "그리고 거기에 알을 두고 가요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "When the babies hatch, they crawl to the sea.",
       "start_ms": 20804,
-      "end_ms": 25089
+      "end_ms": 25089,
+      "ko": "새끼들이 알에서 깨어나면 바다로 기어가요."
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "Some beaches turn off bright lights at night to help them.",
       "start_ms": 25639,
-      "end_ms": 31221
+      "end_ms": 31221,
+      "ko": "어떤 해변에서는 새끼 거북을 돕기 위해 밤에 밝은 불을 꺼요."
     }
   ]
 }

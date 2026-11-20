@@ -20,49 +20,56 @@
       "speaker": "Mom",
       "text": "It is bath time.",
       "start_ms": 250,
-      "end_ms": 2383
+      "end_ms": 2383,
+      "ko": "목욕할 시간이야."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Is the water hot?",
       "start_ms": 3283,
-      "end_ms": 5105
+      "end_ms": 5105,
+      "ko": "물이 뜨거워요?"
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "It is warm.",
       "start_ms": 6005,
-      "end_ms": 7630
+      "end_ms": 7630,
+      "ko": "따뜻해."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "I see bubbles!",
       "start_ms": 8530,
-      "end_ms": 10219
+      "end_ms": 10219,
+      "ko": "거품이 보여요!"
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "Wash your hands.",
       "start_ms": 11119,
-      "end_ms": 13062
+      "end_ms": 13062,
+      "ko": "손 씻으렴."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "My hands are clean.",
       "start_ms": 13962,
-      "end_ms": 15878
+      "end_ms": 15878,
+      "ko": "손이 깨끗해졌어요."
     },
     {
       "idx": 6,
       "speaker": "Mom",
       "text": "Now wash your feet.",
       "start_ms": 16778,
-      "end_ms": 18994
+      "end_ms": 18994,
+      "ko": "이제 발 씻자."
     }
   ]
 }

@@ -19,35 +19,40 @@
       "speaker": "Anchor",
       "text": "Good morning!",
       "start_ms": 250,
-      "end_ms": 1498
+      "end_ms": 1498,
+      "ko": "좋은 아침입니다!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Today is Monday.",
       "start_ms": 2398,
-      "end_ms": 4052
+      "end_ms": 4052,
+      "ko": "오늘은 월요일이에요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "It is sunny.",
       "start_ms": 4952,
-      "end_ms": 6207
+      "end_ms": 6207,
+      "ko": "날씨가 맑아요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "It is warm.",
       "start_ms": 7107,
-      "end_ms": 8429
+      "end_ms": 8429,
+      "ko": "따뜻해요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "Have a good day!",
       "start_ms": 9329,
-      "end_ms": 10763
+      "end_ms": 10763,
+      "ko": "좋은 하루 보내세요!"
     }
   ]
 }

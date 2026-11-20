@@ -20,56 +20,64 @@
       "speaker": "Mom",
       "text": "What color is it?",
       "start_ms": 250,
-      "end_ms": 1938
+      "end_ms": 1938,
+      "ko": "이건 무슨 색이야?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "It is blue.",
       "start_ms": 2838,
-      "end_ms": 4159
+      "end_ms": 4159,
+      "ko": "파란색이에요."
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "What color is this?",
       "start_ms": 5059,
-      "end_ms": 6911
+      "end_ms": 6911,
+      "ko": "이건 무슨 색이야?"
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "It is yellow.",
       "start_ms": 7811,
-      "end_ms": 9059
+      "end_ms": 9059,
+      "ko": "노란색이에요."
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "Is it green?",
       "start_ms": 9959,
-      "end_ms": 11337
+      "end_ms": 11337,
+      "ko": "초록색이야?"
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "No.",
       "start_ms": 12237,
-      "end_ms": 12969
+      "end_ms": 12969,
+      "ko": "아니요."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "It is red.",
       "start_ms": 13869,
-      "end_ms": 14965
+      "end_ms": 14965,
+      "ko": "빨간색이에요."
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Good job!",
       "start_ms": 15865,
-      "end_ms": 17167
+      "end_ms": 17167,
+      "ko": "잘했어!"
     }
   ]
 }

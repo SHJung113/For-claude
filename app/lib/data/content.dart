@@ -7,12 +7,14 @@ class Sentence {
       : idx = j['idx'] as int,
         speaker = j['speaker'] as String,
         text = j['text'] as String,
+        ko = j['ko'] as String?,
         start = Duration(milliseconds: j['start_ms'] as int),
         end = Duration(milliseconds: j['end_ms'] as int);
 
   final int idx;
   final String speaker;
   final String text;
+  final String? ko; // Korean translation
   final Duration start;
   final Duration end;
 }

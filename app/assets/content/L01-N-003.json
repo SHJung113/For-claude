@@ -19,56 +19,64 @@
       "speaker": "Anchor",
       "text": "Good morning!",
       "start_ms": 250,
-      "end_ms": 1277
+      "end_ms": 1277,
+      "ko": "좋은 아침입니다!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Today is Friday.",
       "start_ms": 2177,
-      "end_ms": 3679
+      "end_ms": 3679,
+      "ko": "오늘은 금요일이에요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Look outside.",
       "start_ms": 4579,
-      "end_ms": 5841
+      "end_ms": 5841,
+      "ko": "밖을 보세요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "It is snowing!",
       "start_ms": 6741,
-      "end_ms": 8022
+      "end_ms": 8022,
+      "ko": "눈이 와요!"
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "The snow is white.",
       "start_ms": 8922,
-      "end_ms": 10380
+      "end_ms": 10380,
+      "ko": "눈은 하얘요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "Wear a hat.",
       "start_ms": 11280,
-      "end_ms": 12360
+      "end_ms": 12360,
+      "ko": "모자를 쓰세요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Wear your gloves.",
       "start_ms": 13260,
-      "end_ms": 14510
+      "end_ms": 14510,
+      "ko": "장갑을 끼세요."
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "Have fun!",
       "start_ms": 15410,
-      "end_ms": 16313
+      "end_ms": 16313,
+      "ko": "재미있게 놀아요!"
     }
   ]
 }

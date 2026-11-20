@@ -20,56 +20,64 @@
       "speaker": "Mom",
       "text": "Time to brush your teeth.",
       "start_ms": 250,
-      "end_ms": 2313
+      "end_ms": 2313,
+      "ko": "이 닦을 시간이야."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "I can do it.",
       "start_ms": 3113,
-      "end_ms": 4348
+      "end_ms": 4348,
+      "ko": "나 혼자 할 수 있어요."
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "Up and down.",
       "start_ms": 5148,
-      "end_ms": 6511
+      "end_ms": 6511,
+      "ko": "위아래로."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Up and down.",
       "start_ms": 7311,
-      "end_ms": 8541
+      "end_ms": 8541,
+      "ko": "위아래로."
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "Now spit.",
       "start_ms": 9341,
-      "end_ms": 10667
+      "end_ms": 10667,
+      "ko": "이제 뱉어."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "My teeth are clean!",
       "start_ms": 11467,
-      "end_ms": 13187
+      "end_ms": 13187,
+      "ko": "이가 깨끗해졌어요!"
     },
     {
       "idx": 6,
       "speaker": "Mom",
       "text": "Let me see.",
       "start_ms": 13987,
-      "end_ms": 15367
+      "end_ms": 15367,
+      "ko": "어디 보자."
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Nice and white!",
       "start_ms": 16167,
-      "end_ms": 17768
+      "end_ms": 17768,
+      "ko": "깨끗하고 하얗네!"
     }
   ]
 }

@@ -21,70 +21,80 @@
       "speaker": "Lily",
       "text": "Mom, can we get a fish?",
       "start_ms": 250,
-      "end_ms": 2582
+      "end_ms": 2582,
+      "ko": "엄마, 우리 물고기 키워도 돼요?"
     },
     {
       "idx": 1,
       "speaker": "Mom",
       "text": "A fish needs a lot of care.",
       "start_ms": 3132,
-      "end_ms": 5502
+      "end_ms": 5502,
+      "ko": "물고기는 돌봐 줄 게 많아."
     },
     {
       "idx": 2,
       "speaker": "Lily",
       "text": "I'll feed it every day.",
       "start_ms": 6052,
-      "end_ms": 8286
+      "end_ms": 8286,
+      "ko": "내가 매일 밥 줄게요."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "And I'll clean the tank.",
       "start_ms": 8836,
-      "end_ms": 10296
+      "end_ms": 10296,
+      "ko": "그리고 내가 어항 청소할게요."
     },
     {
       "idx": 4,
       "speaker": "Mom",
       "text": "Do you promise?",
       "start_ms": 10846,
-      "end_ms": 12203
+      "end_ms": 12203,
+      "ko": "약속하니?"
     },
     {
       "idx": 5,
       "speaker": "Lily",
       "text": "We promise!",
       "start_ms": 12753,
-      "end_ms": 14271
+      "end_ms": 14271,
+      "ko": "약속해요!"
     },
     {
       "idx": 6,
       "speaker": "Mom",
       "text": "Okay.",
       "start_ms": 14821,
-      "end_ms": 15792
+      "end_ms": 15792,
+      "ko": "좋아."
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Let's go to the pet store on Saturday.",
       "start_ms": 16342,
-      "end_ms": 19139
+      "end_ms": 19139,
+      "ko": "토요일에 애완동물 가게 가자."
     },
     {
       "idx": 8,
       "speaker": "Lily",
       "text": "Yay!",
       "start_ms": 19689,
-      "end_ms": 20575
+      "end_ms": 20575,
+      "ko": "야호!"
     },
     {
       "idx": 9,
       "speaker": "Lily",
       "text": "I'll name it Goldie.",
       "start_ms": 21125,
-      "end_ms": 23287
+      "end_ms": 23287,
+      "ko": "이름은 골디라고 지을래요."
     }
   ]
 }

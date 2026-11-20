@@ -20,63 +20,72 @@
       "speaker": "Dad",
       "text": "Do you want to ride your bike?",
       "start_ms": 250,
-      "end_ms": 2640
+      "end_ms": 2640,
+      "ko": "자전거 탈래?"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Yes, but don't let go!",
       "start_ms": 3240,
-      "end_ms": 5282
+      "end_ms": 5282,
+      "ko": "네, 근데 손 놓지 마세요!"
     },
     {
       "idx": 2,
       "speaker": "Dad",
       "text": "I'm holding on.",
       "start_ms": 5882,
-      "end_ms": 7675
+      "end_ms": 7675,
+      "ko": "잡고 있어."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Am I doing it?",
       "start_ms": 8275,
-      "end_ms": 9615
+      "end_ms": 9615,
+      "ko": "나 타고 있는 거예요?"
     },
     {
       "idx": 4,
       "speaker": "Dad",
       "text": "Yes!",
       "start_ms": 10215,
-      "end_ms": 11140
+      "end_ms": 11140,
+      "ko": "그래!"
     },
     {
       "idx": 5,
       "speaker": "Dad",
       "text": "Keep pedaling.",
       "start_ms": 11740,
-      "end_ms": 13254
+      "end_ms": 13254,
+      "ko": "계속 페달 밟아."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "Dad, are you still holding on?",
       "start_ms": 13854,
-      "end_ms": 16170
+      "end_ms": 16170,
+      "ko": "아빠, 아직 잡고 있어요?"
     },
     {
       "idx": 7,
       "speaker": "Dad",
       "text": "No, you're doing it by yourself!",
       "start_ms": 16770,
-      "end_ms": 19732
+      "end_ms": 19732,
+      "ko": "아니, 너 혼자 타고 있어!"
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "I can ride a bike!",
       "start_ms": 20332,
-      "end_ms": 21918
+      "end_ms": 21918,
+      "ko": "나 자전거 탈 수 있어요!"
     }
   ]
 }

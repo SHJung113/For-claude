@@ -19,49 +19,56 @@
       "speaker": "Anchor",
       "text": "Good morning, everyone!",
       "start_ms": 250,
-      "end_ms": 2599
+      "end_ms": 2599,
+      "ko": "여러분, 좋은 아침입니다!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Here's some animal news.",
       "start_ms": 3299,
-      "end_ms": 5550
+      "end_ms": 5550,
+      "ko": "동물 소식을 전해 드릴게요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "A baby elephant was born at the zoo.",
       "start_ms": 6250,
-      "end_ms": 9681
+      "end_ms": 9681,
+      "ko": "동물원에서 아기 코끼리가 태어났어요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "She's very big.",
       "start_ms": 10381,
-      "end_ms": 11990
+      "end_ms": 11990,
+      "ko": "아기 코끼리는 아주 커요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "She's already taller than a dog!",
       "start_ms": 12690,
-      "end_ms": 15465
+      "end_ms": 15465,
+      "ko": "벌써 강아지보다 키가 커요!"
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "She drinks lots of milk.",
       "start_ms": 16165,
-      "end_ms": 18407
+      "end_ms": 18407,
+      "ko": "우유를 아주 많이 먹어요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Her mom is always next to her.",
       "start_ms": 19107,
-      "end_ms": 21875
+      "end_ms": 21875,
+      "ko": "엄마 코끼리가 늘 옆에 있어요."
     }
   ]
 }

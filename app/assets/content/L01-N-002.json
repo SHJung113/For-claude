@@ -19,49 +19,56 @@
       "speaker": "Anchor",
       "text": "Hello, everyone!",
       "start_ms": 250,
-      "end_ms": 1671
+      "end_ms": 1671,
+      "ko": "여러분, 안녕하세요!"
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Today is Tuesday.",
       "start_ms": 2571,
-      "end_ms": 4102
+      "end_ms": 4102,
+      "ko": "오늘은 화요일이에요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "It is rainy.",
       "start_ms": 5002,
-      "end_ms": 6158
+      "end_ms": 6158,
+      "ko": "비가 와요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "It is cold.",
       "start_ms": 7058,
-      "end_ms": 8229
+      "end_ms": 8229,
+      "ko": "추워요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "Take an umbrella.",
       "start_ms": 9129,
-      "end_ms": 10470
+      "end_ms": 10470,
+      "ko": "우산을 챙기세요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "Wear your boots.",
       "start_ms": 11370,
-      "end_ms": 12597
+      "end_ms": 12597,
+      "ko": "장화를 신으세요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "See you tomorrow!",
       "start_ms": 13497,
-      "end_ms": 14750
+      "end_ms": 14750,
+      "ko": "내일 만나요!"
     }
   ]
 }

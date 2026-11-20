@@ -20,56 +20,64 @@
       "speaker": "Max",
       "text": "Mom, Lily is crying.",
       "start_ms": 250,
-      "end_ms": 1837
+      "end_ms": 1837,
+      "ko": "엄마, 릴리가 울어요."
     },
     {
       "idx": 1,
       "speaker": "Mom",
       "text": "She's hungry.",
       "start_ms": 2637,
-      "end_ms": 3781
+      "end_ms": 3781,
+      "ko": "배가 고파서 그래."
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "Can I help?",
       "start_ms": 4581,
-      "end_ms": 5574
+      "end_ms": 5574,
+      "ko": "내가 도와줄까요?"
     },
     {
       "idx": 3,
       "speaker": "Mom",
       "text": "Get her bottle, please.",
       "start_ms": 6374,
-      "end_ms": 8066
+      "end_ms": 8066,
+      "ko": "릴리 젖병 좀 가져다줄래?"
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Here it is.",
       "start_ms": 8866,
-      "end_ms": 9811
+      "end_ms": 9811,
+      "ko": "여기 있어요."
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "Thank you, Max.",
       "start_ms": 10611,
-      "end_ms": 11910
+      "end_ms": 11910,
+      "ko": "고마워, 맥스."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "Look!",
       "start_ms": 12710,
-      "end_ms": 13362
+      "end_ms": 13362,
+      "ko": "봐요!"
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "She's smiling now.",
       "start_ms": 14162,
-      "end_ms": 15508
+      "end_ms": 15508,
+      "ko": "릴리가 이제 웃어요."
     }
   ]
 }

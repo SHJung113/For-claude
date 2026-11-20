@@ -20,49 +20,56 @@
       "speaker": "Max",
       "text": "Mom, I'm bored.",
       "start_ms": 250,
-      "end_ms": 1761
+      "end_ms": 1761,
+      "ko": "엄마, 심심해요."
     },
     {
       "idx": 1,
       "speaker": "Mom",
       "text": "Let's build a fort.",
       "start_ms": 2461,
-      "end_ms": 4309
+      "end_ms": 4309,
+      "ko": "우리 아지트 만들자."
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "With blankets?",
       "start_ms": 5009,
-      "end_ms": 6353
+      "end_ms": 6353,
+      "ko": "담요로요?"
     },
     {
       "idx": 3,
       "speaker": "Mom",
       "text": "Yes, and the pillows.",
       "start_ms": 7053,
-      "end_ms": 9068
+      "end_ms": 9068,
+      "ko": "그래, 베개도."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Can Biscuit come in?",
       "start_ms": 9768,
-      "end_ms": 11420
+      "end_ms": 11420,
+      "ko": "비스킷도 들어와도 돼요?"
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "Sure, he can be the guard.",
       "start_ms": 12120,
-      "end_ms": 14447
+      "end_ms": 14447,
+      "ko": "물론이지, 비스킷이 경비병 하면 되겠다."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "This is the best fort ever!",
       "start_ms": 15147,
-      "end_ms": 17303
+      "end_ms": 17303,
+      "ko": "이건 지금까지 중에 최고의 아지트예요!"
     }
   ]
 }

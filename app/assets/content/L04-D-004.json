@@ -20,56 +20,64 @@
       "speaker": "Librarian",
       "text": "Welcome to the library, class.",
       "start_ms": 250,
-      "end_ms": 3223
+      "end_ms": 3223,
+      "ko": "도서관에 온 걸 환영해요, 여러분."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Can I take two books?",
       "start_ms": 3823,
-      "end_ms": 5727
+      "end_ms": 5727,
+      "ko": "책 두 권 빌려도 돼요?"
     },
     {
       "idx": 2,
       "speaker": "Librarian",
       "text": "Yes, you can take two.",
       "start_ms": 6327,
-      "end_ms": 8759
+      "end_ms": 8759,
+      "ko": "그래, 두 권 빌릴 수 있어."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "I want a book about trucks.",
       "start_ms": 9359,
-      "end_ms": 11541
+      "end_ms": 11541,
+      "ko": "트럭에 관한 책이 보고 싶어요."
     },
     {
       "idx": 4,
       "speaker": "Librarian",
       "text": "They're on the bottom shelf.",
       "start_ms": 12141,
-      "end_ms": 14307
+      "end_ms": 14307,
+      "ko": "맨 아래 칸에 있어."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "And one about space.",
       "start_ms": 14907,
-      "end_ms": 16708
+      "end_ms": 16708,
+      "ko": "그리고 우주에 관한 책도요."
     },
     {
       "idx": 6,
       "speaker": "Librarian",
       "text": "Good choice.",
       "start_ms": 17308,
-      "end_ms": 18617
+      "end_ms": 18617,
+      "ko": "좋은 선택이야."
     },
     {
       "idx": 7,
       "speaker": "Librarian",
       "text": "Bring them back next week.",
       "start_ms": 19217,
-      "end_ms": 21414
+      "end_ms": 21414,
+      "ko": "다음 주에 돌려주렴."
     }
   ]
 }

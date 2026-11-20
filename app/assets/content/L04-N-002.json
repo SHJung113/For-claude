@@ -19,56 +19,64 @@
       "speaker": "Anchor",
       "text": "Good morning, and welcome to Kids News.",
       "start_ms": 250,
-      "end_ms": 4089
+      "end_ms": 4089,
+      "ko": "좋은 아침이에요, 키즈 뉴스입니다."
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Spring is a rainy time of year.",
       "start_ms": 4689,
-      "end_ms": 7507
+      "end_ms": 7507,
+      "ko": "봄은 비가 많이 오는 계절이에요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Rain helps plants grow.",
       "start_ms": 8107,
-      "end_ms": 10363
+      "end_ms": 10363,
+      "ko": "비는 식물이 자라도록 도와줘요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "Soon, flowers will open.",
       "start_ms": 10963,
-      "end_ms": 13422
+      "end_ms": 13422,
+      "ko": "곧 꽃이 필 거예요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "Worms come out after the rain.",
       "start_ms": 14022,
-      "end_ms": 16508
+      "end_ms": 16508,
+      "ko": "비가 온 뒤에는 지렁이가 나와요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "Look for them on the sidewalk.",
       "start_ms": 17108,
-      "end_ms": 19652
+      "end_ms": 19652,
+      "ko": "인도에서 지렁이를 찾아보세요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "But don't step on them!",
       "start_ms": 20252,
-      "end_ms": 22078
+      "end_ms": 22078,
+      "ko": "하지만 밟지는 마세요!"
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "Have a great day!",
       "start_ms": 22678,
-      "end_ms": 24245
+      "end_ms": 24245,
+      "ko": "좋은 하루 보내세요!"
     }
   ]
 }

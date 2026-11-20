@@ -19,49 +19,56 @@
       "speaker": "Anchor",
       "text": "Today's animal news is about penguins.",
       "start_ms": 250,
-      "end_ms": 3411
+      "end_ms": 3411,
+      "ko": "오늘의 동물 소식은 펭귄 이야기예요."
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Penguins are birds.",
       "start_ms": 4111,
-      "end_ms": 5690
+      "end_ms": 5690,
+      "ko": "펭귄은 새예요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "But they can't fly.",
       "start_ms": 6390,
-      "end_ms": 7878
+      "end_ms": 7878,
+      "ko": "하지만 날지는 못해요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "They're very good swimmers.",
       "start_ms": 8578,
-      "end_ms": 10397
+      "end_ms": 10397,
+      "ko": "펭귄은 수영을 아주 잘해요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "They eat fish.",
       "start_ms": 11097,
-      "end_ms": 12373
+      "end_ms": 12373,
+      "ko": "물고기를 먹어요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "Some penguins live in very cold places.",
       "start_ms": 13073,
-      "end_ms": 16536
+      "end_ms": 16536,
+      "ko": "어떤 펭귄은 아주 추운 곳에 살아요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "They stand close together to stay warm.",
       "start_ms": 17236,
-      "end_ms": 20071
+      "end_ms": 20071,
+      "ko": "따뜻하게 지내려고 서로 바짝 붙어 서 있어요."
     }
   ]
 }

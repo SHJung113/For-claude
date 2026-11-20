@@ -21,70 +21,80 @@
       "speaker": "Ms. Park",
       "text": "We can't go outside today.",
       "start_ms": 250,
-      "end_ms": 2297
+      "end_ms": 2297,
+      "ko": "오늘은 밖에 못 나가요."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Why not?",
       "start_ms": 2897,
-      "end_ms": 3788
+      "end_ms": 3788,
+      "ko": "왜요?"
     },
     {
       "idx": 2,
       "speaker": "Ms. Park",
       "text": "It's raining too hard.",
       "start_ms": 4388,
-      "end_ms": 6221
+      "end_ms": 6221,
+      "ko": "비가 너무 많이 와요."
     },
     {
       "idx": 3,
       "speaker": "Leo",
       "text": "Can we play a game?",
       "start_ms": 6821,
-      "end_ms": 8854
+      "end_ms": 8854,
+      "ko": "게임해도 돼요?"
     },
     {
       "idx": 4,
       "speaker": "Ms. Park",
       "text": "Sure.",
       "start_ms": 9454,
-      "end_ms": 10157
+      "end_ms": 10157,
+      "ko": "그럼요."
     },
     {
       "idx": 5,
       "speaker": "Ms. Park",
       "text": "You can play a board game.",
       "start_ms": 10757,
-      "end_ms": 12650
+      "end_ms": 12650,
+      "ko": "보드게임 해도 돼요."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "Let's play the animal game.",
       "start_ms": 13250,
-      "end_ms": 15065
+      "end_ms": 15065,
+      "ko": "동물 게임 하자."
     },
     {
       "idx": 7,
       "speaker": "Leo",
       "text": "Okay, but I go first.",
       "start_ms": 15665,
-      "end_ms": 18156
+      "end_ms": 18156,
+      "ko": "좋아, 근데 내가 먼저 할래."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Fine.",
       "start_ms": 18756,
-      "end_ms": 19432
+      "end_ms": 19432,
+      "ko": "그래."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "Roll the dice.",
       "start_ms": 20032,
-      "end_ms": 21160
+      "end_ms": 21160,
+      "ko": "주사위 굴려."
     }
   ]
 }

@@ -19,63 +19,72 @@
       "speaker": "Anchor",
       "text": "Good evening.",
       "start_ms": 250,
-      "end_ms": 1421
+      "end_ms": 1421,
+      "ko": "안녕하세요."
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Welcome to Kids News.",
       "start_ms": 1971,
-      "end_ms": 4115
+      "end_ms": 4115,
+      "ko": "키즈 뉴스입니다."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Look up at the sky tonight.",
       "start_ms": 4665,
-      "end_ms": 6848
+      "end_ms": 6848,
+      "ko": "오늘 밤 하늘을 올려다보세요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "Can you see the moon?",
       "start_ms": 7398,
-      "end_ms": 8930
+      "end_ms": 8930,
+      "ko": "달이 보이나요?"
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "The moon doesn't make its own light.",
       "start_ms": 9480,
-      "end_ms": 12634
+      "end_ms": 12634,
+      "ko": "달은 스스로 빛을 내지 않아요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "It shines because the sun lights it up.",
       "start_ms": 13184,
-      "end_ms": 16575
+      "end_ms": 16575,
+      "ko": "햇빛을 받아서 빛나는 거예요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "The moon looks different every night.",
       "start_ms": 17125,
-      "end_ms": 19666
+      "end_ms": 19666,
+      "ko": "달은 밤마다 모양이 달라 보여요."
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "Sometimes it's round, and sometimes it's thin.",
       "start_ms": 20216,
-      "end_ms": 24184
+      "end_ms": 24184,
+      "ko": "어떤 날은 동그랗고, 어떤 날은 가늘어요."
     },
     {
       "idx": 8,
       "speaker": "Anchor",
       "text": "Good night, and happy moon watching!",
       "start_ms": 24734,
-      "end_ms": 27935
+      "end_ms": 27935,
+      "ko": "잘 자요, 즐겁게 달 구경하세요!"
     }
   ]
 }

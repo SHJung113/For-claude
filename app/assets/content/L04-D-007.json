@@ -20,70 +20,80 @@
       "speaker": "Lily",
       "text": "Max, look at my tower.",
       "start_ms": 250,
-      "end_ms": 2385
+      "end_ms": 2385,
+      "ko": "오빠, 내 탑 좀 봐."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "Wow, it's really tall.",
       "start_ms": 2985,
-      "end_ms": 4373
+      "end_ms": 4373,
+      "ko": "와, 진짜 높다."
     },
     {
       "idx": 2,
       "speaker": "Lily",
       "text": "Don't touch it!",
       "start_ms": 4973,
-      "end_ms": 6499
+      "end_ms": 6499,
+      "ko": "만지지 마!"
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "I won't touch it.",
       "start_ms": 7099,
-      "end_ms": 8288
+      "end_ms": 8288,
+      "ko": "안 만질게."
     },
     {
       "idx": 4,
       "speaker": "Lily",
       "text": "Biscuit, no!",
       "start_ms": 8888,
-      "end_ms": 10458
+      "end_ms": 10458,
+      "ko": "비스킷, 안 돼!"
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "Oh no.",
       "start_ms": 11058,
-      "end_ms": 11856
+      "end_ms": 11856,
+      "ko": "아, 이런."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "He knocked it down.",
       "start_ms": 12456,
-      "end_ms": 13757
+      "end_ms": 13757,
+      "ko": "비스킷이 넘어뜨렸어."
     },
     {
       "idx": 7,
       "speaker": "Lily",
       "text": "Bad dog!",
       "start_ms": 14357,
-      "end_ms": 15613
+      "end_ms": 15613,
+      "ko": "나쁜 강아지!"
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Don't cry.",
       "start_ms": 16213,
-      "end_ms": 17101
+      "end_ms": 17101,
+      "ko": "울지 마."
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "I'll help you build it again.",
       "start_ms": 17701,
-      "end_ms": 19357
+      "end_ms": 19357,
+      "ko": "다시 쌓는 거 도와줄게."
     }
   ]
 }

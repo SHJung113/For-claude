@@ -20,77 +20,88 @@
       "speaker": "Max",
       "text": "Mom, look!",
       "start_ms": 250,
-      "end_ms": 1198
+      "end_ms": 1198,
+      "ko": "엄마, 봐요!"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "It's a swing.",
       "start_ms": 1998,
-      "end_ms": 3024
+      "end_ms": 3024,
+      "ko": "그네예요."
     },
     {
       "idx": 2,
       "speaker": "Mom",
       "text": "Do you want to swing?",
       "start_ms": 3824,
-      "end_ms": 5153
+      "end_ms": 5153,
+      "ko": "그네 타고 싶니?"
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Yes!",
       "start_ms": 5953,
-      "end_ms": 6589
+      "end_ms": 6589,
+      "ko": "네!"
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Push me, please.",
       "start_ms": 7389,
-      "end_ms": 8602
+      "end_ms": 8602,
+      "ko": "밀어 주세요."
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "Hold on tight.",
       "start_ms": 9402,
-      "end_ms": 10707
+      "end_ms": 10707,
+      "ko": "꽉 잡아."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "I'm so high!",
       "start_ms": 11507,
-      "end_ms": 12626
+      "end_ms": 12626,
+      "ko": "엄청 높이 올라가요!"
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Not too high.",
       "start_ms": 13426,
-      "end_ms": 14674
+      "end_ms": 14674,
+      "ko": "너무 높이는 말고."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Now I want the slide.",
       "start_ms": 15474,
-      "end_ms": 16952
+      "end_ms": 16952,
+      "ko": "이제 미끄럼틀 탈래요."
     },
     {
       "idx": 9,
       "speaker": "Mom",
       "text": "Okay.",
       "start_ms": 17752,
-      "end_ms": 18599
+      "end_ms": 18599,
+      "ko": "그래."
     },
     {
       "idx": 10,
       "speaker": "Mom",
       "text": "Be careful.",
       "start_ms": 19399,
-      "end_ms": 20466
+      "end_ms": 20466,
+      "ko": "조심해."
     }
   ]
 }

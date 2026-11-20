@@ -19,56 +19,64 @@
       "speaker": "Anchor",
       "text": "Welcome to Kids News.",
       "start_ms": 250,
-      "end_ms": 2393
+      "end_ms": 2393,
+      "ko": "키즈 뉴스입니다."
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Today, we're talking about bees.",
       "start_ms": 2943,
-      "end_ms": 5860
+      "end_ms": 5860,
+      "ko": "오늘은 꿀벌 이야기를 해 볼게요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Bees fly from flower to flower.",
       "start_ms": 6410,
-      "end_ms": 9013
+      "end_ms": 9013,
+      "ko": "꿀벌은 이 꽃에서 저 꽃으로 날아다녀요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "They drink nectar, a sweet juice inside flowers.",
       "start_ms": 9563,
-      "end_ms": 14212
+      "end_ms": 14212,
+      "ko": "꽃 안에 있는 달콤한 즙인 꿀물을 마셔요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "They also carry pollen.",
       "start_ms": 14762,
-      "end_ms": 16614
+      "end_ms": 16614,
+      "ko": "꽃가루도 옮겨요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "Pollen helps plants make fruit and seeds.",
       "start_ms": 17164,
-      "end_ms": 20549
+      "end_ms": 20549,
+      "ko": "꽃가루는 식물이 열매와 씨앗을 만들도록 도와줘요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Without bees, we would have fewer apples and berries.",
       "start_ms": 21099,
-      "end_ms": 25657
+      "end_ms": 25657,
+      "ko": "꿀벌이 없으면 사과와 베리가 줄어들 거예요."
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "So say thank you to the bees!",
       "start_ms": 26207,
-      "end_ms": 28428
+      "end_ms": 28428,
+      "ko": "그러니 꿀벌에게 고맙다고 말해 주세요!"
     }
   ]
 }

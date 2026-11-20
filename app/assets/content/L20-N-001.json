@@ -21,119 +21,136 @@
       "speaker": "Anchor",
       "text": "Good evening.",
       "start_ms": 250,
-      "end_ms": 933
+      "end_ms": 933,
+      "ko": "안녕하십니까."
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "As summers get hotter, more cities are turning to one of the oldest tools there is: trees.",
       "start_ms": 1183,
-      "end_ms": 5884
+      "end_ms": 5884,
+      "ko": "여름이 점점 더워지면서, 더 많은 도시들이 가장 오래된 도구 중 하나인 나무에 눈을 돌리고 있습니다."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "Our correspondent has more.",
       "start_ms": 6134,
-      "end_ms": 7436
+      "end_ms": 7436,
+      "ko": "특파원이 자세히 전합니다."
     },
     {
       "idx": 3,
       "speaker": "Reporter",
       "text": "On a July afternoon, the asphalt on this street can get hot enough to burn bare feet.",
       "start_ms": 7686,
-      "end_ms": 11650
+      "end_ms": 11650,
+      "ko": "7월 오후, 이 거리의 아스팔트는 맨발에 화상을 입을 만큼 뜨거워질 수 있습니다."
     },
     {
       "idx": 4,
       "speaker": "Reporter",
       "text": "Just a few blocks away, under a line of old oaks, it's noticeably cooler.",
       "start_ms": 11900,
-      "end_ms": 15335
+      "end_ms": 15335,
+      "ko": "불과 몇 블록 떨어진 오래된 참나무 줄 아래는 눈에 띄게 더 시원합니다."
     },
     {
       "idx": 5,
       "speaker": "Reporter",
       "text": "Researchers call this difference the urban heat island effect.",
       "start_ms": 15585,
-      "end_ms": 18252
+      "end_ms": 18252,
+      "ko": "연구자들은 이 차이를 도시 열섬 효과라고 부릅니다."
     },
     {
       "idx": 6,
       "speaker": "Reporter",
       "text": "Pavement and rooftops soak up heat during the day and release it slowly at night, so neighborhoods with little shade can stay warm long after sunset.",
       "start_ms": 18502,
-      "end_ms": 25249
+      "end_ms": 25249,
+      "ko": "포장도로와 지붕은 낮 동안 열을 흡수했다가 밤에 천천히 내보내기 때문에, 그늘이 거의 없는 동네는 해가 진 뒤에도 한참 동안 더운 상태로 남을 수 있습니다."
     },
     {
       "idx": 7,
       "speaker": "Planner",
       "text": "We used to think of trees as decoration.",
       "start_ms": 25499,
-      "end_ms": 28242
+      "end_ms": 28242,
+      "ko": "예전에는 나무를 장식으로 생각했어요."
     },
     {
       "idx": 8,
       "speaker": "Planner",
       "text": "Now we treat them as infrastructure, like pipes or power lines.",
       "start_ms": 28492,
-      "end_ms": 33155
+      "end_ms": 33155,
+      "ko": "이제는 수도관이나 전선 같은 기반 시설로 다룹니다."
     },
     {
       "idx": 9,
       "speaker": "Planner",
       "text": "A healthy tree canopy cools the street, cleans the air, and honestly, it makes people wanna walk outside.",
       "start_ms": 33405,
-      "end_ms": 41060
+      "end_ms": 41060,
+      "ko": "건강한 나무 그늘은 거리를 식히고 공기를 깨끗하게 하고, 솔직히 사람들이 밖을 걷고 싶게 만들어요."
     },
     {
       "idx": 10,
       "speaker": "Reporter",
       "text": "But planting is the easy part.",
       "start_ms": 41310,
-      "end_ms": 42805
+      "end_ms": 42805,
+      "ko": "하지만 심는 건 쉬운 부분입니다."
     },
     {
       "idx": 11,
       "speaker": "Reporter",
       "text": "Young trees need water, care, and years of growth before they give real shade, and the neighborhoods that need them most often have the least room for them.",
       "start_ms": 43055,
-      "end_ms": 49801
+      "end_ms": 49801,
+      "ko": "어린나무는 제대로 된 그늘을 만들기까지 물과 관리, 그리고 몇 년간의 성장이 필요하고, 나무가 가장 필요한 동네일수록 나무를 심을 공간이 가장 부족한 경우가 많습니다."
     },
     {
       "idx": 12,
       "speaker": "Planner",
       "text": "You can't just drop a sapling into a crack in the sidewalk and walk away.",
       "start_ms": 50051,
-      "end_ms": 54263
+      "end_ms": 54263,
+      "ko": "인도 틈새에 묘목 하나 꽂아 두고 그냥 가 버리면 안 돼요."
     },
     {
       "idx": 13,
       "speaker": "Planner",
       "text": "It's a twenty-year commitment.",
       "start_ms": 54513,
-      "end_ms": 55931
+      "end_ms": 55931,
+      "ko": "20년짜리 약속이니까요."
     },
     {
       "idx": 14,
       "speaker": "Reporter",
       "text": "Still, city leaders here say the math is simple.",
       "start_ms": 56181,
-      "end_ms": 58267
+      "end_ms": 58267,
+      "ko": "그래도 이곳 시 지도자들은 계산은 간단하다고 말합니다."
     },
     {
       "idx": 15,
       "speaker": "Reporter",
       "text": "Every tree that survives is a little shade that didn't exist before.",
       "start_ms": 58517,
-      "end_ms": 61565
+      "end_ms": 61565,
+      "ko": "살아남는 나무 한 그루 한 그루가 전에는 없던 그늘을 조금씩 만들어 낸다는 것입니다."
     },
     {
       "idx": 16,
       "speaker": "Reporter",
       "text": "Reporting from downtown, I'm Claire Hughes.",
       "start_ms": 61815,
-      "end_ms": 63816
+      "end_ms": 63816,
+      "ko": "시내에서 클레어 휴즈였습니다."
     }
   ]
 }

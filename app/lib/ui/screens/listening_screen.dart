@@ -2,12 +2,16 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../data/content.dart';
 import '../nav.dart';
 import '../theme.dart';
 
 enum RotateMode { sentence, speed }
+
+/// What the text area shows. Cycled with ↻ long-press (or T).
+enum TextMode { blind, script, scriptKo }
 
 /// "Now Listening": sentence-by-sentence playback controlled by the wheel.
 ///
@@ -17,7 +21,7 @@ enum RotateMode { sentence, speed }
 ///   center long-press → toggle rotate mode: sentence ↔ speed
 ///   ⏮ / ⏭             → previous / next sentence
 ///   ↻                 → repeat current sentence
-///   ↻ long-press      → show / hide transcript (blind listening by default)
+///   ↻ long-press      → text: blind → script → script + Korean → blind
 class ListeningScreen extends AppScreen {
   ListeningScreen(this.content) {
     _player.positionUpdater = TimerPositionUpdater(
@@ -43,7 +47,9 @@ class ListeningScreen extends AppScreen {
   bool single = false; // stop at the end of the current sentence
   double speed = 1.0;
   RotateMode mode = RotateMode.sentence;
-  bool showText = false;
+  TextMode textMode = TextMode.blind;
+  final _keys = <GlobalKey>[];
+  int _scrolledTo = -1;
   Duration position = Duration.zero;
 
   List<Sentence> get _s => content.sentences;
@@ -100,7 +106,7 @@ class ListeningScreen extends AppScreen {
   @override
   void onRotate(int steps) {
     if (mode == RotateMode.sentence) {
-      _playSentence(index + steps);
+      _moveTo(index + steps);
     } else {
       speed = ((speed * 10 + steps).clamp(5, 15)) / 10;
       _player.setPlaybackRate(speed);
@@ -115,16 +121,103 @@ class ListeningScreen extends AppScreen {
   }
 
   @override
-  void onPrev() => _playSentence(index - 1);
+  void onPrev() => _moveTo(index - 1);
   @override
-  void onNext() => _playSentence(index + 1);
+  void onNext() => _moveTo(index + 1);
+
+  /// Jump to another sentence. Past the first or last sentence nothing
+  /// happens (no replay), so ⏭ on the last sentence doesn't restart it.
+  void _moveTo(int target) {
+    final t = target.clamp(0, _s.length - 1);
+    if (t == index && target != index) {
+      HapticFeedback.heavyImpact();
+      return;
+    }
+    _playSentence(t);
+  }
   @override
   void onBottom() => _playSentence(index);
 
   @override
   void onBottomLong() {
-    showText = !showText;
+    textMode = TextMode.values[(textMode.index + 1) % TextMode.values.length];
+    _scrolledTo = -1;
     refresh();
+  }
+
+  /// Keep the current sentence in view in the script list.
+  void _followCurrent() {
+    if (_scrolledTo == index) return;
+    _scrolledTo = index;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final ctx = index < _keys.length ? _keys[index].currentContext : null;
+      if (ctx != null) {
+        Scrollable.ensureVisible(ctx,
+            alignment: 0.35, duration: const Duration(milliseconds: 200));
+      }
+    });
+  }
+
+  Widget _script(Palette pal) {
+    if (_keys.length != _s.length) {
+      _keys
+        ..clear()
+        ..addAll(List.generate(_s.length, (_) => GlobalKey()));
+    }
+    _followCurrent();
+    final withKo = textMode == TextMode.scriptKo;
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (final s in _s)
+            GestureDetector(
+              key: _keys[s.idx],
+              onTap: () => _playSentence(s.idx),
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                decoration: BoxDecoration(
+                  color: s.idx == index ? Palette.accentBottom.withValues(alpha: 0.14) : null,
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border(
+                    left: BorderSide(
+                      color: s.idx == index ? Palette.accentBottom : Colors.transparent,
+                      width: 3,
+                    ),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(children: [
+                        TextSpan(
+                            text: '${s.speaker}  ',
+                            style: TextStyle(
+                                color: pal.subtext, fontSize: 12, fontWeight: FontWeight.w700)),
+                        TextSpan(text: s.text),
+                      ]),
+                      style: TextStyle(
+                        color: pal.text,
+                        fontSize: 16,
+                        height: 1.3,
+                        fontWeight: s.idx == index ? FontWeight.w600 : FontWeight.w400,
+                      ),
+                    ),
+                    if (withKo && s.ko != null)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 2),
+                        child: Text(s.ko!,
+                            style: TextStyle(color: pal.subtext, fontSize: 14, height: 1.3)),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -140,7 +233,6 @@ class ListeningScreen extends AppScreen {
     final pal = Palette.of(context);
     final total = content.duration.inMilliseconds;
     final frac = total == 0 ? 0.0 : (position.inMilliseconds / total).clamp(0.0, 1.0);
-    final cur = _s[index];
     final small = TextStyle(color: pal.subtext, fontSize: 13);
 
     return Padding(
@@ -181,32 +273,23 @@ class ListeningScreen extends AppScreen {
             const SizedBox(width: 8),
             Text(_fmt(content.duration), style: small),
           ]),
-          const SizedBox(height: 12),
+          const SizedBox(height: 10),
           Expanded(
-            child: Center(
-              child: showText
-                  ? SingleChildScrollView(
-                      child: Text.rich(
-                        TextSpan(children: [
-                          TextSpan(
-                              text: '${cur.speaker}: ',
-                              style: TextStyle(color: pal.subtext, fontWeight: FontWeight.w600)),
-                          TextSpan(text: cur.text),
-                        ]),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: pal.text, fontSize: 17, height: 1.35),
-                      ),
-                    )
-                  : Column(mainAxisSize: MainAxisSize.min, children: [
+            child: textMode == TextMode.blind
+                ? Center(
+                    child: Column(mainAxisSize: MainAxisSize.min, children: [
                       Icon(playing ? Icons.graphic_eq_rounded : Icons.headphones_rounded,
                           color: pal.subtext, size: 34),
                       const SizedBox(height: 6),
-                      Text('Blind listening · hold ↻ for text', style: small),
+                      Text('Blind listening · hold ↻ for script', style: small),
                     ]),
-            ),
+                  )
+                : _script(pal),
           ),
+          const SizedBox(height: 6),
           Text(
-            mode == RotateMode.sentence ? 'Wheel: sentences · hold center: speed' : 'Wheel: speed · hold center: sentences',
+            '${const ['Blind', 'Script', 'Script + 해석'][textMode.index]} · hold ↻ to change  |  '
+            '${mode == RotateMode.sentence ? 'hold center: speed' : 'hold center: sentences'}',
             textAlign: TextAlign.center,
             style: small.copyWith(fontSize: 11),
           ),

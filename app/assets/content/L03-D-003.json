@@ -21,70 +21,80 @@
       "speaker": "Mom",
       "text": "Happy birthday, Max!",
       "start_ms": 250,
-      "end_ms": 1970
+      "end_ms": 1970,
+      "ko": "생일 축하해, 맥스!"
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "I'm five years old!",
       "start_ms": 2670,
-      "end_ms": 4020
+      "end_ms": 4020,
+      "ko": "나 다섯 살이에요!"
     },
     {
       "idx": 2,
       "speaker": "Dad",
       "text": "Make a wish.",
       "start_ms": 4720,
-      "end_ms": 5871
+      "end_ms": 5871,
+      "ko": "소원 빌어."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Okay.",
       "start_ms": 6571,
-      "end_ms": 7306
+      "end_ms": 7306,
+      "ko": "네."
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "I made a wish.",
       "start_ms": 8006,
-      "end_ms": 8937
+      "end_ms": 8937,
+      "ko": "소원 빌었어요."
     },
     {
       "idx": 5,
       "speaker": "Dad",
       "text": "Now blow out the candles.",
       "start_ms": 9637,
-      "end_ms": 11739
+      "end_ms": 11739,
+      "ko": "이제 촛불 불어."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "One, two, three!",
       "start_ms": 12439,
-      "end_ms": 13715
+      "end_ms": 13715,
+      "ko": "하나, 둘, 셋!"
     },
     {
       "idx": 7,
       "speaker": "Mom",
       "text": "Here's your present.",
       "start_ms": 14415,
-      "end_ms": 15755
+      "end_ms": 15755,
+      "ko": "여기 선물이야."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "A red bike!",
       "start_ms": 16455,
-      "end_ms": 17556
+      "end_ms": 17556,
+      "ko": "빨간 자전거다!"
     },
     {
       "idx": 9,
       "speaker": "Max",
       "text": "Thank you!",
       "start_ms": 18256,
-      "end_ms": 19196
+      "end_ms": 19196,
+      "ko": "고마워요!"
     }
   ]
 }

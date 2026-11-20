@@ -20,56 +20,64 @@
       "speaker": "Dad",
       "text": "It is time for bed.",
       "start_ms": 250,
-      "end_ms": 2464
+      "end_ms": 2464,
+      "ko": "잘 시간이야."
     },
     {
       "idx": 1,
       "speaker": "Max",
       "text": "I am not tired.",
       "start_ms": 3364,
-      "end_ms": 4865
+      "end_ms": 4865,
+      "ko": "나 안 피곤해요."
     },
     {
       "idx": 2,
       "speaker": "Dad",
       "text": "Close your eyes.",
       "start_ms": 5765,
-      "end_ms": 7554
+      "end_ms": 7554,
+      "ko": "눈 감으렴."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "Read a book, please.",
       "start_ms": 8454,
-      "end_ms": 10106
+      "end_ms": 10106,
+      "ko": "책 읽어 주세요."
     },
     {
       "idx": 4,
       "speaker": "Dad",
       "text": "One book.",
       "start_ms": 11006,
-      "end_ms": 12336
+      "end_ms": 12336,
+      "ko": "한 권만이야."
     },
     {
       "idx": 5,
       "speaker": "Max",
       "text": "Thank you, Dad.",
       "start_ms": 13236,
-      "end_ms": 14527
+      "end_ms": 14527,
+      "ko": "고마워요, 아빠."
     },
     {
       "idx": 6,
       "speaker": "Dad",
       "text": "Good night, Max.",
       "start_ms": 15427,
-      "end_ms": 17283
+      "end_ms": 17283,
+      "ko": "잘 자, 맥스."
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "Good night.",
       "start_ms": 18183,
-      "end_ms": 19265
+      "end_ms": 19265,
+      "ko": "안녕히 주무세요."
     }
   ]
 }

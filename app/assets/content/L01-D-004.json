@@ -20,49 +20,56 @@
       "speaker": "Max",
       "text": "I am hungry.",
       "start_ms": 250,
-      "end_ms": 1459
+      "end_ms": 1459,
+      "ko": "배고파요."
     },
     {
       "idx": 1,
       "speaker": "Mom",
       "text": "Here is an apple.",
       "start_ms": 2359,
-      "end_ms": 3920
+      "end_ms": 3920,
+      "ko": "여기 사과 있어."
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "Thank you.",
       "start_ms": 4820,
-      "end_ms": 5849
+      "end_ms": 5849,
+      "ko": "고맙습니다."
     },
     {
       "idx": 3,
       "speaker": "Mom",
       "text": "Do you want milk?",
       "start_ms": 6749,
-      "end_ms": 8293
+      "end_ms": 8293,
+      "ko": "우유 줄까?"
     },
     {
       "idx": 4,
       "speaker": "Max",
       "text": "Yes, please.",
       "start_ms": 9193,
-      "end_ms": 10359
+      "end_ms": 10359,
+      "ko": "네, 주세요."
     },
     {
       "idx": 5,
       "speaker": "Mom",
       "text": "Here you go.",
       "start_ms": 11259,
-      "end_ms": 12515
+      "end_ms": 12515,
+      "ko": "자, 여기 있어."
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "Yum!",
       "start_ms": 13415,
-      "end_ms": 14145
+      "end_ms": 14145,
+      "ko": "맛있다!"
     }
   ]
 }

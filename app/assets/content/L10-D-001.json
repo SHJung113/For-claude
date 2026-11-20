@@ -21,147 +21,168 @@
       "speaker": "Max",
       "text": "Dad, can Leo sleep over on Friday?",
       "start_ms": 250,
-      "end_ms": 2210
+      "end_ms": 2210,
+      "ko": "아빠, 레오가 금요일에 자고 가도 돼요?"
     },
     {
       "idx": 1,
       "speaker": "Dad",
       "text": "Did you finish your science project first?",
       "start_ms": 2660,
-      "end_ms": 5256
+      "end_ms": 5256,
+      "ko": "과학 숙제부터 다 끝냈니?"
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "Almost.",
       "start_ms": 5706,
-      "end_ms": 6405
+      "end_ms": 6405,
+      "ko": "거의요."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "We just need to paint the planets.",
       "start_ms": 6855,
-      "end_ms": 8445
+      "end_ms": 8445,
+      "ko": "행성만 색칠하면 돼요."
     },
     {
       "idx": 4,
       "speaker": "Leo",
       "text": "And we're gonna make the rings for Saturn out of paper.",
       "start_ms": 8895,
-      "end_ms": 12086
+      "end_ms": 12086,
+      "ko": "그리고 종이로 토성 고리를 만들 거예요."
     },
     {
       "idx": 5,
       "speaker": "Dad",
       "text": "Sounds great.",
       "start_ms": 12536,
-      "end_ms": 13574
+      "end_ms": 13574,
+      "ko": "좋네."
     },
     {
       "idx": 6,
       "speaker": "Dad",
       "text": "But no staying up past eleven, okay?",
       "start_ms": 14024,
-      "end_ms": 16457
+      "end_ms": 16457,
+      "ko": "근데 11시 넘어서까지 안 자면 안 된다, 알았지?"
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "Okay.",
       "start_ms": 16907,
-      "end_ms": 17556
+      "end_ms": 17556,
+      "ko": "네."
     },
     {
       "idx": 8,
       "speaker": "Max",
       "text": "Can we order pizza, though?",
       "start_ms": 18006,
-      "end_ms": 19334
+      "end_ms": 19334,
+      "ko": "근데 피자 시켜도 돼요?"
     },
     {
       "idx": 9,
       "speaker": "Dad",
       "text": "Only if you clean up the kitchen after.",
       "start_ms": 19784,
-      "end_ms": 22286
+      "end_ms": 22286,
+      "ko": "먹고 나서 부엌 치운다면."
     },
     {
       "idx": 10,
       "speaker": "Leo",
       "text": "Deal!",
       "start_ms": 22736,
-      "end_ms": 23480
+      "end_ms": 23480,
+      "ko": "좋아요!"
     },
     {
       "idx": 11,
       "speaker": "Leo",
       "text": "I wanna get pepperoni and extra cheese.",
       "start_ms": 23930,
-      "end_ms": 26753
+      "end_ms": 26753,
+      "ko": "나는 페퍼로니에 치즈 추가할래."
     },
     {
       "idx": 12,
       "speaker": "Max",
       "text": "Better make it two pizzas.",
       "start_ms": 27203,
-      "end_ms": 28626
+      "end_ms": 28626,
+      "ko": "피자 두 판 시키는 게 낫겠어요."
     },
     {
       "idx": 13,
       "speaker": "Max",
       "text": "Leo eats a lot.",
       "start_ms": 29076,
-      "end_ms": 30081
+      "end_ms": 30081,
+      "ko": "레오가 많이 먹거든요."
     },
     {
       "idx": 14,
       "speaker": "Leo",
       "text": "Hey!",
       "start_ms": 30531,
-      "end_ms": 31257
+      "end_ms": 31257,
+      "ko": "야!"
     },
     {
       "idx": 15,
       "speaker": "Leo",
       "text": "That's not true.",
       "start_ms": 31707,
-      "end_ms": 33207
+      "end_ms": 33207,
+      "ko": "그거 아니거든."
     },
     {
       "idx": 16,
       "speaker": "Leo",
       "text": "Well, maybe a little.",
       "start_ms": 33657,
-      "end_ms": 35291
+      "end_ms": 35291,
+      "ko": "음, 조금은 맞을지도."
     },
     {
       "idx": 17,
       "speaker": "Dad",
       "text": "Alright, two pizzas.",
       "start_ms": 35741,
-      "end_ms": 37167
+      "end_ms": 37167,
+      "ko": "알았다, 피자 두 판."
     },
     {
       "idx": 18,
       "speaker": "Dad",
       "text": "But the next day, you're both helping me in the garden.",
       "start_ms": 37617,
-      "end_ms": 40892
+      "end_ms": 40892,
+      "ko": "대신 다음 날은 둘 다 정원 일 도와야 해."
     },
     {
       "idx": 19,
       "speaker": "Max",
       "text": "Got it.",
       "start_ms": 41342,
-      "end_ms": 41961
+      "end_ms": 41961,
+      "ko": "알겠어요."
     },
     {
       "idx": 20,
       "speaker": "Max",
       "text": "Thanks, Dad!",
       "start_ms": 42411,
-      "end_ms": 43235
+      "end_ms": 43235,
+      "ko": "고마워요, 아빠!"
     }
   ]
 }

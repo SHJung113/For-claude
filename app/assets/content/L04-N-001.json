@@ -19,63 +19,72 @@
       "speaker": "Anchor",
       "text": "Hello and welcome to Kids News.",
       "start_ms": 250,
-      "end_ms": 3431
+      "end_ms": 3431,
+      "ko": "안녕하세요, 키즈 뉴스입니다."
     },
     {
       "idx": 1,
       "speaker": "Anchor",
       "text": "Fall is here.",
       "start_ms": 4031,
-      "end_ms": 5354
+      "end_ms": 5354,
+      "ko": "가을이 왔어요."
     },
     {
       "idx": 2,
       "speaker": "Anchor",
       "text": "The leaves are changing colors.",
       "start_ms": 5954,
-      "end_ms": 8604
+      "end_ms": 8604,
+      "ko": "나뭇잎 색이 바뀌고 있어요."
     },
     {
       "idx": 3,
       "speaker": "Anchor",
       "text": "Some are red, and some are yellow.",
       "start_ms": 9204,
-      "end_ms": 12367
+      "end_ms": 12367,
+      "ko": "빨간 잎도 있고, 노란 잎도 있어요."
     },
     {
       "idx": 4,
       "speaker": "Anchor",
       "text": "The air is cooler in the morning.",
       "start_ms": 12967,
-      "end_ms": 15552
+      "end_ms": 15552,
+      "ko": "아침에는 공기가 더 선선해요."
     },
     {
       "idx": 5,
       "speaker": "Anchor",
       "text": "Don't forget your jacket.",
       "start_ms": 16152,
-      "end_ms": 18297
+      "end_ms": 18297,
+      "ko": "재킷 챙기는 거 잊지 마세요."
     },
     {
       "idx": 6,
       "speaker": "Anchor",
       "text": "Many families pick apples in the fall.",
       "start_ms": 18897,
-      "end_ms": 22446
+      "end_ms": 22446,
+      "ko": "가을에는 많은 가족들이 사과를 따러 가요."
     },
     {
       "idx": 7,
       "speaker": "Anchor",
       "text": "That's all for today.",
       "start_ms": 23046,
-      "end_ms": 24858
+      "end_ms": 24858,
+      "ko": "오늘 소식은 여기까지예요."
     },
     {
       "idx": 8,
       "speaker": "Anchor",
       "text": "See you next time!",
       "start_ms": 25458,
-      "end_ms": 27249
+      "end_ms": 27249,
+      "ko": "다음에 만나요!"
     }
   ]
 }

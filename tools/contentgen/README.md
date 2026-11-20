@@ -18,3 +18,4 @@ curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-fil
 - `levels/Lxx.yaml`: 단계별 대본 묶음 (`contents:` 목록)
 - `characters.yaml`: 등장인물별 기본 목소리
 - 이미 만든 번들은 건너뛴다 (`--force`로 다시 생성)
+- `translations/ko.yaml`: 문장별 한국어 해석. 콘텐츠 생성 후 `python apply_translations.py --content ../../app/assets/content` 로 반영 (문장 수가 다르면 실패)

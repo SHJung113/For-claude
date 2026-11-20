@@ -19,49 +19,56 @@
       "speaker": "Ms. Park",
       "text": "Good news, class!",
       "start_ms": 250,
-      "end_ms": 1921
+      "end_ms": 1921,
+      "ko": "반가운 소식이 있어요, 여러분!"
     },
     {
       "idx": 1,
       "speaker": "Ms. Park",
       "text": "We have a new fish.",
       "start_ms": 2721,
-      "end_ms": 4450
+      "end_ms": 4450,
+      "ko": "새 물고기가 생겼어요."
     },
     {
       "idx": 2,
       "speaker": "Ms. Park",
       "text": "It's orange.",
       "start_ms": 5250,
-      "end_ms": 6566
+      "end_ms": 6566,
+      "ko": "주황색이에요."
     },
     {
       "idx": 3,
       "speaker": "Ms. Park",
       "text": "It's very small.",
       "start_ms": 7366,
-      "end_ms": 8990
+      "end_ms": 8990,
+      "ko": "아주 작아요."
     },
     {
       "idx": 4,
       "speaker": "Ms. Park",
       "text": "Its name is Bubbles.",
       "start_ms": 9790,
-      "end_ms": 11710
+      "end_ms": 11710,
+      "ko": "이름은 버블스예요."
     },
     {
       "idx": 5,
       "speaker": "Ms. Park",
       "text": "Bubbles eats in the morning.",
       "start_ms": 12510,
-      "end_ms": 14802
+      "end_ms": 14802,
+      "ko": "버블스는 아침에 밥을 먹어요."
     },
     {
       "idx": 6,
       "speaker": "Ms. Park",
       "text": "Please say hello to Bubbles!",
       "start_ms": 15602,
-      "end_ms": 17869
+      "end_ms": 17869,
+      "ko": "버블스에게 인사해 주세요!"
     }
   ]
 }

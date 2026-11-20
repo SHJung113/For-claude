@@ -20,98 +20,112 @@
       "speaker": "Leo",
       "text": "Hi!",
       "start_ms": 250,
-      "end_ms": 926
+      "end_ms": 926,
+      "ko": "안녕!"
     },
     {
       "idx": 1,
       "speaker": "Leo",
       "text": "What's your name?",
       "start_ms": 1626,
-      "end_ms": 2794
+      "end_ms": 2794,
+      "ko": "이름이 뭐야?"
     },
     {
       "idx": 2,
       "speaker": "Max",
       "text": "I'm Max.",
       "start_ms": 3494,
-      "end_ms": 4172
+      "end_ms": 4172,
+      "ko": "나는 맥스야."
     },
     {
       "idx": 3,
       "speaker": "Max",
       "text": "What's your name?",
       "start_ms": 4872,
-      "end_ms": 5618
+      "end_ms": 5618,
+      "ko": "너는 이름이 뭐야?"
     },
     {
       "idx": 4,
       "speaker": "Leo",
       "text": "I'm Leo.",
       "start_ms": 6318,
-      "end_ms": 7374
+      "end_ms": 7374,
+      "ko": "나는 레오야."
     },
     {
       "idx": 5,
       "speaker": "Leo",
       "text": "Do you want to play?",
       "start_ms": 8074,
-      "end_ms": 9231
+      "end_ms": 9231,
+      "ko": "같이 놀래?"
     },
     {
       "idx": 6,
       "speaker": "Max",
       "text": "Sure!",
       "start_ms": 9931,
-      "end_ms": 10401
+      "end_ms": 10401,
+      "ko": "좋아!"
     },
     {
       "idx": 7,
       "speaker": "Max",
       "text": "Let's play tag.",
       "start_ms": 11101,
-      "end_ms": 12045
+      "end_ms": 12045,
+      "ko": "술래잡기하자."
     },
     {
       "idx": 8,
       "speaker": "Leo",
       "text": "Okay.",
       "start_ms": 12745,
-      "end_ms": 13658
+      "end_ms": 13658,
+      "ko": "알았어."
     },
     {
       "idx": 9,
       "speaker": "Leo",
       "text": "You're it!",
       "start_ms": 14358,
-      "end_ms": 15074
+      "end_ms": 15074,
+      "ko": "네가 술래야!"
     },
     {
       "idx": 10,
       "speaker": "Max",
       "text": "I'm going to catch you!",
       "start_ms": 15774,
-      "end_ms": 16870
+      "end_ms": 16870,
+      "ko": "내가 잡을 거야!"
     },
     {
       "idx": 11,
       "speaker": "Leo",
       "text": "You can't catch me!",
       "start_ms": 17570,
-      "end_ms": 19046
+      "end_ms": 19046,
+      "ko": "넌 날 못 잡아!"
     },
     {
       "idx": 12,
       "speaker": "Max",
       "text": "Got you!",
       "start_ms": 19746,
-      "end_ms": 20411
+      "end_ms": 20411,
+      "ko": "잡았다!"
     },
     {
       "idx": 13,
       "speaker": "Max",
       "text": "Now you're it.",
       "start_ms": 21111,
-      "end_ms": 21838
+      "end_ms": 21838,
+      "ko": "이제 네가 술래야."
     }
   ]
 }
