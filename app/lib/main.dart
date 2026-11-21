@@ -6,6 +6,7 @@ import 'ui/device_shell.dart';
 import 'ui/nav.dart';
 import 'ui/screens/listening_screen.dart';
 import 'ui/screens/menu_screen.dart';
+import 'ui/screens/youtube_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -74,6 +75,7 @@ MenuScreen buildRootMenu(List<Content> catalog) {
                     detail: '${catalog.where((c) => c.level == l.no).length}',
                     open: () => levelScreen(l)),
             ])),
+    MenuItem('YouTube', open: () => YouTubeHome()),
     MenuItem('Review', open: () => InfoScreen('Review', _later)),
     MenuItem('Progress', open: () => InfoScreen('Progress', _later)),
     MenuItem('Settings', open: () => InfoScreen('Settings', _later)),

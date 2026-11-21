@@ -4,10 +4,11 @@ import '../nav.dart';
 import '../theme.dart';
 
 class MenuItem {
-  const MenuItem(this.label, {this.detail, this.open, this.enabled = true});
+  const MenuItem(this.label, {this.detail, this.open, this.action, this.enabled = true});
   final String label;
   final String? detail;
   final AppScreen Function()? open;
+  final void Function()? action; // runs instead of opening a screen
   final bool enabled;
 }
 
@@ -44,7 +45,12 @@ class MenuScreen extends AppScreen {
   @override
   void onCenter() {
     final item = items[selected];
-    if (item.enabled && item.open != null) nav.push(item.open!());
+    if (!item.enabled) return;
+    if (item.action != null) {
+      item.action!();
+    } else if (item.open != null) {
+      nav.push(item.open!());
+    }
   }
 
   @override
