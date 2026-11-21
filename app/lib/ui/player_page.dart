@@ -5,7 +5,7 @@ import '../data/content.dart';
 import '../player/sentence_player.dart';
 import '../youtube/pack.dart';
 
-enum TextMode { blind, script, translation, expressions }
+enum TextMode { blind, sentence, script, translation, expressions }
 
 /// Study screen for one piece of content (TTS or YouTube).
 /// Text area on top, every control in a dock at the bottom for one thumb.
@@ -18,6 +18,7 @@ class PlayerPage extends StatefulWidget {
     this.header,
     this.expressions = const [],
     this.initialMode = TextMode.blind,
+    this.modes = const [TextMode.blind, TextMode.script, TextMode.translation],
   });
 
   final String title;
@@ -28,6 +29,9 @@ class PlayerPage extends StatefulWidget {
   final Widget Function(SentencePlayer)? header;
   final List<Expression> expressions;
   final TextMode initialMode;
+
+  /// Text modes offered in the selector, in order.
+  final List<TextMode> modes;
 
   @override
   State<PlayerPage> createState() => _PlayerPageState();
@@ -49,7 +53,7 @@ class _PlayerPageState extends State<PlayerPage> {
   void _changed() {
     if (!mounted) return;
     setState(() {});
-    if (_followed != p.index && mode != TextMode.blind && mode != TextMode.expressions) {
+    if (_followed != p.index && (mode == TextMode.script || mode == TextMode.translation)) {
       _followed = p.index;
       WidgetsBinding.instance.addPostFrameCallback((_) {
         final ctx = _keys[p.index].currentContext;
@@ -72,12 +76,7 @@ class _PlayerPageState extends State<PlayerPage> {
     f();
   }
 
-  List<TextMode> get _modes => [
-        TextMode.blind,
-        TextMode.script,
-        TextMode.translation,
-        if (widget.expressions.isNotEmpty) TextMode.expressions,
-      ];
+  List<TextMode> get _modes => widget.modes;
 
   void _nextMode() {
     final m = _modes;
@@ -131,6 +130,7 @@ class _PlayerPageState extends State<PlayerPage> {
   Widget _modeSelector() {
     const labels = {
       TextMode.blind: '듣기만',
+      TextMode.sentence: '문장',
       TextMode.script: '대본',
       TextMode.translation: '해석',
       TextMode.expressions: '표현',
@@ -165,6 +165,31 @@ class _PlayerPageState extends State<PlayerPage> {
             const SizedBox(height: 6),
             Text('대본 없이 먼저 들어 보세요', style: TextStyle(color: cs.onSurfaceVariant)),
           ]),
+        );
+      case TextMode.sentence:
+        final s = p.sentences[p.index];
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                Text('문장 ${p.index + 1} / ${p.sentences.length}'
+                    '${s.speaker.isEmpty ? '' : ' · ${s.speaker}'}',
+                    style: TextStyle(color: cs.onSurfaceVariant, fontWeight: FontWeight.w600)),
+                const SizedBox(height: 14),
+                Text(s.text,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 23, height: 1.35, fontWeight: FontWeight.w600, color: cs.onSurface)),
+                if (s.ko != null) ...[
+                  const SizedBox(height: 12),
+                  Text(s.ko!,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 16, height: 1.4, color: cs.onSurfaceVariant)),
+                ],
+              ]),
+            ),
+          ),
         );
       case TextMode.expressions:
         return ListView.separated(
@@ -212,7 +237,7 @@ class _PlayerPageState extends State<PlayerPage> {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
             child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              SizedBox(
+              if (s.speaker.isNotEmpty) SizedBox(
                 width: 64,
                 child: Text(s.speaker,
                     maxLines: 1,

@@ -41,6 +41,8 @@ class YouTubePack {
     return best + 1;
   }
 
+  bool get hasTranslation => sentences.any((s) => s.ko != null);
+
   String get fileName => '${videoId}_${title.replaceAll(RegExp(r'[^A-Za-z0-9]+'), '_')}.json';
 }
 
@@ -75,20 +77,39 @@ class PackStore {
     return packs;
   }
 
-  /// Lets the user pick a pack file and saves it. Returns the pack, or null
-  /// if cancelled. Throws [FormatException] for files that aren't packs.
-  static Future<YouTubePack?> importFromPicker() async {
-    final files = await FilePicker.pickFiles(type: FileType.any);
-    if (files.isEmpty) return null;
-    final text = utf8.decode(await files.first.readAsBytes());
-    final json = jsonDecode(text);
-    if (json is! Map<String, dynamic> || json['type'] != 'listenup-youtube-pack') {
-      throw const FormatException('ListenUp 학습 팩 파일이 아닙니다.');
-    }
-    final pack = YouTubePack.fromJson(json);
-    final all = await _all()..[pack.fileName] = text;
+  static Future<void> _write(Map<String, String> all) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_key, jsonEncode(all));
-    return pack;
+  }
+
+  /// Saves pack JSON objects; returns how many were saved.
+  static Future<int> saveAll(List<Map<String, dynamic>> packs) async {
+    final all = await _all();
+    for (final j in packs) {
+      final pack = YouTubePack.fromJson(j); // validates the shape
+      all[pack.fileName] = jsonEncode(j);
+    }
+    await _write(all);
+    return packs.length;
+  }
+
+  static Future<void> delete(YouTubePack pack) async {
+    final all = await _all()..remove(pack.fileName);
+    await _write(all);
+  }
+
+  /// Lets the user pick a pack file (one pack, or a bundle of many) and
+  /// saves it. Returns the number of packs saved (0 if cancelled).
+  static Future<int> importFromPicker() async {
+    final files = await FilePicker.pickFiles(type: FileType.any);
+    if (files.isEmpty) return 0;
+    final json = jsonDecode(utf8.decode(await files.first.readAsBytes()));
+    if (json is Map<String, dynamic> && json['type'] == 'listenup-youtube-pack') {
+      return saveAll([json]);
+    }
+    if (json is Map<String, dynamic> && json['type'] == 'listenup-youtube-bundle') {
+      return saveAll([for (final p in json['packs'] as List) p as Map<String, dynamic>]);
+    }
+    throw const FormatException('ListenUp 학습 팩 파일이 아닙니다.');
   }
 }

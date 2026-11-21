@@ -17,8 +17,12 @@ class YouTubeSentencePlayer extends SentencePlayer {
       : controller = YoutubePlayerController.fromVideoId(
           videoId: pack.videoId,
           startSeconds: pack.sentences.first.start.inMilliseconds / 1000,
+          // Our dock is the only control surface: hide YouTube's own controls,
+          // captions and annotations to keep the screen calm.
           params: const YoutubePlayerParams(
-            showControls: true,
+            showControls: false,
+            enableCaption: false,
+            showVideoAnnotations: false,
             showFullscreenButton: false,
             strictRelatedVideos: true,
             playsInline: true,

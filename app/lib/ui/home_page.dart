@@ -8,6 +8,7 @@ import '../player/youtube_sentence_player.dart';
 import '../youtube/pack.dart';
 import 'app_theme.dart';
 import 'player_page.dart';
+import 'youtube_add_page.dart';
 
 /// Placement test arrives with M2; until then everyone starts at L1.
 const currentLevel = 1;
@@ -68,7 +69,13 @@ void openPack(BuildContext context, YouTubePack pk) {
       createPlayer: () => YouTubeSentencePlayer(pk),
       header: (p) => YoutubePlayer(controller: (p as YouTubeSentencePlayer).controller),
       expressions: pk.expressions,
-      initialMode: TextMode.translation,
+      initialMode: TextMode.sentence,
+      modes: [
+        TextMode.blind,
+        TextMode.sentence,
+        pk.hasTranslation ? TextMode.translation : TextMode.script,
+        if (pk.expressions.isNotEmpty) TextMode.expressions,
+      ],
     ),
   ));
 }
@@ -249,19 +256,48 @@ class _YouTubeTabState extends State<_YouTubeTab> {
     if (mounted) setState(() => packs = list);
   }
 
-  Future<void> _import() async {
-    String msg;
+  void _snack(String msg) {
+    if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+  }
+
+  Future<void> _importFile() async {
     try {
-      final pk = await PackStore.importFromPicker();
-      if (pk == null) return;
-      msg = '"${pk.title}" 가져옴';
+      final n = await PackStore.importFromPicker();
+      if (n == 0) return;
+      _snack('학습 팩 $n개를 가져왔습니다');
     } on FormatException catch (e) {
-      msg = e.message;
+      _snack(e.message);
     } catch (e) {
-      msg = '가져오기 실패: $e';
+      _snack('가져오기 실패: $e');
     }
     await _load();
-    if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+  }
+
+  Future<void> _add() async {
+    final n = await Navigator.of(context)
+        .push<int>(MaterialPageRoute(builder: (_) => const YouTubeAddPage()));
+    if (n != null && n > 0) {
+      _snack('학습 팩 $n개를 만들었습니다');
+      await _load();
+    }
+  }
+
+  Future<void> _delete(YouTubePack pk) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (c) => AlertDialog(
+        title: const Text('삭제할까요?'),
+        content: Text(pk.title),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('취소')),
+          FilledButton(onPressed: () => Navigator.pop(c, true), child: const Text('삭제')),
+        ],
+      ),
+    );
+    if (ok == true) {
+      await PackStore.delete(pk);
+      await _load();
+    }
   }
 
   @override
@@ -285,11 +321,20 @@ class _YouTubeTabState extends State<_YouTubeTab> {
         else ...[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: FilledButton.tonalIcon(
+            child: FilledButton.icon(
               style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-              onPressed: _import,
+              onPressed: _add,
+              icon: const Icon(Icons.add_link_rounded),
+              label: const Text('링크와 자막으로 추가'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(46)),
+              onPressed: _importFile,
               icon: const Icon(Icons.file_open_rounded),
-              label: const Text('학습 팩 가져오기'),
+              label: const Text('학습 팩 파일 가져오기 (해석 포함)'),
             ),
           ),
           const SizedBox(height: 12),
@@ -310,9 +355,10 @@ class _YouTubeTabState extends State<_YouTubeTab> {
                     child: Icon(Icons.smart_display_rounded, color: cs.onErrorContainer, size: 20),
                   ),
                   title: Text(pk.title, style: const TextStyle(fontWeight: FontWeight.w600)),
-                  subtitle: Text('${pk.channel} · ${pk.sentences.length}문장'),
+                  subtitle: Text('${pk.sentences.length}문장${pk.hasTranslation ? ' · 해석 있음' : ''}'),
                   trailing: Tag('≈L${pk.estimatedLevel}', strong: true),
                   onTap: () => openPack(context, pk),
+                  onLongPress: () => _delete(pk),
                 ),
               ),
             ),
