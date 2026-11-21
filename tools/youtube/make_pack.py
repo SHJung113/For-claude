@@ -30,7 +30,7 @@ def caption_words(segments, chapter):
     """[(word, time, line_end)] for one chapter, spreading each line's words evenly."""
     out = []
     for s in segments:
-        if s["noise"] or s["chapter"] != chapter:
+        if s["noise"] or (s["chapter"] or "") != (chapter or ""):
             continue
         words = WORD_RE.findall(s["text"].lower())
         span = min(s["end"] - s["start"], 12)
@@ -39,7 +39,20 @@ def caption_words(segments, chapter):
     return out
 
 
+def check_spec(spec):
+    """Refuse skeleton leftovers from new_spec.py."""
+    problems = []
+    for i, (speaker, en, ko) in enumerate(spec["sentences"]):
+        if speaker in ("?", "") or not ko.strip():
+            problems.append(f"  sentence {i}: speaker={speaker!r} ko={ko!r} :: {en}")
+    if spec.get("title", "").startswith("TODO"):
+        problems.append("  title is still TODO")
+    if problems:
+        raise SystemExit(f"unfinished spec for chapter {spec.get('chapter')!r}:\n" + "\n".join(problems[:10]))
+
+
 def build_pack(spec, base_dir):
+    check_spec(spec)
     src = json.loads((base_dir / spec["source"]).read_text(encoding="utf-8"))
     cap = caption_words(src["segments"], spec["chapter"])
     if not cap:
@@ -81,8 +94,8 @@ def build_pack(spec, base_dir):
         "channel": spec.get("channel", ""), "chapter": spec["chapter"],
         "wpm": round(words / (seconds / 60)),
         "sentences": sentences,
-        "expressions": [{"en": e, "ko": k, "note": nt} for e, k, nt in spec.get("expressions", [])],
-        "notes": spec.get("notes", []),
+        "expressions": [{"en": e, "ko": k, "note": nt} for e, k, nt in (spec.get("expressions") or [])],
+        "notes": spec.get("notes") or [],
     }
     print(f"{pack['title']}: {len(sentences)} sentences, {words} words, {pack['wpm']} wpm, "
           f"{matched:.0%} of words aligned to captions")
