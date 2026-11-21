@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import '../data/content.dart';
@@ -282,6 +283,36 @@ class _YouTubeTabState extends State<_YouTubeTab> {
     }
   }
 
+  Future<void> _options(YouTubePack pk) async {
+    final action = await showModalBottomSheet<String>(
+      context: context,
+      showDragHandle: true,
+      builder: (c) => SafeArea(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          ListTile(
+            leading: const Icon(Icons.copy_rounded),
+            title: const Text('해석 요청용으로 복사'),
+            subtitle: const Text('이 영상의 모든 챕터 자막을 복사해 Claude 대화에 붙여넣기'),
+            onTap: () => Navigator.pop(c, 'copy'),
+          ),
+          ListTile(
+            leading: const Icon(Icons.delete_outline_rounded),
+            title: const Text('삭제'),
+            onTap: () => Navigator.pop(c, 'delete'),
+          ),
+          const SizedBox(height: 8),
+        ]),
+      ),
+    );
+    if (action == 'copy') {
+      final same = packs.where((p) => p.videoId == pk.videoId).toList();
+      await Clipboard.setData(ClipboardData(text: YouTubePack.requestText(same)));
+      _snack('챕터 ${same.length}개 자막을 복사했습니다. Claude 대화에 붙여넣어 주세요.');
+    } else if (action == 'delete') {
+      await _delete(pk);
+    }
+  }
+
   Future<void> _delete(YouTubePack pk) async {
     final ok = await showDialog<bool>(
       context: context,
@@ -355,10 +386,10 @@ class _YouTubeTabState extends State<_YouTubeTab> {
                     child: Icon(Icons.smart_display_rounded, color: cs.onErrorContainer, size: 20),
                   ),
                   title: Text(pk.title, style: const TextStyle(fontWeight: FontWeight.w600)),
-                  subtitle: Text('${pk.sentences.length}문장${pk.hasTranslation ? ' · 해석 있음' : ''}'),
+                  subtitle: Text('${pk.sentences.length}문장 · ${pk.hasTranslation ? '해석 있음' : '해석 없음 · 길게 눌러 요청'}'),
                   trailing: Tag('≈L${pk.estimatedLevel}', strong: true),
                   onTap: () => openPack(context, pk),
-                  onLongPress: () => _delete(pk),
+                  onLongPress: () => _options(pk),
                 ),
               ),
             ),

@@ -43,7 +43,27 @@ class YouTubePack {
 
   bool get hasTranslation => sentences.any((s) => s.ko != null);
 
-  String get fileName => '${videoId}_${title.replaceAll(RegExp(r'[^A-Za-z0-9]+'), '_')}.json';
+  /// One pack per video chapter: a pack made by Claude replaces the
+  /// auto-made pack of the same chapter.
+  String get fileName {
+    final part = (chapter.isNotEmpty ? chapter : title).toLowerCase();
+    return '${videoId}_${part.replaceAll(RegExp(r'[^a-z0-9]+'), '_')}.json';
+  }
+
+  /// Text to paste into the Claude chat to get a translated pack:
+  /// link, chapter headings and timestamped caption lines.
+  static String requestText(List<YouTubePack> packs) {
+    final b = StringBuffer('ListenUp 해석 요청\nhttps://youtu.be/${packs.first.videoId}\n');
+    var n = 1;
+    for (final p in packs) {
+      if (p.chapter.isNotEmpty) b.writeln('챕터 ${n++}: ${p.chapter}');
+      for (final s in p.sentences) {
+        final t = (s.start.inMilliseconds + 200) ~/ 1000;
+        b.writeln('${t ~/ 60}:${(t % 60).toString().padLeft(2, '0')} ${s.text}');
+      }
+    }
+    return b.toString();
+  }
 }
 
 class Expression {
@@ -65,15 +85,21 @@ class PackStore {
   }
 
   static Future<List<YouTubePack>> list() async {
-    final packs = <YouTubePack>[];
+    // Keyed by chapter; if old entries collide, prefer the translated one.
+    final byKey = <String, YouTubePack>{};
     for (final v in (await _all()).values) {
       try {
-        packs.add(YouTubePack.fromJson(jsonDecode(v) as Map<String, dynamic>));
+        final p = YouTubePack.fromJson(jsonDecode(v) as Map<String, dynamic>);
+        final old = byKey[p.fileName];
+        if (old == null || (!old.hasTranslation && p.hasTranslation)) byKey[p.fileName] = p;
       } catch (_) {
         // skip broken entries
       }
     }
-    packs.sort((a, b) => a.title.compareTo(b.title));
+    final packs = byKey.values.toList()
+      ..sort((a, b) => a.videoId == b.videoId
+          ? a.sentences.first.start.compareTo(b.sentences.first.start)
+          : a.videoId.compareTo(b.videoId));
     return packs;
   }
 
@@ -87,6 +113,14 @@ class PackStore {
     final all = await _all();
     for (final j in packs) {
       final pack = YouTubePack.fromJson(j); // validates the shape
+      // Drop any stored entry for the same chapter (older key formats too).
+      all.removeWhere((_, v) {
+        try {
+          return YouTubePack.fromJson(jsonDecode(v) as Map<String, dynamic>).fileName == pack.fileName;
+        } catch (_) {
+          return false;
+        }
+      });
       all[pack.fileName] = jsonEncode(j);
     }
     await _write(all);
@@ -94,7 +128,14 @@ class PackStore {
   }
 
   static Future<void> delete(YouTubePack pack) async {
-    final all = await _all()..remove(pack.fileName);
+    final all = await _all();
+    all.removeWhere((_, v) {
+      try {
+        return YouTubePack.fromJson(jsonDecode(v) as Map<String, dynamic>).fileName == pack.fileName;
+      } catch (_) {
+        return false;
+      }
+    });
     await _write(all);
   }
 

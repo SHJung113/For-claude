@@ -1,10 +1,12 @@
 """Build a YouTube learning pack (JSON) for the app.
 
 Usage:
-    python make_pack.py pack.yaml --out pack.json
+    python make_pack.py spec.yaml [more.yaml ...] --out out.json
 
-pack.yaml holds the cleaned-up sentences (speaker, English, Korean) of one
-chapter plus key expressions. `source` points to the parsed transcript JSON
+A spec holds the cleaned-up sentences (speaker, English, Korean) of one
+chapter plus key expressions, or several chapters under `packs:` sharing
+videoId/source/channel. With more than one pack the output is a bundle
+({"type": "listenup-youtube-bundle", "packs": [...]}) the app imports at once. `source` points to the parsed transcript JSON
 (from parse_transcript.py). Sentence times are estimated by aligning the
 cleaned words to the timestamped caption words; inside a caption line, words
 are assumed to be evenly spaced, so times are approximate (about ±0.5 s).
@@ -37,15 +39,11 @@ def caption_words(segments, chapter):
     return out
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("spec")
-    ap.add_argument("--out", required=True)
-    a = ap.parse_args()
-    spec_path = Path(a.spec)
-    spec = yaml.safe_load(spec_path.read_text(encoding="utf-8"))
-    src = json.loads((spec_path.parent / spec["source"]).read_text(encoding="utf-8"))
+def build_pack(spec, base_dir):
+    src = json.loads((base_dir / spec["source"]).read_text(encoding="utf-8"))
     cap = caption_words(src["segments"], spec["chapter"])
+    if not cap:
+        raise SystemExit(f"chapter not found in source: {spec['chapter']}")
     cap_tokens = [w for w, _, _ in cap]
 
     clean_tokens, owner = [], []  # owner[i] = sentence index of clean token i
@@ -61,7 +59,7 @@ def main():
             mapping[blk.a + k] = blk.b + k
     matched = len(mapping) / len(clean_tokens)
 
-    sentences, n = [], len(spec["sentences"])
+    sentences = []
     for si, (speaker, en, ko) in enumerate(spec["sentences"]):
         idx = [mapping[i] for i, o in enumerate(owner) if o == si and i in mapping]
         if not idx:
@@ -86,9 +84,34 @@ def main():
         "expressions": [{"en": e, "ko": k, "note": nt} for e, k, nt in spec.get("expressions", [])],
         "notes": spec.get("notes", []),
     }
-    Path(a.out).write_text(json.dumps(pack, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"{pack['title']}: {n} sentences, {words} words, {pack['wpm']} wpm, "
+    print(f"{pack['title']}: {len(sentences)} sentences, {words} words, {pack['wpm']} wpm, "
           f"{matched:.0%} of words aligned to captions")
+    return pack
+
+
+def specs_in(path):
+    d = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    if "packs" not in d:
+        yield d
+        return
+    shared = {k: v for k, v in d.items() if k != "packs"}
+    for p in d["packs"]:
+        yield {**shared, **p}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("specs", nargs="+")
+    ap.add_argument("--out", required=True)
+    a = ap.parse_args()
+    packs = []
+    for f in a.specs:
+        for spec in specs_in(f):
+            packs.append(build_pack(spec, Path(f).parent))
+    out = packs[0] if len(packs) == 1 else {
+        "type": "listenup-youtube-bundle", "version": 1, "packs": packs}
+    Path(a.out).write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"wrote {len(packs)} pack(s) to {a.out}")
 
 
 if __name__ == "__main__":
