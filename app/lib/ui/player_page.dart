@@ -5,10 +5,18 @@ import '../data/content.dart';
 import '../player/sentence_player.dart';
 import '../youtube/pack.dart';
 
-enum TextMode { blind, sentence, script, translation, expressions }
+/// What the text area shows. Korean is a separate on/off toggle.
+enum TextMode { blind, sentence, script, expressions }
+
+const _modeLabels = {
+  TextMode.blind: '듣기만',
+  TextMode.sentence: '문장',
+  TextMode.script: '대본',
+  TextMode.expressions: '표현',
+};
 
 /// Study screen for one piece of content (TTS or YouTube).
-/// Text area on top, every control in a dock at the bottom for one thumb.
+/// Content on top, every playback control in a dock at the bottom.
 class PlayerPage extends StatefulWidget {
   const PlayerPage({
     super.key,
@@ -18,7 +26,6 @@ class PlayerPage extends StatefulWidget {
     this.header,
     this.expressions = const [],
     this.initialMode = TextMode.blind,
-    this.modes = const [TextMode.blind, TextMode.script, TextMode.translation],
   });
 
   final String title;
@@ -30,9 +37,6 @@ class PlayerPage extends StatefulWidget {
   final List<Expression> expressions;
   final TextMode initialMode;
 
-  /// Text modes offered in the selector, in order.
-  final List<TextMode> modes;
-
   @override
   State<PlayerPage> createState() => _PlayerPageState();
 }
@@ -40,8 +44,18 @@ class PlayerPage extends StatefulWidget {
 class _PlayerPageState extends State<PlayerPage> {
   late final SentencePlayer p = widget.createPlayer();
   late TextMode mode = widget.initialMode;
+  bool showKo = true;
   final _keys = <GlobalKey>[];
   int _followed = -1;
+
+  bool get _hasKo => p.sentences.any((s) => s.ko != null);
+
+  List<TextMode> get _modes => [
+        TextMode.blind,
+        TextMode.sentence,
+        TextMode.script,
+        if (widget.expressions.isNotEmpty) TextMode.expressions,
+      ];
 
   @override
   void initState() {
@@ -53,7 +67,7 @@ class _PlayerPageState extends State<PlayerPage> {
   void _changed() {
     if (!mounted) return;
     setState(() {});
-    if (_followed != p.index && (mode == TextMode.script || mode == TextMode.translation)) {
+    if (_followed != p.index && mode == TextMode.script) {
       _followed = p.index;
       WidgetsBinding.instance.addPostFrameCallback((_) {
         final ctx = _keys[p.index].currentContext;
@@ -76,14 +90,13 @@ class _PlayerPageState extends State<PlayerPage> {
     f();
   }
 
-  List<TextMode> get _modes => widget.modes;
-
-  void _nextMode() {
-    final m = _modes;
-    setState(() => mode = m[(m.indexOf(mode) + 1) % m.length]);
+  void _setMode(TextMode m) {
+    setState(() => mode = m);
     _followed = -1;
     _changed();
   }
+
+  void _nextMode() => _setMode(_modes[(_modes.indexOf(mode) + 1) % _modes.length]);
 
   @override
   Widget build(BuildContext context) {
@@ -96,29 +109,46 @@ class _PlayerPageState extends State<PlayerPage> {
         const SingleActivator(LogicalKeyboardKey.keyR): p.repeat,
         const SingleActivator(LogicalKeyboardKey.keyS): p.cycleSpeed,
         const SingleActivator(LogicalKeyboardKey.keyT): _nextMode,
+        const SingleActivator(LogicalKeyboardKey.keyK): () => setState(() => showKo = !showKo),
       },
       child: Focus(
         autofocus: true,
         child: Scaffold(
           appBar: AppBar(
             titleSpacing: 0,
+            toolbarHeight: 64,
+            actions: [
+              if (_hasKo)
+                IconButton(
+                  tooltip: showKo ? '해석 숨기기' : '해석 보기',
+                  isSelected: showKo,
+                  selectedIcon: const Icon(Icons.translate_rounded),
+                  icon: const Icon(Icons.translate_rounded),
+                  style: IconButton.styleFrom(
+                    backgroundColor: showKo ? cs.primaryContainer : null,
+                    foregroundColor: showKo ? cs.onPrimaryContainer : cs.onSurfaceVariant,
+                  ),
+                  onPressed: () => setState(() => showKo = !showKo),
+                ),
+              const SizedBox(width: 8),
+            ],
             title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(widget.title, maxLines: 1, overflow: TextOverflow.ellipsis),
+              const SizedBox(height: 2),
               Text(widget.subtitle,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontSize: 13, color: cs.onSurfaceVariant, fontWeight: FontWeight.w500)),
             ]),
           ),
           body: Column(children: [
             if (widget.header != null)
               Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
                 child: ClipRRect(borderRadius: BorderRadius.circular(16), child: widget.header!(p)),
               ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: _modeSelector(),
-            ),
-            const SizedBox(height: 8),
+            _modeBar(cs),
+            const SizedBox(height: 6),
             Expanded(child: _textArea(cs)),
             _Dock(player: p, onTap: _tap),
           ]),
@@ -127,148 +157,222 @@ class _PlayerPageState extends State<PlayerPage> {
     );
   }
 
-  Widget _modeSelector() {
-    const labels = {
-      TextMode.blind: '듣기만',
-      TextMode.sentence: '문장',
-      TextMode.script: '대본',
-      TextMode.translation: '해석',
-      TextMode.expressions: '표현',
-    };
-    return SizedBox(
-      width: double.infinity,
-      child: SegmentedButton<TextMode>(
-        showSelectedIcon: false,
-        segments: [
-          for (final m in _modes) ButtonSegment(value: m, label: Text(labels[m]!)),
-        ],
-        selected: {mode},
-        onSelectionChanged: (s) {
-          setState(() => mode = s.first);
-          _followed = -1;
-          _changed();
-        },
-      ),
+  /// Text mode chips; all fit on one line (no icons, short labels).
+  Widget _modeBar(ColorScheme cs) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Row(children: [
+        for (final m in _modes)
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: ChoiceChip(
+              showCheckmark: false,
+              visualDensity: VisualDensity.compact,
+              label: Text(_modeLabels[m]!, style: const TextStyle(fontWeight: FontWeight.w600)),
+              selected: mode == m,
+              onSelected: (_) => _setMode(m),
+            ),
+          ),
+      ]),
     );
   }
 
   Widget _textArea(ColorScheme cs) {
     switch (mode) {
       case TextMode.blind:
-        return Center(
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(p.playing ? Icons.graphic_eq_rounded : Icons.headphones_rounded,
-                size: 56, color: cs.primary),
-            const SizedBox(height: 12),
-            Text('문장 ${p.index + 1} / ${p.sentences.length}',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: cs.onSurface)),
-            const SizedBox(height: 6),
-            Text('대본 없이 먼저 들어 보세요', style: TextStyle(color: cs.onSurfaceVariant)),
-          ]),
-        );
+        return _BlindView(player: p);
       case TextMode.sentence:
-        final s = p.sentences[p.index];
-        return Padding(
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(mainAxisSize: MainAxisSize.min, children: [
-                Text('문장 ${p.index + 1} / ${p.sentences.length}'
-                    '${s.speaker.isEmpty ? '' : ' · ${s.speaker}'}',
-                    style: TextStyle(color: cs.onSurfaceVariant, fontWeight: FontWeight.w600)),
-                const SizedBox(height: 14),
-                Text(s.text,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 23, height: 1.35, fontWeight: FontWeight.w600, color: cs.onSurface)),
-                if (s.ko != null) ...[
-                  const SizedBox(height: 12),
-                  Text(s.ko!,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 16, height: 1.4, color: cs.onSurfaceVariant)),
-                ],
-              ]),
+        return _SentenceView(player: p, showKo: showKo, onTapSentence: (i) => _tap(() => p.playSentence(i)));
+      case TextMode.expressions:
+        return _ExpressionsView(expressions: widget.expressions);
+      case TextMode.script:
+        return ListView.builder(
+          padding: const EdgeInsets.fromLTRB(12, 4, 12, 16),
+          itemCount: p.sentences.length,
+          // Every tile is built so scrolling to the current one always works.
+          cacheExtent: 100000,
+          itemBuilder: (_, i) => KeyedSubtree(
+            key: _keys[i],
+            child: _ScriptTile(
+              s: p.sentences[i],
+              current: i == p.index,
+              showKo: showKo,
+              onTap: () => _tap(() => p.playSentence(i)),
             ),
           ),
         );
-      case TextMode.expressions:
-        return ListView.separated(
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-          itemCount: widget.expressions.length,
-          separatorBuilder: (_, _) => const SizedBox(height: 8),
-          itemBuilder: (_, i) {
-            final e = widget.expressions[i];
-            return Card(
+    }
+  }
+}
+
+class _BlindView extends StatelessWidget {
+  const _BlindView({required this.player});
+  final SentencePlayer player;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Center(
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        Container(
+          width: 96,
+          height: 96,
+          decoration: BoxDecoration(color: cs.primaryContainer, shape: BoxShape.circle),
+          child: Icon(player.playing ? Icons.graphic_eq_rounded : Icons.headphones_rounded,
+              size: 48, color: cs.onPrimaryContainer),
+        ),
+        const SizedBox(height: 16),
+        Text('문장 ${player.index + 1} / ${player.sentences.length}',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: cs.onSurface)),
+        const SizedBox(height: 6),
+        Text('대본 없이 먼저 들어 보세요', style: TextStyle(fontSize: 15, color: cs.onSurfaceVariant)),
+      ]),
+    );
+  }
+}
+
+/// Speaker label shown above a sentence.
+class _SpeakerChip extends StatelessWidget {
+  const _SpeakerChip(this.name, {this.onDark = false});
+  final String name;
+  final bool onDark;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(
+        color: onDark ? cs.primary : cs.secondaryContainer,
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Text(name,
+          style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+              color: onDark ? cs.onPrimary : cs.onSecondaryContainer)),
+    );
+  }
+}
+
+/// One sentence, large and centred, with its neighbours faded above/below.
+class _SentenceView extends StatelessWidget {
+  const _SentenceView({required this.player, required this.showKo, required this.onTapSentence});
+  final SentencePlayer player;
+  final bool showKo;
+  final void Function(int) onTapSentence;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final ss = player.sentences;
+    final i = player.index;
+    final s = ss[i];
+
+    Widget neighbour(int j) => j < 0 || j >= ss.length
+        ? const SizedBox(height: 22)
+        : InkWell(
+            borderRadius: BorderRadius.circular(10),
+            onTap: () => onTapSentence(j),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              child: Text(ss[j].text,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 15, color: cs.onSurfaceVariant.withValues(alpha: 0.7))),
+            ),
+          );
+
+    return LayoutBuilder(
+      builder: (context, box) => SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: box.maxHeight - 12),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            neighbour(i - 1),
+            const SizedBox(height: 6),
+            Card(
+              color: cs.surfaceContainerHigh,
               child: Padding(
-                padding: const EdgeInsets.all(14),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(e.en, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
-                  const SizedBox(height: 2),
-                  Text(e.ko, style: const TextStyle(fontSize: 15)),
-                  if (e.note.isNotEmpty) ...[
-                    const SizedBox(height: 4),
-                    Text(e.note, style: TextStyle(fontSize: 13, color: cs.onSurfaceVariant)),
+                padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+                  Row(children: [
+                    if (s.speaker.isNotEmpty) _SpeakerChip(s.speaker),
+                    const Spacer(),
+                    Text('${i + 1} / ${ss.length}',
+                        style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: cs.onSurfaceVariant)),
+                  ]),
+                  const SizedBox(height: 14),
+                  Text(s.text,
+                      style: TextStyle(
+                          fontSize: 24, height: 1.35, fontWeight: FontWeight.w700, color: cs.onSurface)),
+                  if (showKo && s.ko != null) ...[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: Divider(height: 1, color: cs.outlineVariant),
+                    ),
+                    Text(s.ko!,
+                        style: TextStyle(fontSize: 17, height: 1.45, color: cs.primary, fontWeight: FontWeight.w500)),
                   ],
                 ]),
               ),
-            );
-          },
-        );
-      case TextMode.script:
-      case TextMode.translation:
-        return SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-          child: Column(children: [for (final s in p.sentences) _sentenceTile(s, cs)]),
-        );
-    }
+            ),
+            const SizedBox(height: 6),
+            neighbour(i + 1),
+          ]),
+        ),
+      ),
+    );
   }
+}
 
-  Widget _sentenceTile(Sentence s, ColorScheme cs) {
-    final cur = s.idx == p.index;
+class _ScriptTile extends StatelessWidget {
+  const _ScriptTile({required this.s, required this.current, required this.showKo, required this.onTap});
+  final Sentence s;
+  final bool current;
+  final bool showKo;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
     return Padding(
-      key: _keys[s.idx],
       padding: const EdgeInsets.only(bottom: 4),
       child: Material(
-        color: cur ? cs.primaryContainer : Colors.transparent,
+        color: current ? cs.primaryContainer : Colors.transparent,
         borderRadius: BorderRadius.circular(14),
         child: InkWell(
           borderRadius: BorderRadius.circular(14),
-          onTap: () => _tap(() => p.playSentence(s.idx)),
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
-            child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              if (s.speaker.isNotEmpty) SizedBox(
-                width: 64,
-                child: Text(s.speaker,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontSize: 12,
-                        height: 1.9,
-                        fontWeight: FontWeight.w700,
-                        color: cur ? cs.onPrimaryContainer : cs.onSurfaceVariant)),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(14),
+              border: Border(
+                left: BorderSide(color: current ? cs.primary : Colors.transparent, width: 4),
               ),
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(s.text,
+            ),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              if (s.speaker.isNotEmpty) ...[
+                _SpeakerChip(s.speaker, onDark: current),
+                const SizedBox(height: 6),
+              ],
+              Text(s.text,
+                  style: TextStyle(
+                      fontSize: 18,
+                      height: 1.35,
+                      fontWeight: current ? FontWeight.w700 : FontWeight.w500,
+                      color: current ? cs.onPrimaryContainer : cs.onSurface)),
+              if (showKo && s.ko != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(s.ko!,
                       style: TextStyle(
-                          fontSize: 17,
-                          height: 1.35,
-                          fontWeight: cur ? FontWeight.w600 : FontWeight.w400,
-                          color: cur ? cs.onPrimaryContainer : cs.onSurface)),
-                  if (mode == TextMode.translation && s.ko != null)
-                    Padding(
-                      padding: const EdgeInsets.only(top: 3),
-                      child: Text(s.ko!,
-                          style: TextStyle(
-                              fontSize: 14,
-                              height: 1.35,
-                              color: cur
-                                  ? cs.onPrimaryContainer.withValues(alpha: 0.8)
-                                  : cs.onSurfaceVariant)),
-                    ),
-                ]),
-              ),
+                          fontSize: 15,
+                          height: 1.4,
+                          color: current ? cs.onPrimaryContainer.withValues(alpha: 0.85) : cs.onSurfaceVariant)),
+                ),
             ]),
           ),
         ),
@@ -277,17 +381,60 @@ class _PlayerPageState extends State<PlayerPage> {
   }
 }
 
+class _ExpressionsView extends StatelessWidget {
+  const _ExpressionsView({required this.expressions});
+  final List<Expression> expressions;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return ListView.separated(
+      padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+      itemCount: expressions.length,
+      separatorBuilder: (_, _) => const SizedBox(height: 8),
+      itemBuilder: (_, i) {
+        final e = expressions[i];
+        return Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(e.en, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: cs.onSurface)),
+              const SizedBox(height: 4),
+              Text(e.ko, style: TextStyle(fontSize: 16, color: cs.primary, fontWeight: FontWeight.w500)),
+              if (e.note.isNotEmpty) ...[
+                const SizedBox(height: 6),
+                Text(e.note, style: TextStyle(fontSize: 13, height: 1.4, color: cs.onSurfaceVariant)),
+              ],
+            ]),
+          ),
+        );
+      },
+    );
+  }
+}
+
 /// Bottom control dock: sentence slider + big transport buttons.
-class _Dock extends StatelessWidget {
+class _Dock extends StatefulWidget {
   const _Dock({required this.player, required this.onTap});
   final SentencePlayer player;
   final void Function(VoidCallback) onTap;
 
   @override
+  State<_Dock> createState() => _DockState();
+}
+
+class _DockState extends State<_Dock> {
+  /// Sentence under the finger while dragging the slider.
+  int? _drag;
+
+  @override
   Widget build(BuildContext context) {
     final cs = Theme.of(context).colorScheme;
-    final p = player;
+    final p = widget.player;
+    final onTap = widget.onTap;
     final n = p.sentences.length;
+    final shown = _drag ?? p.index;
+    final status = p.single ? '한 문장 재생' : (p.playing ? '이어서 재생 중' : '정지');
     return Container(
       decoration: BoxDecoration(
         color: cs.surfaceContainer,
@@ -296,33 +443,42 @@ class _Dock extends StatelessWidget {
       child: SafeArea(
         top: false,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 10, 16, 14),
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             Row(children: [
-              Text('문장 ${p.index + 1} / $n',
-                  style: TextStyle(fontWeight: FontWeight.w700, color: cs.onSurface)),
+              Text('문장 ${shown + 1} / $n',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: cs.onSurface)),
               const Spacer(),
-              Text(p.single ? '한 문장 재생' : (p.playing ? '이어서 재생' : '정지'),
-                  style: TextStyle(fontSize: 13, color: cs.onSurfaceVariant)),
+              Icon(p.playing ? Icons.volume_up_rounded : Icons.pause_circle_outline_rounded,
+                  size: 16, color: cs.onSurfaceVariant),
+              const SizedBox(width: 4),
+              Text(status, style: TextStyle(fontSize: 13, color: cs.onSurfaceVariant)),
             ]),
             SliderTheme(
               data: SliderTheme.of(context).copyWith(
                 trackHeight: 6,
-                thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
-                overlayShape: const RoundSliderOverlayShape(overlayRadius: 18),
+                thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 9),
+                overlayShape: const RoundSliderOverlayShape(overlayRadius: 20),
               ),
               child: Slider(
-                value: p.index.toDouble(),
+                value: shown.toDouble(),
                 min: 0,
                 max: (n - 1).clamp(1, 1 << 20).toDouble(),
                 divisions: n > 1 ? n - 1 : null,
-                onChanged: n > 1 ? (v) => p.playSentence(v.round()) : null,
+                label: '${shown + 1}',
+                onChanged: n > 1 ? (v) => setState(() => _drag = v.round()) : null,
+                onChangeEnd: n > 1
+                    ? (v) {
+                        setState(() => _drag = null);
+                        p.playSentence(v.round());
+                      }
+                    : null,
               ),
             ),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               _SpeedButton(player: p, onTap: onTap),
               IconButton(
-                iconSize: 34,
+                iconSize: 36,
                 tooltip: '이전 문장',
                 onPressed: () => onTap(p.prev),
                 icon: const Icon(Icons.skip_previous_rounded),
@@ -331,23 +487,27 @@ class _Dock extends StatelessWidget {
                 width: 76,
                 height: 76,
                 child: IconButton.filled(
-                  iconSize: 42,
+                  iconSize: 44,
                   tooltip: p.playing ? '일시정지' : '재생',
                   onPressed: () => onTap(p.toggle),
                   icon: Icon(p.playing ? Icons.pause_rounded : Icons.play_arrow_rounded),
                 ),
               ),
               IconButton(
-                iconSize: 34,
+                iconSize: 36,
                 tooltip: '다음 문장',
                 onPressed: () => onTap(p.next),
                 icon: const Icon(Icons.skip_next_rounded),
               ),
-              IconButton.filledTonal(
-                iconSize: 28,
-                tooltip: '이 문장 다시',
-                onPressed: () => onTap(p.repeat),
-                icon: const Icon(Icons.replay_rounded),
+              SizedBox(
+                width: 56,
+                height: 56,
+                child: IconButton.filledTonal(
+                  iconSize: 28,
+                  tooltip: '이 문장 다시',
+                  onPressed: () => onTap(p.repeat),
+                  icon: const Icon(Icons.replay_rounded),
+                ),
               ),
             ]),
           ]),
@@ -368,10 +528,11 @@ class _SpeedButton extends StatelessWidget {
     final label = s == s.roundToDouble() ? '${s.toStringAsFixed(1)}x' : '${s}x';
     return SizedBox(
       width: 64,
+      height: 48,
       child: OutlinedButton(
-        style: OutlinedButton.styleFrom(padding: EdgeInsets.zero, minimumSize: const Size(56, 44)),
+        style: OutlinedButton.styleFrom(padding: EdgeInsets.zero),
         onPressed: () => onTap(player.cycleSpeed),
-        child: Text(label, style: const TextStyle(fontWeight: FontWeight.w700)),
+        child: Text(label, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800)),
       ),
     );
   }

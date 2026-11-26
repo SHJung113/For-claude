@@ -68,17 +68,39 @@ void openPack(BuildContext context, YouTubePack pk) {
       title: pk.title,
       subtitle: '${pk.channel} · ≈L${pk.estimatedLevel} · ${pk.wpm} wpm',
       createPlayer: () => YouTubeSentencePlayer(pk),
-      header: (p) => YoutubePlayer(controller: (p as YouTubeSentencePlayer).controller),
+      header: (p) => _VideoHeader(player: p as YouTubeSentencePlayer),
       expressions: pk.expressions,
       initialMode: TextMode.sentence,
-      modes: [
-        TextMode.blind,
-        TextMode.sentence,
-        pk.hasTranslation ? TextMode.translation : TextMode.script,
-        if (pk.expressions.isNotEmpty) TextMode.expressions,
-      ],
     ),
   ));
+}
+
+/// The embedded YouTube player, with a readable message if it can't play.
+class _VideoHeader extends StatelessWidget {
+  const _VideoHeader({required this.player});
+  final YouTubeSentencePlayer player;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final err = player.errorMessage;
+    return Stack(children: [
+      YoutubePlayer(controller: player.controller),
+      if (err != null)
+        Positioned.fill(
+          child: Container(
+            color: Colors.black.withValues(alpha: 0.75),
+            padding: const EdgeInsets.all(20),
+            alignment: Alignment.center,
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Icon(Icons.error_outline_rounded, color: cs.errorContainer, size: 32),
+              const SizedBox(height: 8),
+              Text(err, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white, fontSize: 15)),
+            ]),
+          ),
+        ),
+    ]);
+  }
 }
 
 class _Header extends StatelessWidget {
@@ -257,6 +279,15 @@ class _YouTubeTabState extends State<_YouTubeTab> {
     if (mounted) setState(() => packs = list);
   }
 
+  /// Packs grouped by video, keeping the stored order (video, then time).
+  List<List<YouTubePack>> _byVideo() {
+    final groups = <String, List<YouTubePack>>{};
+    for (final pk in packs) {
+      groups.putIfAbsent(pk.videoId, () => []).add(pk);
+    }
+    return groups.values.toList();
+  }
+
   void _snack(String msg) {
     if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
   }
@@ -375,26 +406,95 @@ class _YouTubeTabState extends State<_YouTubeTab> {
               child: Text('아직 가져온 학습 팩이 없습니다.',
                   textAlign: TextAlign.center, style: TextStyle(color: cs.onSurfaceVariant)),
             ),
-          for (final pk in packs)
+          for (final group in _byVideo())
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-              child: Card(
-                child: ListTile(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-                  leading: CircleAvatar(
-                    backgroundColor: cs.errorContainer,
-                    child: Icon(Icons.smart_display_rounded, color: cs.onErrorContainer, size: 20),
-                  ),
-                  title: Text(pk.title, style: const TextStyle(fontWeight: FontWeight.w600)),
-                  subtitle: Text('${pk.sentences.length}문장 · ${pk.hasTranslation ? '해석 있음' : '해석 없음 · 길게 눌러 요청'}'),
-                  trailing: Tag('≈L${pk.estimatedLevel}', strong: true),
-                  onTap: () => openPack(context, pk),
-                  onLongPress: () => _options(pk),
-                ),
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+              child: _VideoCard(
+                packs: group,
+                onOpen: (pk) => openPack(context, pk),
+                onMore: _options,
               ),
             ),
         ],
       ],
+    );
+  }
+}
+
+/// One video: thumbnail header + its chapters.
+class _VideoCard extends StatelessWidget {
+  const _VideoCard({required this.packs, required this.onOpen, required this.onMore});
+  final List<YouTubePack> packs;
+  final void Function(YouTubePack) onOpen;
+  final void Function(YouTubePack) onMore;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final first = packs.first;
+    final translated = packs.where((p) => p.hasTranslation).length;
+    final sentences = packs.fold<int>(0, (a, p) => a + p.sentences.length);
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        Padding(
+          padding: const EdgeInsets.all(12),
+          child: Row(children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: SizedBox(
+                width: 120,
+                height: 68,
+                // Official thumbnail image (no video data).
+                child: Image.network(
+                  'https://i.ytimg.com/vi/${first.videoId}/mqdefault.jpg',
+                  fit: BoxFit.cover,
+                  errorBuilder: (_, _, _) => Container(
+                    color: cs.surfaceContainerHighest,
+                    child: Icon(Icons.smart_display_rounded, color: cs.onSurfaceVariant, size: 32),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(first.channel.isEmpty ? 'YouTube' : first.channel,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+                const SizedBox(height: 2),
+                Text('챕터 ${packs.length}개 · $sentences문장',
+                    style: TextStyle(fontSize: 13, color: cs.onSurfaceVariant)),
+                const SizedBox(height: 4),
+                Tag(translated == packs.length ? '해석 있음' : '해석 $translated/${packs.length}',
+                    strong: translated == packs.length),
+              ]),
+            ),
+          ]),
+        ),
+        Divider(height: 1, color: cs.outlineVariant),
+        for (final pk in packs)
+          ListTile(
+            dense: true,
+            contentPadding: const EdgeInsets.only(left: 16, right: 4),
+            leading: Icon(
+                pk.hasTranslation ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                color: pk.hasTranslation ? cs.primary : cs.outline,
+                size: 20),
+            title: Text(pk.title,
+                maxLines: 1, overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+            subtitle: Text('${pk.sentences.length}문장 · ≈L${pk.estimatedLevel}${pk.hasTranslation ? '' : ' · 해석 없음'}'),
+            trailing: IconButton(
+              tooltip: '더보기',
+              icon: const Icon(Icons.more_vert_rounded),
+              onPressed: () => onMore(pk),
+            ),
+            onTap: () => onOpen(pk),
+            onLongPress: () => onMore(pk),
+          ),
+      ]),
     );
   }
 }

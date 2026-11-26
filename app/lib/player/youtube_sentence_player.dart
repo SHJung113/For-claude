@@ -30,18 +30,49 @@ class YouTubeSentencePlayer extends SentencePlayer {
         ),
         super(pack.sentences) {
     _timer = Timer.periodic(const Duration(milliseconds: 150), (_) => _poll());
+    _sub = controller.stream.listen(_onValue);
   }
 
   final YouTubePack pack;
   final YoutubePlayerController controller;
   late final Timer _timer;
+  late final StreamSubscription<YoutubePlayerValue> _sub;
   bool _busy = false;
+  bool _enginePlaying = false;
+
+  /// Why the video can't be played, or null when it's fine.
+  String? errorMessage;
+
+  /// Video title from YouTube once the player has loaded it.
+  String videoTitle = '';
 
   @override
   List<double> get speeds => const [0.5, 0.75, 1.0, 1.25];
 
+  void _onValue(YoutubePlayerValue v) {
+    final title = v.metaData.title;
+    final err = switch (v.error) {
+      YoutubeError.none => null,
+      YoutubeError.notEmbeddable || YoutubeError.sameAsNotEmbeddable =>
+        '이 영상은 제작자가 다른 앱에서의 재생을 막아 두었습니다.',
+      YoutubeError.videoNotFound || YoutubeError.cannotFindVideo =>
+        '영상을 찾을 수 없습니다. 삭제되었거나 비공개일 수 있어요.',
+      _ => '영상을 재생할 수 없습니다. 인터넷 연결을 확인해 주세요.',
+    };
+    final changed = title != videoTitle || err != errorMessage;
+    videoTitle = title;
+    errorMessage = err;
+
+    final state = v.playerState;
+    _enginePlaying = state == PlayerState.playing || state == PlayerState.buffering;
+    if (state == PlayerState.playing || state == PlayerState.paused || state == PlayerState.ended) {
+      onEnginePlaying(state == PlayerState.playing);
+    }
+    if (changed) notifyListeners();
+  }
+
   Future<void> _poll() async {
-    if (!playing || _busy) return;
+    if ((!playing && !_enginePlaying) || _busy) return;
     _busy = true;
     try {
       final t = await controller.currentTime;
@@ -69,6 +100,7 @@ class YouTubeSentencePlayer extends SentencePlayer {
   @override
   void dispose() {
     _timer.cancel();
+    _sub.cancel();
     controller.close();
     super.dispose();
   }
