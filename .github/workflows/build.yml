@@ -26,6 +26,7 @@ jobs:
           cache: true
       - run: flutter pub get
       - run: flutter analyze --no-fatal-infos
+      - run: flutter test
       # Same signing key for every build, so updates install over the old app.
       - name: Set up release signing
         env:

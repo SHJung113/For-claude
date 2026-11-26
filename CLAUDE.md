@@ -14,7 +14,9 @@
   - `lib/player/` — `SentencePlayer`(문장 단위 재생 공통), TTS·YouTube 구현
   - `lib/ui/` — `home_page.dart`(오늘/레벨/YouTube 탭), `player_page.dart`(학습 화면), `youtube_add_page.dart`
   - `lib/youtube/` — 학습 팩 모델·저장(`pack.dart`), 앱 내 자막 파서(`transcript.dart`)
+  - `lib/data/study_store.dart` — 기기 안 학습 기록(반복 설정, 진행도, 연속 학습일, 저장 문장)
   - `assets/content/<id>.json|.mp3` — 내장 TTS 콘텐츠
+- `app/test/` — 재생 로직(`SentencePlayer`)·자막 파서 단위 테스트. 재생 로직을 바꾸면 `flutter test`로 확인(CI에서도 실행)
 - `tools/contentgen/` — TTS 콘텐츠 생성(Kokoro, 무료): `levels/Lxx.yaml` → `make_content.py` → `apply_translations.py`(`translations/ko.yaml`)
 - `tools/youtube/` — YouTube 학습 팩: `parse_transcript.py`, `new_spec.py`, `make_pack.py`
 

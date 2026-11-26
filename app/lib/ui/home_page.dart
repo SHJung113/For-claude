@@ -4,6 +4,7 @@ import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import '../data/content.dart';
 import '../data/levels.dart';
+import '../data/study_store.dart';
 import '../player/tts_player.dart';
 import '../player/youtube_sentence_player.dart';
 import '../youtube/pack.dart';
@@ -27,13 +28,16 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final pages = [
-      _TodayTab(catalog: widget.catalog),
-      _LevelsTab(catalog: widget.catalog),
-      const _YouTubeTab(),
-    ];
+    // Built inside the builder: progress, streak and saved sentences live in
+    // [study], and fresh widgets are needed for the tab to repaint on change.
+    Widget page() => switch (tab) {
+          0 => _TodayTab(catalog: widget.catalog),
+          1 => _LevelsTab(catalog: widget.catalog),
+          2 => const _YouTubeTab(),
+          _ => _SavedTab(catalog: widget.catalog),
+        };
     return Scaffold(
-      body: SafeArea(child: pages[tab]),
+      body: SafeArea(child: ListenableBuilder(listenable: study, builder: (_, _) => page())),
       bottomNavigationBar: NavigationBar(
         selectedIndex: tab,
         onDestinationSelected: (i) => setState(() => tab = i),
@@ -46,15 +50,22 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.smart_display_outlined),
               selectedIcon: Icon(Icons.smart_display),
               label: 'YouTube'),
+          NavigationDestination(
+              icon: Icon(Icons.star_outline_rounded), selectedIcon: Icon(Icons.star_rounded), label: '저장'),
         ],
       ),
     );
   }
 }
 
-void openContent(BuildContext context, Content c) {
+String ttsKey(Content c) => 'tts:${c.id}';
+String ytKey(YouTubePack pk) => 'yt:${pk.fileName}';
+
+void openContent(BuildContext context, Content c, {int? at}) {
   Navigator.of(context).push(MaterialPageRoute(
     builder: (_) => PlayerPage(
+      contentKey: ttsKey(c),
+      startIndex: at,
       title: c.title,
       subtitle: 'L${c.level} · ${c.track == 'news' ? 'News' : 'Daily'} · ${fmtDuration(c.duration)}',
       createPlayer: () => TtsPlayer(c),
@@ -62,9 +73,11 @@ void openContent(BuildContext context, Content c) {
   ));
 }
 
-void openPack(BuildContext context, YouTubePack pk) {
+void openPack(BuildContext context, YouTubePack pk, {int? at}) {
   Navigator.of(context).push(MaterialPageRoute(
     builder: (_) => PlayerPage(
+      contentKey: ytKey(pk),
+      startIndex: at,
       title: pk.title,
       subtitle: '${pk.channel} · ≈L${pk.estimatedLevel} · ${pk.wpm} wpm',
       createPlayer: () => YouTubeSentencePlayer(pk),
@@ -73,6 +86,27 @@ void openPack(BuildContext context, YouTubePack pk) {
       initialMode: TextMode.sentence,
     ),
   ));
+}
+
+/// Opens whatever a progress / saved-sentence key points to.
+Future<void> openByKey(BuildContext context, List<Content> catalog, String key, {int? at}) async {
+  if (key.startsWith('tts:')) {
+    final c = catalog.where((c) => ttsKey(c) == key).firstOrNull;
+    if (c != null) return openContent(context, c, at: at);
+  } else if (key.startsWith('yt:')) {
+    final pk = (await PackStore.list()).where((p) => ytKey(p) == key).firstOrNull;
+    if (pk != null && context.mounted) {
+      if (!youtubeSupported) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(const SnackBar(content: Text('YouTube 학습은 Android 폰에서 사용할 수 있습니다.')));
+        return;
+      }
+      return openPack(context, pk, at: at);
+    }
+  }
+  if (context.mounted) {
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('원래 콘텐츠를 찾을 수 없습니다.')));
+  }
 }
 
 /// The embedded YouTube player, with a readable message if it can't play.
@@ -140,7 +174,7 @@ class ContentTile extends StatelessWidget {
         ),
         title: Text(c.title, style: const TextStyle(fontWeight: FontWeight.w600)),
         subtitle: Text('${news ? 'News' : 'Daily'} · ${c.sentences.length}문장 · ${fmtDuration(c.duration)}'),
-        trailing: const Icon(Icons.play_circle_fill_rounded, size: 32),
+        trailing: _ProgressBadge(key_: ttsKey(c), total: c.sentences.length),
         onTap: () => openContent(context, c),
       ),
     );
@@ -187,6 +221,42 @@ class _TodayTab extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(children: [
+            _Stat(icon: Icons.local_fire_department_rounded, value: '${study.streakDays}일', label: '연속 학습'),
+            const SizedBox(width: 8),
+            _Stat(icon: Icons.timer_outlined, value: '${study.todayMinutes}분', label: '오늘 들은 시간'),
+            const SizedBox(width: 8),
+            _Stat(
+                icon: Icons.task_alt_rounded,
+                value: '${items.where((c) => study.isDone(ttsKey(c))).length}/${items.length}',
+                label: '이 단계 완료'),
+          ]),
+        ),
+        if (study.last != null) ...[
+          const SizedBox(height: 12),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Card(
+              color: cs.secondaryContainer,
+              child: ListTile(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+                leading: Icon(Icons.play_circle_rounded, size: 36, color: cs.onSecondaryContainer),
+                title: const Text('이어서 하기', style: TextStyle(fontWeight: FontWeight.w700)),
+                subtitle: Text(
+                    '${study.last!['title']} · 문장 ${study.lastIndex(study.last!['key'] as String) + 1}부터',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis),
+                onTap: () => openByKey(context, catalog, study.last!['key'] as String),
+              ),
+            ),
+          ),
+        ],
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 8),
+          child: Text('L${lv.no} 콘텐츠', style: TextStyle(fontWeight: FontWeight.w700, color: cs.primary)),
+        ),
         for (final c in items)
           Padding(padding: const EdgeInsets.fromLTRB(16, 0, 16, 8), child: ContentTile(c)),
       ],
@@ -495,6 +565,124 @@ class _VideoCard extends StatelessWidget {
             onLongPress: () => onMore(pk),
           ),
       ]),
+    );
+  }
+}
+
+/// Done check / "3/11" / play icon for a content row.
+class _ProgressBadge extends StatelessWidget {
+  const _ProgressBadge({required this.key_, required this.total});
+  final String key_;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    if (study.isDone(key_)) return Icon(Icons.check_circle_rounded, size: 30, color: cs.primary);
+    final m = study.maxIndex(key_);
+    if (m < 0) return Icon(Icons.play_circle_fill_rounded, size: 32, color: cs.onSurfaceVariant);
+    return SizedBox(
+      width: 34,
+      height: 34,
+      child: Stack(alignment: Alignment.center, children: [
+        CircularProgressIndicator(
+          value: (m + 1) / total,
+          strokeWidth: 3.5,
+          backgroundColor: cs.surfaceContainerHighest,
+        ),
+        Text('${m + 1}', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700)),
+      ]),
+    );
+  }
+}
+
+class _Stat extends StatelessWidget {
+  const _Stat({required this.icon, required this.value, required this.label});
+  final IconData icon;
+  final String value;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Expanded(
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+          child: Column(children: [
+            Icon(icon, color: cs.primary, size: 22),
+            const SizedBox(height: 4),
+            Text(value, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+            Text(label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 12, color: cs.onSurfaceVariant)),
+          ]),
+        ),
+      ),
+    );
+  }
+}
+
+/// Starred sentences; tap to jump back to that sentence, swipe to remove.
+class _SavedTab extends StatelessWidget {
+  const _SavedTab({required this.catalog});
+  final List<Content> catalog;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    final items = study.saved;
+    return ListView(
+      padding: const EdgeInsets.only(bottom: 24),
+      children: [
+        _Header('저장한 문장', '안 들렸거나 외우고 싶은 문장을 모아 다시 들어요'),
+        if (items.isEmpty)
+          Padding(
+            padding: const EdgeInsets.all(24),
+            child: Text('학습 화면에서 ☆를 누르거나, 대본에서 문장을 길게 누르면 여기에 모입니다.',
+                textAlign: TextAlign.center, style: TextStyle(color: cs.onSurfaceVariant, height: 1.5)),
+          ),
+        for (final s in items)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: Dismissible(
+              key: ValueKey('${s.key}#${s.idx}'),
+              direction: DismissDirection.endToStart,
+              background: Container(
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.only(right: 24),
+                decoration: BoxDecoration(color: cs.errorContainer, borderRadius: BorderRadius.circular(18)),
+                child: Icon(Icons.delete_outline_rounded, color: cs.onErrorContainer),
+              ),
+              onDismissed: (_) => study.toggleSaved(s),
+              child: Card(
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(18),
+                  onTap: () => openByKey(context, catalog, s.key, at: s.idx),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
+                    child: Row(children: [
+                      Expanded(
+                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          Text(s.text, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600, height: 1.35)),
+                          if (s.ko != null) ...[
+                            const SizedBox(height: 4),
+                            Text(s.ko!, style: TextStyle(fontSize: 14, color: cs.primary)),
+                          ],
+                          const SizedBox(height: 6),
+                          Text('${s.source} · 문장 ${s.idx + 1}',
+                              style: TextStyle(fontSize: 12, color: cs.onSurfaceVariant)),
+                        ]),
+                      ),
+                      Icon(Icons.play_circle_fill_rounded, size: 32, color: cs.primary),
+                    ]),
+                  ),
+                ),
+              ),
+            ),
+          ),
+      ],
     );
   }
 }
