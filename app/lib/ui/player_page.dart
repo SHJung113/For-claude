@@ -184,8 +184,8 @@ class _PlayerPageState extends State<PlayerPage> {
                 IconButton(
                   tooltip: showKo ? '해석 숨기기' : '해석 보기',
                   isSelected: showKo,
-                  selectedIcon: const Icon(Icons.translate_rounded),
-                  icon: const Icon(Icons.translate_rounded),
+                  selectedIcon: const _KoEnIcon(),
+                  icon: const _KoEnIcon(off: true),
                   style: IconButton.styleFrom(
                     backgroundColor: showKo ? cs.primaryContainer : null,
                     foregroundColor: showKo ? cs.onPrimaryContainer : cs.onSurfaceVariant,
@@ -759,6 +759,40 @@ class _RepeatSheetState extends State<_RepeatSheet> {
               style: TextStyle(fontSize: 13, color: cs.onSurfaceVariant)),
         ]),
       ),
+    );
+  }
+}
+
+/// "가 A" glyph for the Korean on/off toggle (Material's translate icon
+/// shows a Chinese character). Follows the IconButton's colour and size.
+class _KoEnIcon extends StatelessWidget {
+  const _KoEnIcon({this.off = false});
+
+  /// Translation hidden: the glyph is drawn faded.
+  final bool off;
+
+  @override
+  Widget build(BuildContext context) {
+    final icon = IconTheme.of(context);
+    final c = off ? icon.color?.withValues(alpha: 0.45) : icon.color;
+    final size = icon.size ?? 24;
+    return SizedBox(
+      width: size,
+      height: size,
+      child: Stack(children: [
+        Positioned(
+          left: 0,
+          top: -size * 0.06,
+          child: Text('가',
+              style: TextStyle(fontSize: size * 0.62, fontWeight: FontWeight.w800, color: c, height: 1)),
+        ),
+        Positioned(
+          right: 0,
+          bottom: -size * 0.04,
+          child: Text('A',
+              style: TextStyle(fontSize: size * 0.6, fontWeight: FontWeight.w900, color: c, height: 1)),
+        ),
+      ]),
     );
   }
 }
