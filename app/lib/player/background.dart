@@ -15,6 +15,12 @@ class ListenUpAudioHandler extends BaseAudioHandler {
 
   static ListenUpAudioHandler? instance;
 
+  /// Why the service could not start (shown on the check screen), or null.
+  static String? initError;
+
+  /// The playback service exists on this platform (Android).
+  static bool get supported => !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
+
   /// Starts the audio service. Android only; elsewhere playback simply
   /// stays in the foreground.
   static Future<void> init() async {
@@ -32,6 +38,7 @@ class ListenUpAudioHandler extends BaseAudioHandler {
         ),
       );
     } catch (e) {
+      initError = '$e';
       debugPrint('audio_service unavailable: $e');
     }
   }
@@ -44,6 +51,9 @@ class ListenUpAudioHandler extends BaseAudioHandler {
       if (await Permission.notification.isDenied) await Permission.notification.request();
     } catch (_) {}
   }
+
+  /// Whether a player is attached and playing right now (for the check screen).
+  bool get isPlaying => _p?.playing ?? false;
 
   void attach(SentencePlayer p, {required String title, required String subtitle}) {
     _p?.removeListener(_sync);

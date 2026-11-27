@@ -10,6 +10,7 @@ import '../player/youtube_sentence_player.dart';
 import '../youtube/pack.dart';
 import 'app_theme.dart';
 import 'player_page.dart';
+import 'settings_page.dart';
 import 'youtube_add_page.dart';
 
 /// Placement test arrives with M2; until then everyone starts at L1.
@@ -194,7 +195,19 @@ class _TodayTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.only(bottom: 24),
       children: [
-        const _Header('오늘의 학습', '대본 없이 먼저 듣고, 안 들린 문장만 반복하세요'),
+        Stack(children: [
+          const _Header('오늘의 학습', '대본 없이 먼저 듣고, 안 들린 문장만 반복하세요'),
+          Positioned(
+            right: 8,
+            top: 12,
+            child: IconButton(
+              tooltip: '설정 · 점검',
+              icon: const Icon(Icons.settings_outlined),
+              onPressed: () =>
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsPage())),
+            ),
+          ),
+        ]),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Card(
