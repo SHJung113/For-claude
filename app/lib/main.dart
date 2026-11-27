@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'data/content.dart';
 import 'data/study_store.dart';
+import 'player/background.dart';
 import 'ui/app_theme.dart';
 import 'ui/home_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await study.init();
+  await ListenUpAudioHandler.init();
   runApp(const ListenUpApp());
 }
 

@@ -55,6 +55,11 @@ abstract class SentencePlayer extends ChangeNotifier {
   Future<void> enginePause();
   Future<void> engineSpeed(double s);
 
+  /// Silence for the pause between sentences, positioned at [at].
+  /// Default: pause. Engines that should keep the device awake with the
+  /// screen off (TTS background play) may instead play muted.
+  Future<void> engineGap(Duration at) => enginePause();
+
   /// Notifies only when something the UI shows has changed
   /// (positions arrive every ~40-150 ms).
   void _update(void Function() change) {
@@ -106,8 +111,8 @@ abstract class SentencePlayer extends ChangeNotifier {
   /// Stepped mode: pause, then repeat the sentence or move on.
   void _sentenceEnded() {
     lastCommand = DateTime.now();
-    enginePause();
     final cur = sentences[index];
+    engineGap(cur.start);
     final gap = gapSeconds < 0 ? cur.end - cur.start : Duration(seconds: gapSeconds);
     waiting = true;
     _gapTimer?.cancel();

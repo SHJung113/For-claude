@@ -12,6 +12,8 @@ class TtsPlayer extends SentencePlayer {
       interval: const Duration(milliseconds: 40),
       getPosition: _player.getCurrentPosition,
     );
+    // Hold a wake lock while playing so timing stays exact with the screen off.
+    _player.setAudioContext(AudioContextConfig(stayAwake: true).build()).catchError((_) {});
     _subs.add(_player.onPositionChanged.listen(onPosition));
     _subs.add(_player.onPlayerComplete.listen((_) => onComplete()));
     _ready = _player.setSource(AssetSource(content.audioAsset));
@@ -34,11 +36,20 @@ class TtsPlayer extends SentencePlayer {
   @override
   Future<void> enginePlay() async {
     await _ready;
+    await _player.setVolume(1);
     await _player.resume();
   }
 
   @override
   Future<void> enginePause() => _player.pause();
+
+  /// Keep playing muted from the sentence start during the pause, so the
+  /// device stays awake (screen off) and the next sentence starts on time.
+  @override
+  Future<void> engineGap(Duration at) async {
+    await _player.setVolume(0);
+    await _player.seek(at);
+  }
 
   @override
   Future<void> engineSpeed(double s) => _player.setPlaybackRate(s);

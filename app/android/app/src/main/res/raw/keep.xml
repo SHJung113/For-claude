@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Keep the monochrome icon: audio_service uses it by name for the
+     playback notification, so resource shrinking must not remove it. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+  tools:keep="@drawable/ic_launcher_monochrome" />

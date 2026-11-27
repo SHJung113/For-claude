@@ -69,6 +69,7 @@ void openContent(BuildContext context, Content c, {int? at}) {
       title: c.title,
       subtitle: 'L${c.level} · ${c.track == 'news' ? 'News' : 'Daily'} · ${fmtDuration(c.duration)}',
       createPlayer: () => TtsPlayer(c),
+      background: true,
     ),
   ));
 }

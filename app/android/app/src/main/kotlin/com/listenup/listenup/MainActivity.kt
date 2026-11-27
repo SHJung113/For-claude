@@ -1,5 +1,7 @@
 package com.listenup.listenup
 
-import io.flutter.embedding.android.FlutterActivity
+import com.ryanheise.audioservice.AudioServiceActivity
 
-class MainActivity : FlutterActivity()
+// AudioServiceActivity shares the Flutter engine with the background audio
+// service, so playback continues with the screen off.
+class MainActivity : AudioServiceActivity()

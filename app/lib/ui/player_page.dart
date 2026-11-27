@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 
 import '../data/content.dart';
 import '../data/study_store.dart';
+import '../player/background.dart';
 import '../player/sentence_player.dart';
 import '../youtube/pack.dart';
 
@@ -32,6 +33,7 @@ class PlayerPage extends StatefulWidget {
     this.expressions = const [],
     this.initialMode = TextMode.blind,
     this.startIndex,
+    this.background = false,
   });
 
   /// Progress / saved-sentence key: `tts:CONTENT_ID` or `yt:PACK_FILE_NAME`.
@@ -47,6 +49,9 @@ class PlayerPage extends StatefulWidget {
 
   /// Open at this sentence instead of where the learner left off.
   final int? startIndex;
+
+  /// Keep playing with the screen off (TTS only; never YouTube).
+  final bool background;
 
   @override
   State<PlayerPage> createState() => _PlayerPageState();
@@ -80,6 +85,10 @@ class _PlayerPageState extends State<PlayerPage> {
     p.setRepeat(count: study.repeatCount, gapSeconds: study.gapSeconds);
     _saveProgress();
     p.addListener(_changed);
+    if (widget.background) {
+      ListenUpAudioHandler.instance?.attach(p, title: widget.title, subtitle: widget.subtitle);
+      ListenUpAudioHandler.askNotificationPermission();
+    }
     // Count listening time (only while audio is playing) for the streak.
     _clock = Timer.periodic(const Duration(seconds: 1), (_) {
       if (p.playing && !p.waiting) _unsavedSeconds++;
@@ -132,6 +141,7 @@ class _PlayerPageState extends State<PlayerPage> {
   void dispose() {
     _clock.cancel();
     _flushTime();
+    ListenUpAudioHandler.instance?.detach(p);
     p.removeListener(_changed);
     p.dispose();
     super.dispose();
